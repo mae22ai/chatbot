@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>형태소 분석 챗봇</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .chat-area {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .message {
+    max-width: 60%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  .bot {
+    align-self: flex-start;
+    background-color: #e0d0d0;
+    color: #333;
+  }
+  .user {
+    align-self: flex-end;
+    background-color: #800020;
+    color: white;
+  }
+  .bot-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  .bot-buttons button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    background-color: white;
+    color: #800020;
+    border: 1px solid #800020;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .bot-buttons button:hover {
+    background-color: #f0e0e0;
+  }
+  .input-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  .input-box input {
+    flex: 1;
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  .input-box button {
+    background-color: #800020;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .input-box button:hover {
+    background-color: #a52a2a;
+  }
+</style>
+</head>
+<body>
+
+<div class="chat-area" id="chatArea"></div>
+
+<script>
+  const chatArea = document.getElementById('chatArea');
+
+  // 초기 챗봇 메시지
+  addBotMessage("무엇을 도와드릴까요?", [
+    { text: "형태소 분석하기", action: onMorphClick },
+    { text: "미정", action: () => addBotMessage("이 기능은 준비 중이에요!") }
+  ]);
+
+  function onMorphClick() {
+    addUserMessage("형태소 분석하기");
+    addBotMessage("분석할 문장을 입력해주세요!");
+
+    // 입력창을 user 말풍선(오른쪽)에 추가
+    addInputBox();
+  }
+
+  function addInputBox() {
+    const container = document.createElement('div');
+    container.className = 'message user'; // 👈 오른쪽에 나오도록
+
+    const inputBox = document.createElement('div');
+    inputBox.className = 'input-box';
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = '메시지를 입력하세요...';
+
+    const sendBtn = document.createElement('button');
+    sendBtn.textContent = '전송';
+
+    sendBtn.addEventListener('click', () => handleSend(input));
+    input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleSend(input);
+    });
+
+    inputBox.appendChild(input);
+    inputBox.appendChild(sendBtn);
+    container.appendChild(inputBox);
+    chatArea.appendChild(container);
+    scrollToBottom();
+    input.focus();
+  }
+
+  function handleSend(input) {
+    const text = input.value.trim();
+    if (!text) return;
+    addUserMessage(text);
+    input.value = '';
+
+    fetch('/chat/query', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    })
+    .then(res => {
+      if (!res.ok) throw new Error('서버 오류');
+      return res.json();
+    })
+    .then(data => {
+      addBotMessage(data.response);
+    })
+    .catch(err => {
+      addBotMessage('오류 발생: ' + err.message);
+    });
+  }
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'message user';
+    msg.textContent = text;
+    chatArea.appendChild(msg);
+    scrollToBottom();
+  }
+
+  function addBotMessage(text, buttons = []) {
+    const container = document.createElement('div');
+    container.className = 'message bot';
+    container.innerHTML = text;
+
+    if (buttons.length) {
+      const btnContainer = document.createElement('div');
+      btnContainer.className = 'bot-buttons';
+      buttons.forEach(btn => {
+        const b = document.createElement('button');
+        b.textContent = btn.text;
+        b.addEventListener('click', btn.action);
+        btnContainer.appendChild(b);
+      });
+      container.appendChild(btnContainer);
+    }
+
+    chatArea.appendChild(container);
+    scrollToBottom();
+  }
+
+  function scrollToBottom() {
+    chatArea.scrollTop = chatArea.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
