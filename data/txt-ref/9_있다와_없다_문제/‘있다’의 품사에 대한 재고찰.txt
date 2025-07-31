@@ -1,0 +1,121 @@
+<본문 내용>
+
+[PAGE 1-2]
+‘있다’의품사에대한재고찰*1)
+이성우
+(한림대학교HK연구교수)
+<Abstract>
+Lee Sung-Woo, 2023. Re-consideration. about parts-of-speech of ‘있
+다’,
+Korean Semantics, 79. This study discusses the part of speech
+of ‘있다,’ the Korean word for ‘to existentially be,’ and identifies it as
+an adjective. To this end, it reviewed previous topics of discussion, and
+examined the uses of the word. Then, this study approached the unique
+usage patterns of the word from a historical perspective. The discussed
+topics largely fall into two categories. Firstly, this essay argues that
+the word, ‘있다,’ in its conjugated usage at a sentence’s end, is much
+closer to an adjective than a verb. Moreover, in previous discussions,
+it was argued that, in order for the word to be used like a verb, the
+subject must be an animate noun. However, this study takes another
+step forward in purporting that, even if the subject is an animate noun,
+the word ‘있다’ maintains its ambiguity as a possible adjective and
+possible verb. Based on this, it is argued that the cases in which the
+word appears to be verb-like is very limited. Secondly, this essay
+argues that the use of the word ‘있다’ in its adnominal form seems like
+a verb in appearance, but is somewhat distinct from a verb. The use
+of locative case markers‘-에서’ and ‘-에’ are presented as evidence.
+Additionally, in order to elaborate further on this argument, it is
+explained how it is possible for the word ‘있다’ to be combined with
+the pre-final ending‘-느-.’ To this end, combinations with ‘잇-/이시-’
+* 이논문은2018년대한민국교육부와한국연구재단의지원을받아수행된연구임
+(NRF-2018S1A6A3A01022568). 또한이논문은제49차한국어의미학회전국학술대회
+에서발표된원고이다.
+
+29
+이성우
+and ‘-​
+-’ found in Korean language historical materials were
+discussed. After presenting the high frequency of these combinations
+and, on those grounds, drawing attention to the semantic qualities, or
+constancy, that is retained by existing predicates, it was derived that
+the reasons for why there is a high frequency of ‘잇-/이시-’ and ‘-​
+-’
+combinations lie in semantic drivers.
+
+[PAGE 2-6]
+1. 서론
+한국어연구초기에는품사에대한논의가활발했다. 잘알려져왔듯이, 논
+자에따라7품사설부터13품사설까지다양한견해가제기되어왔다(구본관외
+2016: 163). 그중8품사, 9품사, 10품사설이대세를이루었으나, 이른바절충설
+이라고하는9품사설이학교문법에서채택되어, 지금에이르고있다. 
+
+'있다'의 빈도에 대해서는 유현경(1998)을 참고할 수 있다.
+2. ‘있다’의 품사에 대한 기존 논의3)
+‘있다’는 한국어의 품사를 논의하던 초기부터 주된 관심의 대상이 되었다. 
+이를 대표하는 논의가 바로 이희승(1949, 1956)이다. 이희승(1949, 1956)에서는
+‘있다’를 존재사로 설정하였다. 이는 이희승(1949, 1956)이 ‘있다’의 성격을 다
+른 단어와 분명하게 구분했다는 것을 의미한다. 이희승(1949, 1956)을 앞뒤로 하여 ‘있다’의 품사에 대해서는 많은 논의가
+있었다. 지금까지 이루어진 ‘있다’의 품사 논의에 대한 역사는 박종덕(2006)에
+서 잘 정리되어 있다. 박종덕(2006)에서는 광복 이전부터 2006년까지의 ‘있다’
+의 품사에 대한 기존 논의를 망라하였다. 이에 따르면, ‘있다’의 품사에 대한
+견해가 크게 여섯으로 나뉘었다는 것을 확인할 수 있다.4)5)
+박종덕(2006: 130-132)에서는 2006년 이전에 이루어진 50개의 논의를 정리하
+였는데, 이중 다수의 견해는 ‘있다’를 동사로 처리한 논의이다. 50개의 논의
+중 21개의 논의가 ‘있다’를 동사로 보고 있었다.7) 다음으로는 ‘있다’를 형용사
+로 처리한 논의를 들 수 있는데, 50개의 기존 논의 중 14개가 ‘있다’를 형용사로
+처리하고 있었다.8) 그다음은 ‘있다’를 존재사로 처리한 논의로 9개의 견해를
+제시할 수 있다.9) 따라서 ‘있다’에 대한 주요 견해는 크게 셋으로 나눌 수 있겠
+다. ‘동사’, ‘형용사’, ‘존재사’가 바로 그것이다. 
+이와 달리 현재 학교문법에서는 비교적 일관된 견지를 내세우고 있다. 이는
+이관규(2015)에서 쉽게 확인할 수 있다. 이관규(2015)에서는 ‘있다’의 의미를
+다음과 같이 둘로 나누고 있다. 
+이관규(2015: 141)에서는 ‘있다’의 의미를 위와 같이 ‘有’와 ‘在’로 나누고, 
+‘有’의 경우에는 형용사, ‘在’의 경우에는 동사로 처리한다. 즉,  (2가)의 ‘있다’
+는 형용사로, (2나)의 ‘있다’는 동사로 보는 관점을 취하는 것이다. 이는 다른
+학교 문법 해설서도 마찬가지이다.10)
+다른 학교 문법 해설서인 남기심·고영근(1985/1993), 고영근·구본관(2008), 구본관 외(2016)
+에서도 이와 비슷한 견해를 내세우고 있다.
+2006년 이후에는 ‘있다’의 품사에 대한 논의가 많이 이루어지지 않았다. 대
+표적으로 유현경(2013), 황화상(2013)을 들 수 있었다. 유현경(2013: 200)에서는
+‘있다’를 형용사로 파악하고, ‘있다’의 동사적 용법은 제약적인 환경에서 나타
+나는 특수한 용법으로 보고 있다. 그리고 그 제약적인 환경으로 주어의 의도성
+을 제시하고 있다. 다음으로 황화상(2013)에서는 ‘있다’를 동사와 형용사를 겸
+하는 단어로 처리하고 있다. 즉, 유현경(2013)은 ‘있다’를 주로 형용사로 간주한
+것이고, 황화상(2013)은 ‘있다’가 동사와 형용사 둘의 속성을 모두 가지고 있다
+고 분석한 것이다. 이러한 비교적 최근의 두 논의를 고려하면, ‘있다’의 품사는
+아직도 풀리지 않은 매듭이 있음을 확인할 수 있다.
+이와 같이 ‘있다’의 품사에 대해서는 연구자들마다 엇갈린 관점을 내세우고
+있다. 더불어 ‘있다’의 품사에 대한 학교 문법의 처리도 깔끔하지 못하다. 
+널리 알려져 있듯이, ‘있다’를 국어사적으로 분석하는 논의들에서는 ‘있다’를 동사에 가까
+운 것으로 처리한다(고영근 1997, 구본관 1996, 이기문 1998 등). 최근에 이영경(2007)에서는 ‘있다’를 형용사로 보려는
+시도가 있었다. 이영경(2007: 247-248)에서는 중세 한국어의 ‘있다’를 동사와 형용사 모두
+설정 가능하다고 밝히고 있다. 
+
+[PAGE 7]
+유현경(2013)에서도 다루었지만, 
+
+[PAGE 10]
+(11-12)와 같이
+
+[PAGE 13]
+유형론적 존재구문에 대한 논의는 신선경(2002)를 따른 것이다. 이러한 구문들을 박진호
+(2017)에서는 리스트 존재문, 이성우(2019나)에서는 집합 구문으로 명명한 바 있다.
+이성우(2019나)는 
+
+[PAGE 15]
+유현경(2013: 189-190)에서는 ‘있다’의 활용을 분석할 때 주로 종결형을 대
+상으로 한다고 언급하면서, ‘있다’의 관형사형인 ‘있는’이 ‘있다’의 품사를 결정할 때 문제
+가 되기는 하지만, ‘있다’가 형용사적 용법으로 쓰일 때도 ‘있는’으로 활용하기 때문에 이
+를 기준으로 품사를 가르는 것은 어렵다고 밝히고 있다. 만일 ‘있다’의 관형형이 동사처럼 활용한다고 해서 ‘있다’를 동사로 봐야 한다고 한다면,
+‘있다’의 반의어인 ‘없다’ 또한 동사로 파악해야 할 것이다. 
+
+[PAGE 17]
+이에 대해서는 안명철
+(1982), 임동훈(2017) 등을 참고할 수 있다. 먼저 안명철(1982: 261-262)에서는
+‘-에’와 구분되는 ‘-에서’의 의미로 ‘어떤 행위가 일어나는 공간적 배경’을 들고
+있다. 임동훈(2017)에서도 이러한 논의와 비슷한 관점을 내세우고 있다. 임동훈
+(2017: 113)에서는 ‘-에서’가 위치를 가리키는 용법은 서술어가 동태 서술어일
+때 발생한다고 언급하고 있다. 
+
+[PAGE 18]
+(28라-마)의 예문은 신선경(2002: 62)에서 가져온 것이다.
