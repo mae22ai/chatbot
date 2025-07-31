@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "file_name": "연결어미의 접속 기능에 대하여.pdf",
+    "relative_path": "12_부사형_전성어미와_종속절_연결어미_문제/연결어미의 접속 기능에 대하여.pdf",
+    "is_text_based": true,
+    "pages_processed": null,
+    "ref_page_ranges": [
+      "9",
+      "13"
+    ],
+    "timestamp": "2025-07-31T07:44:37.916123"
+  },
+  "cost_info": {
+    "total_usd": 0.001682,
+    "total_krw": 2.0,
+    "details": {
+      "cleaned_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 2803,
+        "output_tokens": 2267,
+        "cost_usd": 0.0012005
+      },
+      "ref_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 2625,
+        "output_tokens": 409,
+        "cost_usd": 0.00048150000000000005
+      }
+    }
+  },
+  "cleaned_text": "1) 전처리된 본문\n```\n[PAGE 1]\n87\n\n1.\n\n(1993), .\n.\n.\n, (결합(cohesion)).\n, , , , (Beaugrande & Dressler, 1981: 71).¹\n[FOOTNOTE 1] Beaugrande & Dressler(1981)\n(1995) cohesion ‘\n\n[PAGE 2]\n3\n88\n.\n.\n.\n2.\n, , .\n, , .\n.\n, .\n’\n‘\n’\n. cohesion\n(, 2004), (Brinker, 1994), (, 2003).\n(2004) cohesion ‘\n’\ncoherence ‘\n’\n.\n\n[PAGE 3]\n89\n2.1.\n7\n, .\n, ‘\n’\n‘\n’\n,\n1\n1\n10\n.\n, , .\n.\n(1) .\n(1) . [3-(3)]\n.\n. [6-(4)]\n.\n(1)\n3\n‘\n.’\n.\n, ‘\n’\n‘\n’\n, . ‘\n’\n, , .\n(2)\n3\n1\n‘\n’\n‘\n’\n.\n(2) .\n.\n.\n()\n\n[PAGE 4]\n3\n90\n.\n()\n.\n.\n.\n.\n‘\n’\n.\n‘\n’\n.\n()\n.\n.\n‘\n’\n.\n()\n.\n.\n‘\n’\n.\n.\n.\n.\n‘\n’\n.\n()\n, .\n(1)\n“\n”\n(2)\n.\n.\n6\n(1)\n.\n.\n7\n10\n,\n1\n\n[PAGE 5]\n91\n1\n, .\n, ‘\n’\n.\n, , , , .\n‘\n’\n.\n, .\n(3) .\n(3) .\n[3-(3)]\n.\n[8-(3)]\n.\n.\n[3-(3)]\n.\n[8-(2)]\n.\n.\n[3-(4)]\n.\n[3-(4)]\n.\n[8-(2)]\n.\n.\n[8-(3)]\n.\n[8-(5)]\n.\n\n[PAGE 6]\n3\n92\n(3)\n, (일관성(coherence)).\n(3, )\n.\n(3)\n,\n2\n1\n4\n‘\n’\n‘\n’\n‘\n’\n, .\n.\n2\n2\n4\n‘\n’\n‘\n’\n.\n, , ‘\n’\n, .\n2.2.\n‘\n’\n‘\n’\n. ‘\n’\n‘\n’\n‘\n’\n, ‘\n’\n‘\n’, ‘\n’, ‘\n’, ‘\n’\n.\n\n[PAGE 7]\n93\n.\n.\n.\n, .\n.\n, (Beaugrande & Dressler, 1981).\n, , .\n.\n, .\n(, 1999).\n.\n, ‘\n(결합(cohesion))’\n.³\n[FOOTNOTE 3] cohesion. Halliday & Hasan(1976) cohesion, Beaugrande & Dressler(1981), Brinker(1992) cohesion\n\n[PAGE 8]\n3\n94\n.\n.\n, .\n· .\n, .\n, , .\n(4) .\n(4) .\n.\n.\n.\n.\n.\n.\n.\n(4)\n‘\n’\n, (4)\n(4, , , )\n(4)\n(4)\n.\n.\ncoherence\n.\n.\n\n[PAGE 9]\n95\n, .⁴\n(5) .\n(5) .\n.\n.\n.\n.\n.\n.\n.\n.\n.\n(5)\n(5)\n.\n, (5)\n‘-\n’\n(5)\n, (5)\n(5)\n(5)\n.\n, .\n, (일관성(coherence)), (결합(cohesion)), .\n, .\n[FOOTNOTE 4] (1994).\n\n[PAGE 10]\n3\n96\n.⁵\n, , .\n, , · .\n, , .\n2.3.\n.\n(1993: 39-95)\n(6) .\n(6) .\n.\n.\n[FOOTNOTE 5] (2001: 151), , 3. 0.3, .\n\n[PAGE 11]\n97\n, (6) .\n, , , , , .\n.\n, , .\n, , , , (7) .\n(7) .\n6), 7), .\n.\n.\n.\n(7)\n, , .⁸\n[FOOTNOTE 6] , .\n[FOOTNOTE 7] ‘\n’\n‘\n’\n‘\n’\n‘\n’\n, ‘\n’\n.\n[FOOTNOTE 8] , , , , .\n.\n\n[PAGE 12]\n3\n98\n, .⁹\n.\n.\n¹⁰\n.\n(8) .\n(8) . A .\nB\n. A .\nB\n. A-(,)B\n(8)\n.\nA, B\n.\n, , . (8)\n¹¹\n[FOOTNOTE 9] 5).\n[FOOTNOTE 10] .\n[FOOTNOTE 11] .\n(51)\nA\nB\n.\n.\n.\n,\n\n[PAGE 13]\n99\n.\n.\n(8)\n, (8)\n.¹²\n(8)\n.\n, .\n.\n, .\n.\n, .\n, , , .\n.\n[FOOTNOTE 12] , . ().\n(Beaugrande & Dressler, 1981: 117-118).\n\n[PAGE 14]\n3\n100\n(9) .\n(9) .\n1\n.\n2\n()\n.\n3\n.\n4\n, (9)\n1\n.\n\n[PAGE 15]\n101\n1\n()\n()\n2\n()\n()\n()\n3\n4\n1\n.\n, .\n, , .\n\n[PAGE 16]\n3\n102\n3.\n.\n.\n.\n, .\n, .\n, , , , .\n, .\n.\n, , .\n,\n\n[PAGE 17]\n103\n.\n: , , , , (1999), - , : .\n(1998), , : .\n______________(1999), , : .\n______________(2001), , : .\n______________(2002), , : .\n(2001), ( ) 3-1, : .\n(2002), 2-1, : .\n(2002), 2-2, : .\n(2001), “ ,” 12-2, : .\n(2003), , 19, : .\n\n[PAGE 18]\n3\n104\n(1994), , , : .\n(1993), , , : .\n(2004), , : .\nBeaugrande, R. A./ Dressler, W.(1981), Introduction to Text Linguistics, London: Longman, (1995), , : .\nBrinker, K.(1992), Linguisticshe Textanalyse, 3, Aufl. Berlin, (1994), , : .\nHalliday, M. A. K. & Hasan, R.(1976), Cohesion in English, London: Longman.\n: 7\n: 018-426-1742\n: 2somox@hanmail.net\n\n[PAGE 19]\n105\nAbstract\nA Study on the Function of the Connective Endings\nConsidering that the connective function of connective endings was not only syntactic connection of clauses, the author proposed that the teaching and learning of connective relation should include the instruction of the use of connective endings as well as connective adverbs.\nIn order to instruct connective endings as a cohesion that did connective function in a text, the author formulated a stepwise process how the connection and selection of connective endings were determined.\nIn spite of the importance of the coherence and logic of a text, the instruction of connective endings that play a important role in basic logical relation of a sentence should be emphasized as a principal factor for practical language uses.\nTherefore, for the teaching and learning of a mother tongue, the function and usage of connective endings as well as connective adverbs in a text should be instructed preferentially.\nKey Words: connective endings, connective relation, cohesion, coherence, text\n```\n\n2) 각주/미주 목록\n```\n[FOOTNOTE 1] Beaugrande & Dressler(1981)\n[FOOTNOTE 3] cohesion. Halliday & Hasan(1976) cohesion, Beaugrande & Dressler(1981), Brinker(1992) cohesion\n[FOOTNOTE 4] (1994).\n[FOOTNOTE 5] (2001: 151), , 3. 0.3, .\n[FOOTNOTE 6] , .\n[FOOTNOTE 7] ‘\n’\n‘\n’\n‘\n’\n‘\n’\n, ‘\n’\n.\n[FOOTNOTE 8] , , , , .\n.\n[FOOTNOTE 9] 5).\n[FOOTNOTE 10] .\n[FOOTNOTE 11] .\n[FOOTNOTE 12] , . ().\n\n```",
+  "ref_text": "<본문 내용>\n[PAGE 1-2]\n(1993)\n,\n,\n.\n.\n.\n,\n(cohesion)\n.\n,\n,\n,\n,\n(Beaugrande & Dressler, 1981: 71).1)\n1) Beaugrande & Dressler(1981)\n(1995)\ncohesion\n‘\n\n.\n.\n.\n(\n, 2004),\n(Brinker, 1994,\n),\n(\n, 2003)\n.\n(2004)\ncohesion\n‘\n’\ncoherence\n‘\n’\n.\n\n[PAGE 6-7]\n(3\n,\n)\n.\n‘\n’\n‘\n’\n‘\n’\n,\n.\n.\n‘\n’\n‘\n’\n.\n,\n,\n‘\n’\n,\n.\n2)\n‘\n’\n‘\n’\n. ‘\n’\n‘\n’\n‘\n’\n, ‘\n’\n‘\n’, ‘\n’, ‘\n’, ‘\n’\n.\n\n\n(Beaugrande & Dressler, 1981)\n.\n,\n,\n.\n.\n,\n.\n(\n, 1999).\n.\n, ‘\n(cohesion)’\n.3)\n3) cohesion\n. Halliday\n& Hasan(1976)\ncohesion\n, Beaugrande &\nDressler(1981)\n, Brinker(1992)\ncohesion\n\n[PAGE 9]\n4)\n(1994)\n.\n\n[PAGE 13]\n(Beaugrande & Dressler,\n1981: 117-118)."
+}

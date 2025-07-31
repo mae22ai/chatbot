@@ -1,0 +1,16 @@
+1) 전처리된 본문
+[PAGE 1]
+Copyright (C) 2003 NuriMedia Co., Ltd.
+
+[PAGE 2]
+Copyright (C) 2003 NuriMedia Co., Ltd.
+
+[PAGE 3]
+Copyright (C) 2003 NuriMedia Co., Ltd.
+
+[PAGE 4]
+Copyright (C) 2003 NuriMedia Co., Ltd.
+
+
+2) 각주/미주 목록
+(없음)

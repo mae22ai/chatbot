@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "file_name": "사자성어(四字成語)의 유형과 문법.pdf",
+    "relative_path": "19_기타_쟁점/사자성어(四字成語)의 유형과 문법.pdf",
+    "is_text_based": false,
+    "pages_processed": null,
+    "ref_page_ranges": [],
+    "timestamp": "2025-07-31T06:17:27.010731"
+  },
+  "cost_info": {
+    "total_usd": 0.0,
+    "total_krw": 0.0,
+    "details": {
+      "cleaned_text": {
+        "model": "gemini-1.5-flash",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "ref_text": {
+        "model": "gemini-1.5-flash",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    }
+  },
+  "cleaned_text": "",
+  "ref_text": ""
+}

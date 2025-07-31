@@ -1,0 +1,54 @@
+<본문 내용>
+
+[PAGE 2]
+이 연구의 목적은 제7차 교육과정에서 보편적인 체계로 확립되지 못한 국어 부사절의 설정이 지니는 문제점을 검토해 보고, 학교 문법의 설정 방향을 제시하고자 한다. 고등학교 「문법」교과서와 『고등학교 문법 교사용 지도서』를 대상으로 겹문장 복수체계의 혼란뿐만 아니라 국어 교육의 가장자리로 밀려나 있는 학교 문법의 문제점을 부사절을 통해 분석해 보고자 한다. 교육을 목적으로 하는 학교 문법은 문법 범주의 개념과 명칭에 있어 피교육자가 이해하기 쉬운 방향에서 언어 사용 능력을 향상시킬 수 있도록 제시되어야 한다. 학교 문법이 낮선 문법 용어의 암기와 범주 설정의 이론에 그칠 것이 아니라 설득력 있는 화법 구사와 논리적 글쓰기를 위한 활동적 차원에서 교육되어야 하기 때문이다. 제7차 문법 교과서 겹문장 체계의 부사절 설정과 관련한 이전 논의를 바탕으로 의미ㆍ기능적 측면에서 학교 문법 부사절의 방향을 모색하고자 한다.
+1) 부사절과 관련한 제7차 개정 교육과정은 내용 체계는 그대로 유지한 채 과목 체제가 이원 체제에서 일원 체제로 재구조화되는 변화가 있었을 뿐 2007년 개정, 2009년 개정, 2012년 개정, 2015년 개정 교육과정 시안까지 언어 사용 능력을 신장시키고 탐구 활동 및 핵심 역량을 높여 언어 수행 능력을 강조하는 차원의 개정이 이루어지고 있다.
+
+[PAGE 8]
+다음은 종속적으로 이어진 문장이 내포인지 접속인지에 관한 이전 논의를 살펴보면 크게 세 가지로 나눌 수 있다.
+
+첫째, 부사절ㆍ종속절ㆍ대등절을 겹문장 체계에서 다 설정하는 견해는 최현배(1937), 정정덕(1986), 허웅(1999), 권재일(1992), 남기심ㆍ고영근(2004), 교육부(1985, 1996, 2002)가 있다. 최현배(1937)가 설정한 가진월, 벌린월, 이은월의 3분 체계는 남기심ㆍ고영근(2004)의 안은 문장과 이어진 문장으로 2분 체계로 재편되었지만 가진월이 안은 문장으로, 벌린월이 대등하게 이어진 문장으로, 이은월이 종속적으로 이어진 문장으로 대응되면서 두 체계가 거의 동일하다고 볼 수 있다. 종속적으로 이어진 문장이 가지는 순수한 접속의 기능만을 고려하여 체계화를 시켰고 부사절의 설정을 명확히 하지 않으면서 종속 접속문과 충돌되는 의미적 관계를 고려하지 않았다는 점이다(강미숙, 2006).
+
+둘째는 종속절을 부사절로 보아 부사절ㆍ대등절 두 가지로 설정하는 견해로 유현경(1980), 남기심(1994, 2004), 최재희(1997, 2004), 이관규(1999), 이익섭(2003)을 들 수 있다. 종속적으로 이어진 문장의 성격과 부사절과의 통사적 관계를 고려해 볼 때 부사절과 동일한 특징을 보이므로 이어진 문장에는 대등하게 이어진 문장만 인정하고 종속적으로 이어진 문장을 부사절과 동일한 범주로 보는 것이다. 최재희(1997, 2004)에서는 종속 접속문을 부사절로 보고 접속의 범주에서 다루지 않고 내포의 범주에서 다룰 것을 제시하였다. 부사절 중에는 문장 전체와 관련을 가지는 문장 부사절이 있음을 말하고 종래의 종속 접속문으로 다루어 오던 문장의 선행절은 후행절을 모문으로 한 부사절의 기능을 수행한다고 하였다.
+
+셋째는 대등절까지도 부사절로 처리하여 결국 부사절 하나만을 설정하는 견해로 서태룡(1979), 이익섭ㆍ임홍빈(1985), 김진수(1987), 왕문용ㆍ민현식(1993), 임홍빈ㆍ장소원(1995), 고광주(1999), 유현경(2002)이 있다. 대등하게 이어진 문장의 선행절과 종속적으로 이어진 문장의 선행절 모두 부사절로 보는 견해이다. 부사절 안에 대등ㆍ종속적으로 이어진 문장의 선행절을 포함시킨다는 것은 대등 접속과 종속 접속을 구분하는 표지가 확실하지 않으며, 의미적 맥락이 문맥에 의해 달라질 수 있어 분명한 구분을 할 수 없다는 것을 말하고 있는 것이다. 왕문용(1997)은 대등 접속문으로 보이는 문장도 문맥에 따라서는 종속절을 내포한 문장으로 해석된다고 하였다. 이처럼 안은 문장의 체계와 부사절 확대 설정에 관한 논의는 부사절의 범주 확대와 관련하여 큰 틀에서 세 가지로 분분하며 결론을 맺지 못한 채 논란이 되고 있다.
+
+[PAGE 18]
+강미숙(2006), 「부사절과 접속문의 관련성 연구」, 동아대학교 대학원.
+강희철(2008), “영어 문법의 문장 짜임에 관한 연구-제7차 문법 교과서의 부사절 문장 확대를 중심으로”, 창원대학교 교육대학원 석사학위논문.
+교육인적자원부(2001), 『(교육부 고시 1997-15호) 고등학교 교육 과정 해설 12 국어-』, 교육인적자원부.
+교육인적자원부(2001), 「고등학교 국어」, 서울대학교 국어교육연구소.
+교육인적자원부(2001), 『고등학교 문법 교사용 지도서』, 서울대학교 국어교육연구소.
+교육인적자원부(2002), 「고등학교 문법」, 두산동아.
+교육인적자원부(2007), 『(교육부 고시 제2007-79호) 국어과 교육 과정』, 교육인적자원부.
+고영근(2004), 「국어 문법 교육의 방향 탐색 -현행 고등학교 문법 교육의 문제점과 개선 방안을 중심으로-」, 「우리말 연구」115, 23-50.
+고춘화(2010), 『국어 교육을 위한 문법 교육론』, 역락.
+권재일(1985), 『국어의 복합문 구성 연구』, 집문당.
+권재일(1992), 『한국어 통사론』, 민음사.
+권재일(1989), “의미 기술에서의 ‘의미 관계’에 대하여”, 「한글」205.
+김경찬(2001), 「국어 부사절의 구성 연구」, 조선대학교 교육대학원.
+남기심(1985), “접속 어미와 부사형 어미”, 말 10.
+민현식(1999), 「‘부사성’의 문법적 의미」, 한국어 의미학, 10.
+박소영(2001), 「한국어 부사절과 접속문 체계 다시 보기」, 「언어학」34.
+방동진(2005), “영어 문법 국어 복합문 체계 연구-7차 교육과정을 중심으로-”, 경희대학교 교육대학원.
+선애리(2011), 「고등학교 문법에서의 부사형 어미 연구」, 충남대학교 교육대학원.
+송정근(2011), “학교 문법의 부사절 설정과 관련된 몇 가지 문제점”, 「인문과학 연구」29.
+유현경(1980), 「국어 접속문의 통사적 특질에 대하여」, 「한글」, 191.
+이관규(2001), “국어 부사절 범위에 대한 여러 견해와 그 한계점”, 한국어 학회.
+이익섭(2003), 「국어 부사절의 성립」, 태학사.
+이필영(1994), “한국어 종속절에 관하여”, 「연세어문」1, 22, 서울대 국어교육과.
+이환춘(2007), 「제7차 고등학교 「문법」교과서의 부사절과 접속 부사 내용 분석」, 서강대학교 교육대학원 석사학위 논문.
+정승균(2010), 「국어 부사절 설정에 대한 연구」, 조선대학교 교육대학원 석사학위 논문.
+정정덕(1980), 「국어 접속어미의 의미 통사론적 연구-종속 접속어미를 중심으로-」, 한양대학교 대학원 박사학위논문.
+정제문(1982), 「언어 기술의 방향성에 대하여」, 서울대학교 대학원 석사학위논문.
+최재희(1997), 「국어 종속 접속의 통사적 특성」, 「한글」238, 한글학회.
+최재희(2004), 『한국어 문법론』, 태학사.
+최현배(1971), 「우리말 본」, 정음문화사.
+
+
+[PAGE 20]
+This study set out to search for the direction of adverbial clause setting in the semantic and functional aspects based on the previous discussions about adverbial clause setting. There are various discussions about the category setting of adverbial clause, and they can be divided into three major groups: one group that sets all adverbial, subordinate, and coordinate clauses, another group that sets only adverbial and coordinate clauses, putting subordinate clauses under the category of adverbial clauses, and the other group that sets even coordinate clauses as adverbial ones. Those various views have made it difficult to establish a universal system for adverbial clauses, whose confusion reveals problems with school grammar.
+
+The 7th Korean Curriculum contains views of setting adverbial endings, expanding the category of subordinate clauses being allowed as adverbial ones, and including coordinate clausal connective endings in the category of adverbial endings. As those multiple systems are allowed, they add more confusion to the normativity and systemicity of educational grammar but, at the same time, propose some directions for the discussion about the expansion of adverbial clause setting.
+
+In school grammar, the category setting of adverbial clauses should no longer remain at the level of theoretical discussions and start discussions in the aspect of pedagogical methods to expand sentences effectively. It is also necessary to set semantic- and functional-based adverbial clauses for the development and expression of logical thinking since adverbial clauses play important roles in making propositions and meanings specific and clear in the expansion process of sentences as modifiers. It is also needed to cite the name and concept of adverbial clauses and the methodology of their category setting in the aspects of paragraphs and texts as well as units of sentences when setting semantic- and functional-based adverbial clauses.

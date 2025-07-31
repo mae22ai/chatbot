@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "file_name": "한자복합어 의존형태소 연구.pdf",
+    "relative_path": "1_한자어_분석_문제/한자복합어 의존형태소 연구.pdf",
+    "is_text_based": true,
+    "pages_processed": 20,
+    "ref_page_ranges": [],
+    "timestamp": "2025-07-31T16:07:38.643727"
+  },
+  "cost_info": {
+    "total_usd": 0.000427,
+    "total_krw": 1.0,
+    "details": {
+      "cleaned_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 986,
+        "output_tokens": 535,
+        "cost_usd": 0.00032387500000000005
+      },
+      "ref_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 808,
+        "output_tokens": 5,
+        "cost_usd": 0.00010287500000000001
+      }
+    }
+  },
+  "cleaned_text": "1) 전처리된 본문\n\n[PAGE 1]\n저작자표시-비영리-동일조건변경허락 2.0 대한민국\n이용자는 아래의 조건을 따르는 경우에 한하여 자유롭게\n1. 이 저작물을 복제, 배포, 전송, 전시, 공연 및 방송할 수 있습니다.\n2. 이차적 저작물을 작성할 수 있습니다.\n다음과 같은 조건을 따라야 합니다.\n1. 귀하는 이 저작물의 재이용이나 배포의 경우, 이 저작물에 적용된 이용 허락 조건을 명확하게 나타내어야 합니다.\n2. 저작권자로부터 별도의 허가를 받으면 이러한 조건들은 적용되지 않습니다.\n저작권법에 따른 이용자의 권리는 위의 내용에 의하여 영향을 받지 않습니다.\n이것은 이용 허락 규약(Legal Code)을 이해하기 쉽게 요약한 것입니다.\nDisclaimer\n\n저작자표시. 귀하는 원저작자를 표시하여야 합니다.\n비영리. 귀하는 이 저작물을 영리 목적으로 이용할 수 없습니다.\n동일조건변경허락. 귀하가 이 저작물을 개작, 변형 또는 가공했을 경우에는 이 저작물과 동일한 이용 허락 조건하에서만 배포할 수 있습니다.\n\n[PAGE 2]\n\n\n[PAGE 3]\n\n\n[PAGE 4]\n\n\n[PAGE 5]\n\n\n[PAGE 6]\n\n\n[PAGE 7]\n\n\n[PAGE 8]\n- i -\n\n[PAGE 9]\n- ii -\n\n[PAGE 10]\n- iii -\n\n[PAGE 11]\n- iv -\n\n[PAGE 12]\n- v -\n\n[PAGE 13]\n- 1 -\n\n[PAGE 14]\n- 2 -\n\n[PAGE 15]\n- 3 -\n\n[PAGE 16]\n- 4 -\n\n[PAGE 17]\n- 5 -\n\n[PAGE 18]\n- 6 -\n\n[PAGE 19]\n- 7 -\n\n[PAGE 20]\n- 8 -\n\n\n2) 각주/미주 목록\n\n<각주/미주 내용 없음>",
+  "ref_text": "<본문 내용>"
+}

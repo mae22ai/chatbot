@@ -1,0 +1,110 @@
+```
+[PAGE 1]
+
+󰡔
+󰡕 제13집(2010.12), 한국문법교육학회
+21)
+학교 문법과 한국어 문법의 성격과 내용 체계*
+이관규 (고려대학교)
+
+차례
+1. 머리말
+2. 학교 문법과 한국어 문법의 성격
+2.1. 의식적 학습과 무의식적 학습의 개념
+2.2. 학교 문법과 한국어 문법의 가변성
+3. 학교 문법과 한국어 문법의 내용 체계
+3.1 교육 문법에서 ‘내용 체계’의 두 가지 의미
+3.2. 교육 과정에서 학교 문법과 한국어 문법의 내용 체계
+3.3. 교재에서 학교 문법과 한국어 문법의 내용 체계
+4. 맺음말
+
+1. 머리말
+
+언어 교육의 역사는 문법 교육의 역사라고 해도 과언이 아니다. 상대적이긴 하지만, 문법 교육을 절대시했던 시기가 있었던가 하면 정반대로 언어 교육에서 문법 교육은 불필요하다고 보는 시기도 있었다. 그러나 바른 언어생활을 지향하면서 정도의 차이는 있을지언정 언어 교육에서 문법 교육을 완전히 부정하고 있지는 않는 것 같다.
+
+* 이 논문은 고려대학교 특별연구비에 의하여 수행되었음.
+이 논문은 한국문법교육학회 제13차 전국학술대회(2010년 8월 20일, 한국외국어대학교)에서 발표되었던 것을 수정한 것임.
+
+
+[PAGE 2]
+
+문법 교육 제13호
+30
+
+교육을 완전히 부정하고 있지는 않는 것 같다.
+수학 교육의 목표가 수학 능력의 신장이고 영어 교육의 목표가 영어 능력의 신장이듯이 국어 교육의 목표 또한 국어 능력의 신장이다. 국내인을 대상으로 한 국어 교육(이하 국어 교육)에서 국어 교육의 목표를 국어 능력의 신장이라고 하는 건 당연하다.¹) 마찬가지로 외국인을 위한 한국어 교육(이하 한국어 교육)에서도 본질적으로는 한국어 능력 신장이 한국어 교육의 목표라고 해야 할 것이다. 흔히 한국어 교육의 목표를 한국어 사용 능력 신장이라고 하는데, 그건 ‘한국어 능력’이라고 하는 것을 사용 중심으로 본 입장이다. 실제로 외국인들이 한국어를 자신들의 목적에 맞추어 사용할 수 있도록 한국어 교육이 실시되어야 한다는 것을 뜻한다.
+
+국어 능력이란 국어를 알고 사용하는 능력이라고 할 수 있다(이관규, 2008:10 참조). 즉 국어를 잘 사용하기 위해서는 먼저 국어를 잘 아는 능력이 필요하며, 이를 바탕으로 해서 국어를 잘 사용할 수 있다는 것이다. 특히 개별 언어로서의 ‘국어’를 국가, 국민, 한민족 이런 표현들과 연계해 볼 때 더욱 국어를 아는 능력이 중요하다. 문법 교육도 국어 교육의 일부이기 때문에 국어를 아는 능력과 국어를 사용하는 능력을 신장하는 것을 모두 그 목표로 해야 할 것이다. 단지 과목 혹은 영역의 특성상 문법 교육에서는 국어를 아는 능력, 곧 국어 알기 능력의 신장에 더욱 많은 노력을 경주해 왔을 뿐이다.
+
+한국어 교육에서는 한국어를 아는 능력보다는 한국어 사용 능력의 신장을 주된 목표로 한다. 외국인이 한국어를 배워서 유창한 의사소통을 할 수 있어야 한다는 것이다. 한국어 문법 교육의 목표에서도 마찬가지이다. 한국어 사용 능력 신장이 문법 교육의 목표이며, 이와 관계없는 내용은 문법 교육의 내용으로 적합하지 않다는 것이 주된 경향이다. 그렇지만 한국
+
+
+[FOOTNOTE 1] 제5차 국어과 교육 과정 시기에서는 국어 교육의 목표를 언어 사용 기능 능력 신장이라고 했으며, 최근에도 여러 논저를 보면 국어 교육의 목표를 국어 능력 신장이라고 보는 시각이 존재한다. 그러나 제7차 국어과 교육 과정에 이어, 2007, 2009 개정 국어과 교육 과정에서는 국어 능력 신장을 국어 교육의 목표로 설정하고 있다.
+
+
+[PAGE 3]
+
+이관규․학교 문법과 한국어 문법의 성격과 내용 체계
+31
+
+한국어를 아는 능력을 그 목표에서 완전히 배제할 수는 없을 듯하다. 한국어 교육의 목표와 한국어 문법 교육의 목표가 동일할 수는 없으며, 특히 후자에서는 문법 능력과 관련한 한국어 사용 능력 신장에 더욱 치중할 것이기 때문이다. 한국어 문법 교육에서는 그 목표로 한국어 알기 능력을 기초로 하면서 한국어 사용하기 능력 신장을 제시할 수 있을 것이다.²)
+
+요약하면, 학교 문법과 한국어 문법 모두 (한)국어 능력 신장을 교육의 목표로 할 텐데, 전자에서는 국어 알기 능력, 후자에서는 국어 사용하기 능력을 상대적으로 더 강조하고 있다고 할 수 있을 것 같다.
+
+그렇다면 학교 문법과 한국어 문법은 그 내용 체계가 어떠해야 할까? 각각 국어 알기를 중시하는 능력 신장과 한국어 사용 능력 신장이라는 목표를 달성하기 위해서 어떤 내용을 갖고 교수 학습해야 할까? 여기서는 목표를 달성하기 위한 교육 문법의 내용 체계에 대해서 살펴보고자 한다.³)
+
+2. 학교 문법과 한국어 문법의 성격
+
+2.1. 의식적 학습과 무의식적 학습의 개념
+
+언어에는 일정한 원리와 규칙이 있어서, 이 언어를 통해서 많은 사람들이
+
+
+[FOOTNOTE 2] 엄밀한 의미에서 본다면 외국인이 한국어를 배우는 목적이 무엇인지에 따라서 한국어 교육의 목표는 달라질 수 있다. 극단적으로 보면, 한국에 귀화를 해서 외국계 한국인으로 살아가려고 한다면, 그 외국인의 한국어 교육 목표는 국어 교육 목표와 거의 동일하다고 할 수 있다. 결국 국어와 한국어는 동일한 대상 언어이기 때문에, 그것을 배우는 목표는, 정도의 차이가 있을 뿐이지, 궁극적으로는 국어 능력(혹은 한국어 능력) 신장이라고까지 할 수도 있다.
+
+
+[FOOTNOTE 3] 본고에서 교육 문법이라 하면 내국인을 위한 국어 교육 문법과 외국인을 위한 한국어 교육 문법을 포함한다. 흔히 전자는 학교 문법이라고 불리며, 후자는 그냥 한국어 문법으로 불린다. 본고에서도 이런 의미로 학교 문법과 한국어 문법이라는 용어를 사용하도록 한다.
+
+
+
+[PAGE 4] ~ [PAGE 28] 까지 같은 방식으로 전처리합니다.  한자는 (漢字) 형태로 변환하고, 각주/미주는 분리하여 처리합니다.
+```
+
+(생략된 페이지 4~28)
+
+```
+[PAGE 28]
+
+문법 교육 제13호
+56
+
+Abstract
+
+Characters and content systems of SG and KGF
+
+Lee Kwankyu
+
+(Korea University)
+
+The purposes of this report are to publish the common and difference of School Grammar and Korean Grammar for Foreigners. SG is to escalate korean grammar ability, and KGF is to escalate korean usage ability. Targets of SG are korean language itself and meta language of korean explaining, and target of KGF is korean language itself only.
+
+In view of curriculum, SG has national curriculum, but KGF hasn’t it. The content systems of SG education are knowledge, life and attitude, and the content system of KGF are knowledge and life.
+
+In view of content system of text, SG has high school grammar book, but KGF hasn’t it publicly. Korean Grammar for Foreigners 1(2005, published by NKLC) is a kind of explanation book. Even if it has korean grammar contents, we can expect content system of korean grammar. The contents of HSGB and KGF are almost same, because the two books essentially have the same target language, namely, korean language.
+
+The contents of SG and KGF are not absolute. It is possible for two grammars to have different explanation of grammar, and to have two explanation about one expression in same text book. Especially, it is possible for KGF to have various content systems according to various purposes.
+
+Key words : school grammar, korean grammar for foreigners, curriculum, grammar content system, characteristics
+
+```
+
+```
+각주/미주 목록
+
+[FOOTNOTE 1] 제5차 국어과 교육 과정 시기에서는 국어 교육의 목표를 언어 사용 기능 능력 신장이라고 했으며, 최근에도 여러 논저를 보면 국어 교육의 목표를 국어 능력 신장이라고 보는 시각이 존재한다. 그러나 제7차 국어과 교육 과정에 이어, 2007, 2009 개정 국어과 교육 과정에서는 국어 능력 신장을 국어 교육의 목표로 설정하고 있다.
+[FOOTNOTE 2] 엄밀한 의미에서 본다면 외국인이 한국어를 배우는 목적이 무엇인지에 따라서 한국어 교육의 목표는 달라질 수 있다. 극단적으로 보면, 한국에 귀화를 해서 외국계 한국인으로 살아가려고 한다면, 그 외국인의 한국어 교육 목표는 국어 교육 목표와 거의 동일하다고 할 수 있다. 결국 국어와 한국어는 동일한 대상 언어이기 때문에, 그것을 배우는 목표는, 정도의 차이가 있을 뿐이지, 궁극적으로는 국어 능력(혹은 한국어 능력) 신장이라고까지 할 수도 있다.
+[FOOTNOTE 3] 본고에서 교육 문법이라 하면 내국인을 위한 국어 교육 문법과 외국인을 위한 한국어 교육 문법을 포함한다. 흔히 전자는 학교 문법이라고 불리며, 후자는 그냥 한국어 문법으로 불린다. 본고에서도 이런 의미로 학교 문법과 한국어 문법이라는 용어를 사용하도록 한다.
+[FOOTNOTE 4] 흔히들 무의식적 배움은 습득(aquisition), 의식적 배움은 학습(learning)이라 하여 구분하기도 한다. 그러나 소위 무의식적 습득도 저절로 하늘로부터 배워지는 게 아니고, 엄마 등 가족의 자연스러운 교육을 통해서 배워지는 것이므로 넓은 의미의 학습이라고 하는 게 좋을 듯하다. 즉 무의식적 학습이나 의식적 학습이나 모두 학습에 속한다는 말이다.
+
+... (생략된 각주/미주 5~7)
+```

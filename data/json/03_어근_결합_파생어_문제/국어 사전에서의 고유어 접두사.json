@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "file_name": "국어 사전에서의 고유어 접두사.pdf",
+    "relative_path": "3_어근_결합_파생어_문제/국어 사전에서의 고유어 접두사.pdf",
+    "is_text_based": true,
+    "pages_processed": null,
+    "ref_page_ranges": [],
+    "timestamp": "2025-07-31T11:08:41.206547"
+  },
+  "cost_info": {
+    "total_usd": 0.000462,
+    "total_krw": 1.0,
+    "details": {
+      "cleaned_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 1028,
+        "output_tokens": 584,
+        "cost_usd": 0.0003475
+      },
+      "ref_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 850,
+        "output_tokens": 22,
+        "cost_usd": 0.00011449999999999999
+      }
+    }
+  },
+  "cleaned_text": "1) 전처리된 본문\n[PAGE 1]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 2]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 3]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 4]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 5]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 6]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 7]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 8]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 9]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 10]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 11]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 12]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 13]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 14]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 15]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 16]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 17]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 18]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 19]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 20]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 21]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 22]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 23]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n[PAGE 24]\nCopyright (C) 2002 Nuri Media Co., Ltd.\n\n2) 각주/미주 목록",
+  "ref_text": "<본문 내용>\n\n(기존 연구를 설명하는 부분이 없는 텍스트입니다.)"
+}

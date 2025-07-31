@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "file_name": "역대(歷代) 학교(學校) 문법(文法)의 부사어(副詞語) 연구(硏究).pdf",
+    "relative_path": "12_부사형_전성어미와_종속절_연결어미_문제/역대(歷代) 학교(學校) 문법(文法)의 부사어(副詞語) 연구(硏究).pdf",
+    "is_text_based": true,
+    "pages_processed": null,
+    "ref_page_ranges": [],
+    "timestamp": "2025-07-31T07:44:43.434049"
+  },
+  "cost_info": {
+    "total_usd": 0.000272,
+    "total_krw": 0.0,
+    "details": {
+      "cleaned_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 827,
+        "output_tokens": 215,
+        "cost_usd": 0.00018399999999999997
+      },
+      "ref_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 649,
+        "output_tokens": 19,
+        "cost_usd": 8.825e-05
+      }
+    }
+  },
+  "cleaned_text": "1) 전처리된 본문\n[PAGE 1]\n*\n\n[PAGE 2]\n\n\n\n[PAGE 3]\n\n\n[PAGE 4]\n\n\n[PAGE 5]\n\n\n\n\n[PAGE 6]\n\n\n[PAGE 7]\n\n\n\n[PAGE 8]\n\n\n[PAGE 9]\n\n\n\n\n\n\n\n[PAGE 10]\n\n\n\n\n\n\n\n\n\n[PAGE 11]\n\n\n\n\n\n\n\n\n\n\n\n[PAGE 12]\n\n\n[PAGE 13]\n\n\n[PAGE 14]\n\n\n\n\n\n\n\n[PAGE 15]\n\n\n[PAGE 16]\n\n\n\n\n\n[PAGE 17]\n\n\n[PAGE 18]\n\n\n[PAGE 19]\n\n\n\n[PAGE 20]\n\n\n\n[PAGE 21]\n\n\n[PAGE 22]\n\n\n[PAGE 23]\n\n\n\n\n\n\n\n\n\n\n\n[PAGE 24]\n\n\n[PAGE 25]\n\n\n[PAGE 26]\n\n\n\n[PAGE 27]\n\n\n[PAGE 28]\n\n\n[PAGE 29]\nABSTRACT\n\n\n2) 각주/미주 목록",
+  "ref_text": "(제공된 텍스트에는 기존 연구를 설명하는 부분이 없습니다.)"
+}

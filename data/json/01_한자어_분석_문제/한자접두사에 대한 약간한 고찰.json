@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "file_name": "한자접두사에 대한 약간한 고찰.pdf",
+    "relative_path": "1_한자어_분석_문제/한자접두사에 대한 약간한 고찰.pdf",
+    "is_text_based": true,
+    "pages_processed": 20,
+    "ref_page_ranges": [],
+    "timestamp": "2025-07-31T16:17:41.207615"
+  },
+  "cost_info": {
+    "total_usd": 0.000161,
+    "total_krw": 0.0,
+    "details": {
+      "cleaned_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 553,
+        "output_tokens": 114,
+        "cost_usd": 0.00011187500000000002
+      },
+      "ref_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 375,
+        "output_tokens": 5,
+        "cost_usd": 4.875e-05
+      }
+    }
+  },
+  "cleaned_text": "1) 전처리된 본문\n[PAGE 1]\nCopyright (C) 2003 NuriMedia Co., Ltd.\n\n[PAGE 2]\nCopyright (C) 2003 NuriMedia Co., Ltd.\n\n[PAGE 3]\nCopyright (C) 2003 NuriMedia Co., Ltd.\n\n[PAGE 4]\nCopyright (C) 2003 NuriMedia Co., Ltd.\n\n\n2) 각주/미주 목록\n(없음)",
+  "ref_text": "<본문 내용>"
+}
