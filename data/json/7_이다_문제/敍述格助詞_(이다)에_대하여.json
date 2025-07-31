@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "file_name": "敍述格助詞_(이다)에_대하여.pdf",
+    "relative_path": "7_이다_문제/敍述格助詞_(이다)에_대하여.pdf",
+    "is_text_based": true,
+    "pages_processed": null,
+    "ref_page_ranges": [],
+    "timestamp": "2025-07-31T03:53:53.999970"
+  },
+  "cost_info": {
+    "total_usd": 0.00091,
+    "total_krw": 1.0,
+    "details": {
+      "cleaned_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 1759,
+        "output_tokens": 1308,
+        "cost_usd": 0.0007103750000000001
+      },
+      "ref_text": {
+        "model": "gemini-1.5-pro",
+        "input_tokens": 1581,
+        "output_tokens": 5,
+        "cost_usd": 0.0001995
+      }
+    }
+  },
+  "cleaned_text": "```\n[PAGE 1]\nAccessed : Friday, July 25, 2025 3:09 AM\nDownload by : 163.239.XXX.XX0\n동국어문학\n제1집\nISSN : 1975-0641(Print)\n서술격 조사 <이다>에 대하여\n심영민\nTo cite this article : 심영민 (1987) 서술격 조사 <이다>에 대하여, 동국어문학, 1, 84-102\n① earticle에서 제공하는 모든 저작물의 저작권은 원저작자에게 있으며, 학술교육원은 각 저작물의 내용을 보증하거나 책임을 지지 않습니다.\n② earticle에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타 저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민·형사상의 책임을 질 수 있습니다.\nwww.earticle.net\n\n[PAGE 2]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 3]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 4]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 5]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 6]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 7]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 8]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 9]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 10]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 11]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 12]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 13]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 14]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 15]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 16]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 17]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 18]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 19]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n\n[PAGE 20]\nwww.earticle.net\n[Provider:earticle] Download by IP 163.239.XXX.XX0 at Friday, July 25, 2025 3:09 AM\n```\n\n```\n``` (각주/미주 없음)",
+  "ref_text": "<본문 내용>"
+}
