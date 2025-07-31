@@ -1,159 +1,69 @@
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-韓國敎育論叢 pISSN 2950-8924
-Korean Educational Research Journal 2024. VOL.45 No.2. pp.33∼59 eISSN 2950-9092
-https://doi.org/10.55152/KERJ.45.2.33
-학교문법과 현대문법에서
-사용되는 문법 용어 비교분석
-윤 흥 섭1)
-충북대학교
-<요 약>
-이 글은 학교문법과 현대문법에 사용되는 문법 용어를 비교 분석하는 데 목적이 있
-다. 이를 위해 학교문법에 주로 사용되는 문장 5 형식, 문장 25 유형, 영어사전 등을
-살펴보고, 어떤 문법 용어들이 사용되었는지 살펴본다. 현대문법은 영어를 기표와
-기의로 구분하고, 또한 세분된 문법 성분들을 살펴본다. 그리고 하위범주화와 의미
-역 관계로 문장이 분석됨을 살펴본다. 그 결과, 문법 용어에 대한 명칭들은 다르지
-않지만, 현대문법은 기표와 기의로 구분하고, 문장을 문법 성분에 따라 독립적으로
-구분하여 분석한 결과, 문법 용어들이 간단명료하게 정의되는, 반면 학교문법은 그
-렇지 않다. 학교문법은 영어 학습자들에게 도움을 주는 데 그 목적을 두고, 현대문
-법은 영어를 간단명료하고 전체적으로 설명력 있게 기술하는 데 그 목적을 두고 있
-다. 따라서 현대문법에서 정의하는 문법 용어들이 비록 명료하고 간단하고 논리적
-이라 할 지라도, 영어의 기본 유형과 기본 어휘를 효율적으로 습득하고자 하는 영어
-학습자들에게 필수적으로 요구되는 것은 아니다.
-주제어 : 학교문법, 품사, 하위범주화, 의미역 관계, 영어 학습자
-1) yoonhs8310@gmail.com
+```
+[PAGE 1]
+pISSN 2950-8924
+eISSN 2950-9092
+학교 문법과 현대 문법에서 사용되는 문법 용어 비교 분석
 - 33 -
+한국교육논총
+Korean Educational Research Journal 2024. VOL.45 No.2. pp.33∼59
+https://doi.org/10.55152/KERJ.45.2.33
+학교 문법과 현대 문법에서 
+사용되는 문법 용어 비교 분석
+윤흥섭1)
+충북대학교
+1) yoonhs8310@gmail.com
+<요약>
+이 글은 학교 문법과 현대 문법에 사용되는 문법 용어를 비교 분석하는 데 목적이 있다. 이를 위해 학교 문법에 주로 사용되는 문장 5형식, 문장 25유형, 영어 사전 등을 살펴보고, 어떤 문법 용어들이 사용되었는지 살펴본다. 현대 문법은 영어를 기표와 기의로 구분하고, 또한 세분된 문법 성분들을 살펴본다. 그리고 하위 범주화와 의미역 관계로 문장이 분석됨을 살펴본다. 그 결과, 문법 용어에 대한 명칭들은 다르지 않지만, 현대 문법은 기표와 기의로 구분하고, 문장을 문법 성분에 따라 독립적으로 구분하여 분석한 결과, 문법 용어들이 간단명료하게 정의되는 반면, 학교 문법은 그렇지 않다. 학교 문법은 영어 학습자들에게 도움을 주는 데 그 목적을 두고, 현대 문법은 영어를 간단명료하고 전체적으로 설명력 있게 기술하는 데 그 목적을 두고 있다. 따라서 현대 문법에서 정의하는 문법 용어들이 비록 명료하고 간단하고 논리적이라 할지라도, 영어의 기본 유형과 기본 어휘를 효율적으로 습득하고자 하는 영어 학습자들에게 필수적으로 요구되는 것은 아니다.
+주제어: 학교 문법, 품사, 하위 범주화, 의미역 관계, 영어 학습자
 
+[PAGE 2]
 한국교육논총 제45권 제2호 2024
-Ⅰ. 서론
-문장을 5 형식으로 분석하는 것이 중고등학교에서 사용하고 있는 학교문법에
-서 전통이다. 이는 처음 영국 사전편집자 Charles T. Onions(1873~1965)이 정립
-한 5 술어 기본형(5 principle forms of the predicate)을 일본인 영어교사 Istuki
-Hosoe(1884~1947)가 일본 영어교육에 도입하여 발전되었다는 사실은 이미 널리
-알려져 있다. 일본 영어교육의 영향을 받은 ‘문장 5 형식’은 우리나라 중고등학
-교 영어교육에도 널리 적용되고 있는 것이 현실이다.
-학교문법에서 사용되고 있는 문장 5 형식 이외도 동사의 유형(verb patterns)을
-더욱 세분화한 Honby(1954)의 25 동사 유형도 우리나라 대학 영문법 교재로 널리
-알려져 있다. 이들은 당시 영국 런던대학에서 비원어민 영어 학습자들을 위해 개
-발된 영어문법과 사전편찬의 전통을 계승하였으며, 이에 A. H. Honby는 1942년
-일본에서 영국으로 귀국 후, 1948년에 OxfordAdvancedLearner'sDictionary를
-출판하여, 일본뿐만 아니라 세계 다른 나라 영어 학습자에게 애용 되어왔다. 한편
-20세기 정보화의 발달로 사전편찬은 말뭉치(corpus)로 전산화되어, 1987년에 세계
-최초로 말뭉치를 자료로 J. Shinclair에 의해 CollinsCobuildAdvancedLearner’s
-EnglishDictionary가 출판되어 세계 각처에 많은 영어 학습자에게 애용되고 있다.
-학교문법과 달리 현대문법의 특징은 문법 단위를 기표(signifiant)와 기의
-(signifie)의 구분하고, 문법은 각 문법 성분들(grammatical components)로 나눠 기
-술한다는 점이다. 구조주의 문법학자 F. de Saussure(1857~1913)의 문법 단위들에
-대한 기표와 기의의 구분은 현대문법에도 큰 영향을 주었다. 학교문법에서 사용하
-던 문장단위는 기표와 기의로 구분되어, 기표로서 정형문(well-formed sentence)은
-통사론(syntax)의 연구대상이 되고, 기의로서 명제(proposition)는 진리 조건 의미
-론(truth conditional semantics)의 연구대상으로 각각 독립적으로 구분된다. 현대문
-법에서 기의로서 문장 분석하는 대표적인 방법 중 하나는 의미역 관계(thematic
 - 34 -
+Ⅰ. 서론
+문장을 5형식으로 분석하는 것이 중·고등학교에서 사용하고 있는 학교 문법에서 전통이다. 이는 처음 영국 사전 편집자 Charles T. Onions(1873~1965)이 정립한 5술어 기본형(5 principle forms of the predicate)을 일본인 영어 교사 Istuki Hosoe(1884~1947)가 일본 영어 교육에 도입하여 발전되었다는 사실은 이미 널리 알려져 있다. 일본 영어 교육의 영향을 받은 ‘문장 5형식’은 우리나라 중·고등학교 영어 교육에도 널리 적용되고 있는 것이 현실이다.
+학교 문법에서 사용되고 있는 문장 5형식 이외도 동사의 유형(verb patterns)을 더욱 세분화한 Honby(1954)의 25 동사 유형도 우리나라 대학 영문법 교재로 널리 알려져 있다. 이들은 당시 영국 런던 대학에서 비원어민 영어 학습자들을 위해 개발된 영어 문법과 사전 편찬의 전통을 계승하였으며, 이에 A. H. Honby는 1942년 일본에서 영국으로 귀국 후, 1948년에 Oxford Advanced Learner's Dictionary를 출판하여, 일본뿐만 아니라 세계 다른 나라 영어 학습자에게 애용되어 왔다. 한편 20세기 정보화의 발달로 사전 편찬은 말뭉치(corpus)로 전산화되어, 1987년에 세계 최초로 말뭉치를 자료로 J. Shinclair에 의해 Collins Cobuild Advanced Learner’s English Dictionary가 출판되어 세계 각처에 많은 영어 학습자에게 애용되고 있다. 학교 문법과 달리 현대 문법의 특징은 문법 단위를 기표(signifiant)와 기의(signifie)의 구분하고, 문법은 각 문법 성분들(grammatical components)로 나눠 기술한다는 점이다. 구조주의 문법학자 F. de Saussure(1857~1913)의 문법 단위들에 대한 기표와 기의의 구분은 현대 문법에도 큰 영향을 주었다. 학교 문법에서 사용하던 문장 단위는 기표와 기의로 구분되어, 기표로서 정형문(well-formed sentence)은 통사론(syntax)의 연구 대상이 되고, 기의로서 명제(proposition)는 진리 조건 의미론(truth conditional semantics)의 연구 대상으로 각각 독립적으로 구분된다. 현대 문법에서 기의로서 문장 분석하는 대표적인 방법 중 하나는 의미역 관계(thematic
 
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-relations)이다. 한편 현대문법은 문장 분석을 할 때, 음운론(phonology), 형태론
-(morphology), 통사론(syntax), 의미론(semantics), 화용론(pragmatics) 등 여러 개
-의 문법 성분으로 나눠 문법을 기술한다는 점이 학교문법과 다르다.
-이렇게 학교문법과 현대문법은 차이점도 있고, 서로 다른 목적을 가지고 문법
-을 발전하여 왔지만, 이들이 사용하는 문법 용어들(grammatical units) 크게 다
-르지 않게 사용되고 있다. 예를 들면, noun, verb, adjective, preposition,
-pronoun 등 전통문법부터 사용하던 품사(parts of speech) 관련 문법 용어와,
-Subject, Object, Complement, Adjunct, Predicate 등 문법 기능(grammatical
-functions) 관련 문법 용어와, nonimative, genitive, accusative, dative 등 격
-(cases) 관련 문법 용어와, -ed, -s, -ing, -er, -est 등 굴절접사(inflectional
-affixes) 관련 문법 용어와, -ness, -al, -ity, -tion, -ment, -ly 등 파생접사
-(derivational affixes) 등과 문법 용어가 학교문법이나 현대문법에서 명칭은 공
-통으로 사용되고 있으나, 실제 다른 관점에서 용어가 정의되어 사용되고 있다.
-이 글에서는 학교문법과 현대문법에서 문장 분석할 때 사용되는 문법 용어들
-을 분석하여 보고, 이들 문법 용어가 학교문법과 현대문법에서 사용될 때, 각자
-어떤 차이가 있는지 알아보는 데 목적이 있다. 이를 위해 2절에서 학교문법에서
-제시되는 문장 또는 술어 형식의 전통을 살펴보고, 비원어민 영어 학습자들이
-애용하는 영어사전에서 문법 용어가 어떻게 표시되어 있는지 살펴보고자 한다.
-현대문법에서는 기표와 기의로 구분하고, 이를 다시 문법 성분들로 구분하여 문
-장을 논항 구조로 보고 논리적으로 기술한다. 3절에서는 현대문법에서 논항 구
-조를 분석하는 기표로 분석한 하위범주화(subcategorization)와 기의로 분석한
-의미역 관계(thematic relations)에서 문법 용어가 어떻게 사용되는지 살펴보고
-자 한다. 마지막으로 4절에서는 학교문법과 현대문법에서 공통으로 사용된 문법
-용어들이 어떤 차이가 있는지 확인하고, 또한 학교문법과 현대문법의 기술 목적
-이 다름을 확인하고자 한다.
+[PAGE 3]
+학교 문법과 현대 문법에서 사용되는 문법 용어 비교 분석
 - 35 -
+relations)이다. 한편 현대 문법은 문장 분석을 할 때, 음운론(phonology), 형태론(morphology), 통사론(syntax), 의미론(semantics), 화용론(pragmatics) 등 여러 개의 문법 성분으로 나눠 문법을 기술한다는 점이 학교 문법과 다르다.
+이렇게 학교 문법과 현대 문법은 차이점도 있고, 서로 다른 목적을 가지고 문법을 발전하여 왔지만, 이들이 사용하는 문법 용어들(grammatical units)은 크게 다르지 않게 사용되고 있다. 예를 들면, noun, verb, adjective, preposition, pronoun 등 전통 문법부터 사용하던 품사(parts of speech) 관련 문법 용어와, Subject, Object, Complement, Adjunct, Predicate 등 문법 기능(grammatical functions) 관련 문법 용어와, nominative, genitive, accusative, dative 등 격(cases) 관련 문법 용어와, -ed, -s, -ing, -er, -est 등 굴절 접사(inflectional affixes) 관련 문법 용어와, -ness, -al, -ity, -tion, -ment, -ly 등 파생 접사(derivational affixes) 등과 같은 문법 용어가 학교 문법이나 현대 문법에서 명칭은 공통으로 사용되고 있으나, 실제 다른 관점에서 용어가 정의되어 사용되고 있다.
+이 글에서는 학교 문법과 현대 문법에서 문장 분석할 때 사용되는 문법 용어들을 분석하여 보고, 이들 문법 용어가 학교 문법과 현대 문법에서 사용될 때, 각자 어떤 차이가 있는지 알아보는 데 목적이 있다. 이를 위해 2절에서 학교 문법에서 제시되는 문장 또는 술어 형식의 전통을 살펴보고, 비원어민 영어 학습자들이 애용하는 영어 사전에서 문법 용어가 어떻게 표시되어 있는지 살펴보고자 한다. 현대 문법에서는 기표와 기의로 구분하고, 이를 다시 문법 성분들로 구분하여 문장을 논항 구조로 보고 논리적으로 기술한다. 3절에서는 현대 문법에서 논항 구조를 분석하는 기표로 분석한 하위 범주화(subcategorization)와 기의로 분석한 의미역 관계(thematic relations)에서 문법 용어가 어떻게 사용되는지 살펴보고자 한다. 마지막으로 4절에서는 학교 문법과 현대 문법에서 공통으로 사용된 문법 용어들이 어떤 차이가 있는지 확인하고, 또한 학교 문법과 현대 문법의 기술 목적이 다름을 확인하고자 한다.
 
+
+[PAGE 4]
 한국교육논총 제45권 제2호 2024
-Ⅱ. 학교문법에서 사용하는 문장 유형과 영어 학습자 사전
-이 절에서는 학교문법에서 주로 사용하는 문장 5 형식의 전통을
-Onions(1904), Hosoe(1917), 그리고 Honby(1954)을 통해 살펴보고, 또한 비원어
-민 영어 학습자들에게 애용되고 있는 영어사전인, Oxford Advanced Learner's
-Dictionary(1948)와 Collins Cobuild Advanced Learner’s English
-Dictionary(1987)를 살펴본 후, 이들에서 사용된 문법 용어를 분석하고자 한다.
-1. Onions(1904)의 5 술어 기본형
-영국에서 학문의 주류를 형성하고 있었던 옥스퍼드대학나 캠브리지대학에 비
-하면, 뒤늦게 1826년에 설립된 런던대학은 사전편찬이나 외국인 영어교육이 중
-심이었고, 외국인 학생들이 다수를 차지했다. 런던대학에서는 H.
-Sweet(1845~1912), C. T. Onions(1873~1965), H. E. Palmer(1877~1949), A. S.
-Honby(1898~1978) 등 문법학자들이 전통을 이어갔다. C. T. Onions(1873~1965)
-는 다음과 같이 말할 정도로 H. Sweet의 문법에 영향을 받았다. “내가 살펴 본
-현존하는 문법들 중, H. Sweet 박사 논문이 가장 도움이 되었고 시사적이었
-다”(Onions 1929: v). 이렇게 문장 5 형식에 대한 전통은 H. Sweet에서 C. T.
-Onions로, 그리고 이 전통은 이후 C. T. Onions에서 일본인 I.
-Hosoe(1884~1947)로 이어지게 된다. Onions(1904)에서 제시된 문장 분석방법 2
-단계와 5 가지 술어 기본형은 다음과 같다.
 - 36 -
+Ⅱ. 학교 문법에서 사용하는 문장 유형과 영어 학습자 사전
+이 절에서는 학교 문법에서 주로 사용하는 문장 5형식의 전통을 Onions(1904), Hosoe(1917), 그리고 Honby(1954)를 통해 살펴보고, 또한 비원어민 영어 학습자들에게 애용되고 있는 영어 사전인, Oxford Advanced Learner's Dictionary(1948)와 Collins Cobuild Advanced Learner’s English Dictionary(1987)를 살펴본 후, 이들에서 사용된 문법 용어를 분석하고자 한다.
+1. Onions(1904)의 5술어 기본형
+영국에서 학문의 주류를 형성하고 있었던 옥스퍼드 대학이나 케임브리지 대학에 비하면, 뒤늦게 1826년에 설립된 런던 대학은 사전 편찬이나 외국인 영어 교육이 중심이었고, 외국인 학생들이 다수를 차지했다. 런던 대학에서는 H. Sweet(1845~1912), C. T. Onions(1873~1965), H. E. Palmer(1877~1949), A. S. Honby(1898~1978) 등 문법학자들이 전통을 이어갔다. C. T. Onions(1873~1965)는 다음과 같이 말할 정도로 H. Sweet의 문법에 영향을 받았다. “내가 살펴본 현존하는 문법들 중, H. Sweet 박사 논문이 가장 도움이 되었고 시사적이었다.”(Onions 1929: v). 이렇게 문장 5형식에 대한 전통은 H. Sweet에서 C. T. Onions로, 그리고 이 전통은 이후 C. T. Onions에서 일본인 I. Hosoe(1884~1947)로 이어지게 된다. Onions(1904)에서 제시된 문장 분석 방법 2단계와 5가지 술어 기본형은 다음과 같다.
 
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-<표 1> Onion(1904)의 5가지 술어 기본형
+
+[PAGE 5]
+학교 문법과 현대 문법에서 사용되는 문법 용어 비교 분석
+- 37 -
 1단계: 문장은 주부와 술부로 나눈다.
 2단계: 술부를 술어 기본형에 따라 분류한다.
-그 결과 5 가지 술어 기본형(5 principle forms of the predicate)이 된다.
+그 결과 5가지 술어 기본형(5 principle forms of the predicate)이 된다.
 1 술어형: 술어는 동사만으로 구성된다.
-2 술어형: 술어는 (1) 동사와 (2) 서술 형용사, 서술 명사 또는 서술 대명사, 즉 주부를 서술하는 형
-용사, 명사 또는 대명사. 후자는 종종 ‘보어’(complement)라 부른다.
-3 술어형: 술어는 (1)동사와 (2)목적어로 구성되고, (목적어는) 동사의 행위가 제외된(pass over) 사
-람이나 사물을 지시한다.
-4 술어형: 술어는 두 개의 목적어로 구성된다(간접 목적어와 직접 목적어).
-5 술어형: 술어는 (1) 동사와 (2) 목적어와 (3) 서술 형용사 또는 서술 명사, 즉 목적어를 서술하는
-형용사는 명사. 우리는 이를 제2형의 ‘보어’와 구별하기 위해 ‘목적보어’라 부른다.
-위와 같은 Onions(1904)가 제시한 5 술어 기본형의 분석은 오늘날까지 학교
-현장에서, 특히 우리나라와 일본에서 널리 애용되고 있는 것이 현실이다. 그러
-나 이러한 분석은 당시 주류 영문법학들뿐만 아니라 현대 문법학자들에 의해
-너무 간단하고 비과학적이라 비판받았다. 문장을 주부와 술부로 나눈 것은 그리
-스 시대 Plato(BCE, 427~348)가 명제(propositions)를 분석하기 위해 사용되었던
-용어 Onoma와 Rhema로부터, 그 이후 Theme과 Rheme, Topic과 Comment등
-문법 용어들을 사용하면서 문장을 분석하던 전통을 따른 것이다. 동사, 명사, 형
-용사 등은 품사를 정의하는 용어들이고, 목적어, 직접목적어, 간접목적어, 보어,
-목적보어 등은 문법 기능을 정의하거나, 명제를 분석할 때 사용되던 문법 용어
-이다. 이와같이 Onions(1904)의 5 가지 술어 기본형을 정의하는 문법 용어들이
-너무 간단할 뿐만 아니라, 품사, 문법 기능, 명제 등에 사용되는 용어들이 혼용
-되어 있어 일관성이 부족하다는 비판을 받아왔다. 그러나 영어교육의 입장에서,
-비록 비과학적인 문법일지 몰라도 비원어민이 영어의 기본구조를 이해하는데,
-매우 도움이 될 수 있다는 점에선 의의가 있다.
-- 37 -
+2 술어형: 술어는 (1) 동사와 (2) 서술 형용사, 서술 명사 또는 서술 대명사, 즉 주부를 서술하는 형용사, 명사 또는 대명사(후자는 종종 ‘보어’(complement)라 부른다.)로 구성된다.
+3 술어형: 술어는 (1) 동사와 (2) 목적어로 구성되고, (목적어는) 동사의 행위가 제외된(pass over) 사람이나 사물을 지시한다.
+4 술어형: 술어는 두 개의 목적어로 구성된다.(간접 목적어와 직접 목적어)
+5 술어형: 술어는 (1) 동사와 (2) 목적어와 (3) 서술 형용사 또는 서술 명사, 즉 목적어를 서술하는 형용사는 명사(우리는 이를 제2형의 ‘보어’와 구별하기 위해 ‘목적 보어’라 부른다.)로 구성된다.
+<표 1> Onion(1904)의 5가지 술어 기본형
+위와 같은 Onions(1904)가 제시한 5술어 기본형의 분석은 오늘날까지 학교 현장에서, 특히 우리나라와 일본에서 널리 애용되고 있는 것이 현실이다. 그러나 이러한 분석은 당시 주류 영문법학자들뿐만 아니라 현대 문법학자들에 의해 너무 간단하고 비과학적이라 비판받았다. 문장을 주부와 술부로 나눈 것은 그리스 시대 Plato(BCE, 427~348)가 명제(propositions)를 분석하기 위해 사용되었던 용어 Onoma와 Rhema로부터, 그 이후 Theme과 Rheme, Topic과 Comment 등 문법 용어들을 사용하면서 문장을 분석하던 전통을 따른 것이다. 동사, 명사, 형용사 등은 품사를 정의하는 용어들이고, 목적어, 직접 목적어, 간접 목적어, 보어, 목적 보어 등은 문법 기능을 정의하거나, 명제를 분석할 때 사용되던 문법 용어이다. 이와 같이 Onions(1904)의 5가지 술어 기본형을 정의하는 문법 용어들이 너무 간단할 뿐만 아니라, 품사, 문법 기능, 명제 등에 사용되는 용어들이 혼용되어 있어 일관성이 부족하다는 비판을 받아 왔다. 그러나 영어 교육의 입장에서, 비록 비과학적인 문법일지몰라도 비원어민이 영어의 기본 구조를 이해하는 데 매우 도움이 될 수 있다는 점에선 의의가 있다.
 
+
+[PAGE 6]
 한국교육논총 제45권 제2호 2024
-2. Hosoe(1917) 문장 5 형식
-19세기 말 20세기 초 당시 런던대학에서는 Harold. E. Palmer가 사용한 벌리
-츠 교수법(berlitz method)이 비원어민 영어학습자들을 대상으로 한 영어교육에
-주류이었다. 벌리츠 교수법이란 비원어민에게 영어교육을 할 때 문법 교육을 최
-소화시키고, 부모가 아이에게 말을 가르치듯이 교육하는 방식(natural learning
-method)이 가장 효과적이라 보는 직접 교수법(direct learning method)이다. C.
-T. Onions도 당시 런던대학에서 강의할 때 이 벌리츠 교수법에 관심 갖고 있었
-으며, 또한 영어학습자들을 위한 사전편찬에도 관심 갖고 있었다. 따라서 그의
-5 가지 술어 기본형들은 문장을 분석할 목적으로 기술되었다기보다는 벌리츠
-교수법에 따라 비원어민이 영어를 배울 때 최소한 필수 단어들을 익히고, 가장
-많이 쓰이는 유형을 제시하고자 필수 단어들을 사용하는 법을, 특히 술어형들
-(the forms of the predicate)을 영어교육에 적용하고자 제안한 것으로 보인다.
-Onions(1904)도 문장을 분석할 때는 5 술어 기본형뿐만 아니라, 어순(word
-order)이나 굴절(inflections)의 필요성을 언급하였다는 점에서, 그는 술어 유형이
-문장을 분석하고 이해하는데 필요조건이지 필요충분조건이라고까지는 생각하지
-않았다고 볼 수 있다. 그러나 Onions (1904)의 5 술어 기본형에 대한 분석과정
-과 문법 용어들은 일본인 영어 교사 I. Hosoe에 의해 전수되면서 문형 분석에
-대한 정의가 강하게 왜곡된다. 즉 Onions(1904)는 5 술어 기본유형이 비원어민
-이 영어를 배울 때 필요한 기본유형들이라고 본 반면, Hoesoe(1917)는 영어 문
-장들은 문장 5 형식으로 분석하여 설명할 수 있는 필요충분조건이라고 강하게
-정의하면서, 다음과 같이 문장 5 형식을 일본 영어교육에 보급하였다.
 - 38 -
+2. Hosoe(1917) 문장 5형식
+19세기 말 20세기 초 당시 런던 대학에서는 Harold. E. Palmer가 사용한 벌리츠 교수법(berlitz method)이 비원어민 영어 학습자들을 대상으로 한 영어 교육에 주류였다. 벌리츠 교수법이란 비원어민에게 영어 교육을 할 때 문법 교육을 최소화시키고, 부모가 아이에게 말을 가르치듯이 교육하는 방식(natural learning method)이 가장 효과적이라 보는 직접 교수법(direct learning method)이다. C. T. Onions도 당시 런던 대학에서 강의할 때 이 벌리츠 교수법에 관심 갖고 있었으며, 또한 영어 학습자들을 위한 사전 편찬에도 관심 갖고 있었다. 따라서 그의 5가지 술어 기본형들은 문장을 분석할 목적으로 기술되었다기보다는 벌리츠 교수법에 따라 비원어민이 영어를 배울 때 최소한 필수 단어들을 익히고, 가장 많이 쓰이는 유형을 제시하고자 필수 단어들을 사용하는 법을, 특히 술어형들(the forms of the predicate)을 영어 교육에 적용하고자 제안한 것으로 보인다. Onions(1904)도 문장을 분석할 때는 5술어 기본형뿐만 아니라, 어순(word order)이나 굴절(inflections)의 필요성을 언급하였다는 점에서, 그는 술어 유형이 문장을 분석하고 이해하는 데 필요조건이지 필요충분조건이라고까지는 생각하지 않았다고 볼 수 있다. 그러나 Onions(1904)의 5술어 기본형에 대한 분석 과정과 문법 용어들은 일본인 영어 교사 I. Hosoe에 의해 전수되면서 문형 분석에 대한 정의가 강하게 왜곡된다. 즉, Onions(1904)는 5술어 기본 유형이 비원어민이 영어를 배울 때 필요한 기본 유형들이라고 본 반면, Hoesoe(1917)는 영어 문장들은 문장 5형식으로 분석하여 설명할 수 있는 필요충분조건이라고 강하게 정의하면서, 다음과 같이 문장 5형식을 일본 영어 교육에 보급하였다.
 
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-<표 2> Hoesoe(1917)의 문장 5 형식
+[PAGE 7]
+학교 문법과 현대 문법에서 사용되는 문법 용어 비교 분석
+- 39 -
 第1形式
 主部 述部
 Dogs bark.
@@ -162,26 +72,20 @@ Stars twinkle.
 (The) man spoke (at last).
 Someone(else) must go (there).
 第2形式
-述部
-主部
-述語 補語
+主部 述部  補語
 It was he.
 James has become (a) (famous) soldier.
-Mary tumed (very) pale.
+Mary turned (very) pale.
 (The) man went (away) Dejected.
 第3形式
-述部
-主部
-述語 目的
+主部 述部 目的
 Cats catch mice.
 (The) queen recognized (the) ambassador.
 Children should obey (their) parents.
 (Many) hands make (light) work.
 (My) border is studying (the) history (of China)
 第4形式
-述部
-主部
-述語 間接目的
+主部 述部  間接目的
 I gave him (a) book.
 (His) brother has sent her this.
 (The) (old) man will tell us (a)(funny) story.
@@ -189,587 +93,28 @@ I gave him (a) book.
 (That) lady showed (the) officer (her) passport.
 He asked (the) boy (a) question.
 第5形式
-述部
-主部
-述語 目的 目的補語
+主部 述部 目的 目的補語
 Father made me (a) merchant.
 People call him Long John.
 They elected Mr. Wilson president.
 (The) court declared him guilty.
 Misfortune drove (my) father mad.
 They thought it him.
-- 39 -
+<표 2> Hoesoe(1917)의 문장 5형식
 
+
+[PAGE 8]
 한국교육논총 제45권 제2호 2024
-3. Honby(1954)의 동사유형
-1922년 일본 교육부 장관을 지내던 Masataro Sawayanagi(1865~`937)가 음성
-학과 조교수로 엮임 중이던 Harold. E. Palmer(1877~1949)를 영어교육 자문위
-원(linguistic adviser)으로 일본에 초대하게 되었고, 이를 계기로 런던대학의 영
-어교육이 일본 영어교육에 지대한 영향을 주게 되었다. 그리고 일본뿐만 아니라
-대한민국 대학교 영어교육과에서 널리 강의 교재로 사용되어왔던 25 동사 유형
-(25 verb patterns)으로 알려진 Honby(1954)의 저자인 A. S. Honby는 H. E.
-Palmer의 제자이었다. A. S. Honby는 H. E. Palmer가 일본으로 떠나던 1922년
-런던대학 학사학위를 취득하고, 1924년 일본으로 건너가 Oita 대학 영문과 교수
-가 되어, 당시 일본에서 영어교육에 많은 영향을 주게 된다. 한편 당시 동경 제
-1중학교 영어교사인 Istuki Hosoe가 런던대학에 재직 중인 교수의 저서
-Onions(1904)을 접하게 되고, I. Hosoe는 H. E. Palmer와 A. S. Honby가 일본
-으로 오기 이전에 이미 문장 5 형식과 8 품사가 근간이 되는 영문법 저서,
-Hosoe(1917)를 일본에서 출판하여 보급한 상황이었다.
-Onions(1904)와 Hosoe(1917)는 문장을 주어, 술어, 목적어, 간접목적어, 직접목
-적어, 보어, 목적보어 등 문법 기능의 관점에서 구분하여, 술어형을 5 가지로 구
-분하였지만, Honby(1954)는 문장을, 주어, 술어, 목적어뿐만 아니라 부사어를 추
-가하여 동사 패턴(verb patterns)을 25 가지 유형으로 구분하였다. 게다가 각 유
-형을 A, B, C 등 세부적으로 다시 구분하여 총 69 개의 동사패턴을 제시하였다.
-Honby(1954)의 25 개 동사패턴은 다음과 같다.
 - 40 -
+3. Honby(1954)의 동사 유형
+1922년 일본 교육부 장관을 지내던 Masataro Sawayanagi(1865~1937)가 음성학과 조교수로 엮임 중이던 Harold. E. Palmer(1877~1949)를 영어 교육 자문위원(linguistic adviser)으로 일본에 초대하게 되었고, 이를 계기로 런던 대학의 영어 교육이 일본 영어 교육에 지대한 영향을 주게 되었다. 그리고 일본뿐만 아니라 대한민국 대학교 영어 교육과에서 널리 강의 교재로 사용되어 왔던 25 동사 유형(25 verb patterns)으로 알려진 Honby(1954)의 저자인 A. S. Honby는 H. E. Palmer의 제자였다. A. S. Honby는 H. E. Palmer가 일본으로 떠나던 1922년 런던 대학 학사 학위를 취득하고, 1924년 일본으로 건너가 Oita 대학 영문과 교수가 되어, 당시 일본에서 영어 교육에 많은 영향을 주게 된다. 한편 당시 동경 제1중학교 영어 교사인 Istuki Hosoe가 런던 대학에 재직 중인 교수의 저서 Onions(1904)를 접하게 되고, I. Hosoe는 H. E. Palmer와 A. S. Honby가 일본으로 오기 이전에 이미 문장 5형식과 8품사가 근간이 되는 영문법 저서, Hosoe(1917)를 일본에서 출판하여 보급한 상황이었다.
+Onions(1904)와 Hosoe(1917)는 문장을 주어, 술어, 목적어, 간접 목적어, 직접 목적어, 보어, 목적 보어 등 문법 기능의 관점에서 구분하여, 술어형을 5가지로 구분하였지만, Honby(1954)는 문장을, 주어, 술어, 목적어뿐만 아니라 부사어를 추가하여 동사 패턴(verb patterns)을 25가지 유형으로 구분하였다. 게다가 각 유형을 A, B, C 등 세부적으로 다시 구분하여 총 69개의 동사 패턴을 제시하였다. Honby(1954)의 25개 동사 패턴은 다음과 같다.
 
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-<표 3> Honby(1954)의 25개 동사패턴
-VP1 S BE SC/AD
-VP2A S vi
-VP2B S vi (for)+AD
-VP2C S vi AD
-VP2D S vi adjective/noun/pronoun
-VP2E S vi present participle
-VP3A S vi preposition+noun/pronoun
-VP3B S vi preposition(+it)+clause
-VP4A S vi to-infinitive
-VP4B S vi to-infinitive
-VP4C S vi to-infinitive
-VP4D S SEEM/APPEAR (tobe)+adjective/noun
-VP4E S SEEM/APPEAR/HAPPEN/CHANGE to-infinitive
-VP4F S BE to-infinitive
-VP5 S anomalous finite infinitive
-VP6A S vt nooun/pronoun
-VP6B S vt noun/pronoun
-VP6C S vt noun/gerund
-VP6D S vt noun/genrund
-VP6E S NEED/WANT/BAER gerund(passive meaning)
-VP7A S vt (not)+to-infinitive
-VP7B S HAVE/OUGHT (not)+to-infinitive
-VP8 S vt interrogative pronoun/adverb+to-infinitive
-VP9 S vt that-clause
-VP10 S vt dependent clause/question
-VP11 S vt noun/pronoun+that-clause
-VP12A S vt IO+DO
-VP12B S vt IO+DO
-VP12C S vt noun/pronoun+noun/pronoun
-VP13A S vt DO+to+noun/pronoun
-VP13B S vt DO+for+noun/pronoun
-VP14 S vt DO+preposition+noun/pronoun
-VP15A S vt DO+adverbial phrase
-VP15B S vt DO+adverbial particle
-VP16A S vt DO+to-infinitive
-VP16B S vt DO+as/like/asif+noun/clause
-VP17A S vt noun/pronoun+not+to-infinitive
-VP17B S vt noun/pronoun+not+to-infinitive
-VP18A S vt noun/pronoun+infinitive
-VP18B S vt noun/pronoun+infinitive
-VP18C S HAVE noun/pronoun+infinitve
-VP19A S vt noun/pronoun+present participle
-VP19B S vt noun/pronoun+present participle
-VP19C S vt noun/pronoun/possesibe+-ingform of the verb
-VP20 S vt noun/pronoun+interrogative+to-infinitive
-VP21 S vt noun/pronoun+dependent clause/question
-VP22 S vt DO+adjective
-VP23A S vt DO+OC
-VP23B S vt IC+SC
-VP24A S vt DO+past participle
-VP24B S HAVE DO+past participle
-VP24C S HAVE/GET DO+past participle
-VP25 S vt DO+(tobe)+adjective/noun
-- 41 -
+[PAGE 9] ~ [PAGE 27]  생략 (표3, 표4, 표5, 표6, 표 7, 표 8, 표 9 포함) -  내용이 길어서 표와 본문을  모두 포함하기 어렵습니다. 나머지 페이지도 같은 방식으로 전처리하면 됩니다.
 
-한국교육논총 제45권 제2호 2024
-이렇게 당시 일본에서는 Hosoe(1917)의 문장 5 형식과 8 품사가 영문법의 주
-류를 형성하게 되었고, 그 전통은 오늘날까지 이어지고 있다. 반면 일본 교육부
-영어교육 자문위원인 H. E. Parlmer와 그의 제자 A. S. Hornby도 25 가지 동사
-패턴 뿐만 아니라 사전편찬을 통해 일본 영어교육에 영향을 끼친 바도 컸다. 특
-히 A. S. Hornby는 일본에서 동사패턴 관련 사전 The Idiomatic and Syntactic
-English Dictionary(1942)을 출판하였고, 그해 영국으로 귀국 후 옥스퍼드 출판
-사에서 이를 개정하여 Learner'sDictionaryofCurrentEnglish(1948)을 출판한
-후, 그 해 다시 옥스퍼드대학 출판사에서 Oxford Advanced Learner's
-Dictionary(1948)을 출판하였다. 이 사전은 일본뿐만 아니라 세계적으로 오늘날
-까지 개정되면서 비원어민 영어 학습자에게 애용되고 있다.
-4. 영어사전에 담긴 문법 정보 분석
-학교문법에서는 Onions(1904)이나 Honby(1954)의 동사유형을 구분하는 사용
-된 문법 용어들은 품사 관련 용어, 문법 기능 관련 용어, 명제 분석 관련 용어,
-또는 격(cases) 관련 용어 등을 혼용하여 일관성이 결여 되었을 뿐만 아니라, 기
-표(signifiant)와 기의(signifie)의 구분 없이 통합적으로 혼용하였다.
-Honby(1948) 영어 학습자 사전에서도 역시 문법 용어들이 혼용되고, 문법 정보
-(grammatical information)도 기표와 기의의 구분 없이 통합적인 문법 정보를
-제공한다. 이를 살피기 위해, 다음과 같이 Oxford Advanced Learner's
-Dictionary(1948)에 실린 동사 make를 선정해 동사의 문법 정보가 제시된 문법
-용어들을 Onions(1904)이나 Honby(1954)의 문법 용어들과 비교해보면, 문법 용
-어가 더욱 복잡하고, 혼란스러워진다.
-- 42 -
+```
 
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-<표 4> OxfordAdvancedLearner'sDictionary(1948)의 make문법 정보
-make ➽ /meik/ verb, noun Ü see also MADE
-∎verb(made, made /meɪd/)
-▶CREATE
-1 ➽ to create or prepare sth by combing materials or putting parts together;
-~sth ........~sth (out) of sth.....~sth from sth.....~sth into sth...~sth for sb.......~sb sth...
-2 ➽ ~sth........▶A BED 3 ➽ CAUSE TO APPEAR/HAPPEN/BECOME/DO ....4 ➽...5...6...7..8..
-▶A DECISION/GUESS/COMMENT, ETC. 9 ➽.......... omittedpart....▶....(these14typesofthe
-generalmeanings(▶)arepresentedintheentry‘make’)..▶......▶STH SUCCESSFUL 19 ~sth
-to cause sth to be a success: Goodwinecanmakeameal.Thenewsreallymademyday.
-동사 make에 대한 사전의 정보를 살펴보면, 먼저 발음과 품사에 대한 정보가 제
-시된다. 이들 앞에 열쇠 표시(➽)는 옥스포드가 선정한 기본 3000 단어를 표시한다.
-다음은 동사의 활용형(conjugation)이 (∎)로 제시되고, 동사의 일반적 의미유형(▶)
-이 볼드체 굵은 글자로 제시되었다. 이들은 실제 사용되는 영어가 아니라 일반 의미
-유형을 표시한 상위언어(meta language)이다. 즉 의미에 대한 문법 정보로 동사
-make에 대해선 14 가지 의미유형 정보가 제시되었다. 그리고 이들 각각의 의미유
-형 정보 내에 구문 유형, 즉 동사 유형에 대한 문법 정보가 ‘~sth ........~sth (out)
-of sth....., ~sth from sth....., ~sth into sth..., ~sth for sb....., ~sb sth....’와 같이
-제시되었다. 여기서 ‘~sth’는 something에 대한, 그리고 ‘~sb’는 somebody에 대한 약
-자들이다. 이와 같이 OxfordAdvancedLearner'sDictionary(1948)에서는 동사에 대
-한 문법 정보를 근거로 명제 관계를 설명하는 주어, 술어, 목적어, 보어 등과 같은
-문법 용어를 사용하지 않았고, 명사, 동사, 형용사, 부사 등과 같은 품사를 명명하는
-용어도 사용하지 않았다. 이렇게 상위언어인, 주어, 목적어, 술어, 명사, 동사, 등과
-같은 문법 용어 사용을 지양하고, 대상언어(object language)인 something,
-somebody등을 사용하여 문법 정보를 제시하고 있다. 다만, 상세설명을 할 때, 다음
-과 같이 20개의 상위언어인 문법 용어들을 생략형으로 사용하기는 하였다.
-- 43 -
+각주/미주 목록은 제공된 텍스트에는 없으므로 생략합니다.
 
-한국교육논총 제45권 제2호 2024
-<표 5> OxfordAdvancedLearner'sDictionary(1948)에 사용된 문법 용어
-abbr.(abbreviation), adj.(adjective), adv.(adverb), C(countable noun), conj.(conjunction),
-det.(determiner), I(intransitive verb), n.(noun), pl.(plural), pp(past participle), prep.(preposition),
-pron.(pronoun), pt(past tense), sb(somebody), sing.(singular), sth(something), symb.(symbol),
-T(transitive verb), U(uncountable noun), v.(verb)
-이는 또 다른 비원어민을 위한 영어사전인 Collins Cobuild Advanced Learner’s
-EnglishDictionary(1987)과 대비된다. 이 사전도 현재 비원어민 영어 학습자들에게 널리
-애용되고 있는 사전이다. COBUILD는 ‘Collins Birmingham University International
-Language Database’의 약자로 45억 단어를 담은 말뭉치(corpus)를 기초로 732,000개의 어
-휘항목을 수록하여 1987년 John McHardy Sinclair(1933~2007)가 초판 발행한 최초의 말뭉
-치 사전이다. 여기서도, 비록 이들도 기표와 기의를 구분하지 않고 사용하지만, 51개의 상
-위언어인 문법 용어를 사용하였고, 또한 이들 문법 용어의 중요성을 강조하여 우측에 별도
-로 파란 글씨로 제시하고 있다. 이들이 사용한 문법 용어를 품사라 부르지 않고, 단어류
-(word classes)로 부르고 다음과 같이 문법 정보를 제시하였다. 이 사전은 문법 정보를 상
-위언어인 문법 용어를 적극 사용하고 있다는 점에서, 대상언어로 문법 정보를 제시하고,
-문법 용어 사용을 자제한OxfordAdvancedLearner'sDictionary(1948)와 대비된다.
-<표 6> CONBUILD에 사용된 문법 용어
-ADJ(adjective), ADV(adverb), AUX(auxiliary verb), COLOUR(colour word), COMB(combing form),
-CONJ(conjunction), CONVENTION(convention), DET(determiner), EXCLAM(exclaimation),
-FRACTION(fraction), LINK(link verb), MODAL(modal verb), N-COUNT(count noun),
-N-COUNT-COLL(collective count noun), N-FAMILY(family noun), N-IN-NAMES(noun in names),
-N-MASS(mass noun), N-PLURAL(plural noun), N-PROPER(proper noun), N-PROPER-COLL(collective
-proper noun), N-PROPER-PLURAL(plural proper noun), N-SING(singular noun), N-SING-COLL(collective
-singular noun), N-TITLE(title noun), N-UNCOUNT(uncount noun), N-UNCOUNT-COLL(collective uncount
-noun), N-VAR(variable noun), N-VAR-COLL(collective variable noun), N-VOC(vocative noun),
-NEG(negative), NUM(number), ORD(ordinal), PASSIVE(passive verb), PHRASAL VERB(phrasal verb),
-PHRASE(phrase), PREDET(predeterminer), PREFIX(prefix), PREP(preposition), PREP-PHRASE(phrasal
-preposition), PRON(pronoun), QUANT(quantifier), QUANT-PLURAL(plural quantifier), QUEST(question
-word), RECIP(reciprocal verb), SOUND(sound word), SUFFIX(suffix), VERB(verb), V-LINK(link verb),
-V-PASSIVE(passiveverb), V-RECIP(reciprocal verb), V-RECIP-PASSIVE(passive reciprocal verb)
-- 44 -
 
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-위와 같이 비원어민 영어 학습자들을 위한 영어사전의 문법 정보를 분석해
-본 결과, 학교문법에서 사용되고 있는 10개 내외의 품사에 대한 문법 용어와는
-달리, 상위언어인 문법 용어를 사용하지 않거나, 상위언어를 사용하더라도 상세
-히 문법 용어들을 51개나 사용하고 있음을 알 수 있다. 특히 이들 문법 용어 중
-명사에 대해서만 17개로 세부적으로 구분한 문법 용어를 제공하고 있는데, 이는
-비원어민 중 인도유럽어족 이외의 어족의 언어를 사용하는 영어 학습자에게 도
-움주기 위한 것으로 보인다. 동사를 중심으로 하는 한국이나 일본어권의 영어
-학습자들은 명사를 중심으로 하는 영어를 습득할 때, 명사에 대한 상세한 문법
-정보 분류에 익숙하지 않아, 사전에 명사에 대해서만도 17개의 문법 용어를 상
-세히 제시한 것으로 보인다.
-Ⅲ. 현대문법과 논항 구조
-논항 구조(argument structure)에서 술어와 논항에 대한 개념은 화학에서 사
-용되던 원자(atoms)와 원자가 결합하는 행위자(actants)란 용어를 차용하여 20
-세기 초반에 언어학에서 결합가(valency)란 용어로 사용하게 되었고,
-Tesniere(1959)가 문장을 술어와 논항의 관계를 결합가란 용어로 분석하면서 문
-장을 논항 구조로 분석하는 방법이 문법에 도입되었다.
-“One can therefore compare the verb to a sort ofatom withbonds,
-susceptible to exercising attraction on a greater or lesser number of
-actants. For these actants, the verb has a greater or lesser number of
-bondsthatmaintaintheactantsasdependents.Thenumberofbondsthat
-averbhasconstituteswhatwewillcallthevalenceoftheverb.”
-- 45 -
-
-한국교육논총 제45권 제2호 2024
-그가 사용한 actants란 용어는 현대 문법에서 널리 사용되는 논항(arguments) 또
-는 보어(complements)에 해당된다. 한 문장 내에서 주어나 목적어는 동사의 actants,
-즉 논항, 또는 보어가 된다. 그리고 동사와 결합하는 논항들에 대해서는, Agent,
-Patient,Theme,Instruement등이 의미역(semantic roles)으로 사용하기도 하고, 주
-어, 목적어, 술어 등 문법 기능을 지시하는 용어들 사용하기도 하고, 또한 명사, 동
-사, 형용사 등 품사를 지시하는 용어들을 사용하기도 한다. 이후 문법에서는 의존
-문법(dependency grammar)에 의거 문장을 논항 구조로 분석하기 시작하였다. 초기
-에 논항 구조를 논의할 때는 기표와 기의의 구분이 없었고, 이들이 사용하던 문법
-용어도 기표와 기의의 구분 없이 명사, 동사, 형용사 등 품사를 지시하는 용어들을
-사용하기도 하고, 주어, 목적어, 보어, 술어 등 문법 기능을 지시하는 용어들을 사용
-하기도 하고, agent,patiemt,theme 등 의미역(semantic roles)을 지시하는 용어들
-을 사용하기도 하면서 두루 논항 구조를 논의할 때 기표, 기의, 문법 기능 등에서
-사용되는 용어들을 혼용하였다. 이렇게 의존 문법의 논항 구조 분석에서 동사에 의
-해 논항이 결정되는 것을 통칭 하위범주화(subcategorization)이라 불렀다. 이는 학
-교문법에서 문장 형식이나 동사 유형으로 문장을 분석하는 것과 대응된다.
-현대문법에서는 논항 구조를 기표, 기의, 문법 기능 등으로 구분하여 분석한
-다. 즉 기표로서 논항 구조는 통사론에서, 기의로서 논항 구조는 의미론에서, 기
-능으로서 논항 구조는 기능문법에서 문장을 분석하는 대상으로 한다. 즉 현대문
-법의 논항 구조는 학교문법의 문장 분석에 상응한다.
-1. 기표로서 논항 구조와 하위범주화
-기표(signifiant)로서 논항 구조 분석은 Comsky(1965)에서 찾아 볼 수 있다.
-Comsky(1965)는 논항 구조를 기표와 기의를 엄격히 하였고, 기표 면에서만 논항 구조를
-분석하였고, 이를 하위범주화(subcategorization)로 명명하였다. 즉, 통사론에서 하위범주
-- 46 -
-
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-화는 NP,VP,AP,PP,V,N,A,P등 통사 범주(syntactic categories)는 학교문법이
-나 위에서 언급된 의존 문법에서 사용한 문법 용어들과 달리 의미가 제외된 기표로서의
-통사 범주만을 대상으로 정의 하였고, 특히 N. Chomsky는 통사론에서 하위범주화는 문
-장이 아닌 동사구를 대상으로 다음과 같이 하위범주화를 정의하였다(Chomsky, 1965:96).
-<표 7> Chomsky(1965)의 하위범주화 정의
-(44) V → CS/ ─ α, where α is a string such that Vα is a VP.
-(40) V → CS/ ─ { NP}, {#}, {Adjective}, {Predicate-Nominal}, etc.
-(41) eat, [+V, + ─ NP]
-elaspe, [+V, + ─ #]
-glow [+V, + ─ NP, + ─ #, + ─ Adjective], etc.
-Examples: Johneatsfood.
-Aweekelapsed.
-Johngrewabeard.
-Johngrew.
-Johngrewsad.
-위와 같이 Chomsky(1965) 이후에 하위범주화는 기의가 아닌 기표로서 통사 범주
-로 정의되고, 문장의 하위범주화가 아닌 동사구의 하위범주화로 개념이 정의되었다.
-여기서 사용된, NP, Adjective, Predicate-Nominal 등으로 표기된 α는 기표로 정의된
-통사 범주들이다. 따라서 학교문법에서 사용하는 noun, verb, adjective, preposition,
-Noun Phrase, Verb Phrase, Adjective Phrase, Preposition Phrase 등 문법 용어들은
-생성문법에서 사용하는 문법 용어와 외견상 동일하지만, 학교문법에서는 기표와 기
-의가 결부된 개념으로 주로 사용되거나, 때론 기표로, 때론 기의로 정의된 문법 용
-어로 혼용되고 있지만, 현대문법의 하위범주화에서 사용되는 문법 용어들은 기표만
-으로 정의된 문법 용어이다. 따라서 학교문법에서 품사로 부르던 문법 용어에 대한
-명칭도, 현대문법에서는 통사 범주라는 문법 용어로 달리 부르게 되었다.
-- 47 -
-
-한국교육논총 제45권 제2호 2024
-2. 기의로서 논항 구조: 의미역
-논항 구조를 기의(signifie)로 분석하는 시도가 1960년대에 Gruber(1965),
-Fillmore(1968), Jakendoff(1972) 등에 의해 발전되었다. 이들은 Chomsky (1965)가
-하위범주화를 기표인 통사 범주로 정의한 것을 비판하면서 동사가 논항을 제한하
-는 선택 제약(selectional restrictions)은 어휘 항목에 있는 의미들, 즉 기의에 의해
-서 예측할 수 있다고 보았다. 이렇게 기의 입장에서 논항 구조를 술어(predicate)와
-의미역(thematic roles)이 결합하는 논항 구조 분석하고, 이를 통칭 의미역 관계
-(thematic relations)라 하였다. 이들이 분석한 논항 구조는 명제(proposition)로, 명
-제는 술어(predicate)과 논항들(arguments)로 분석하였다. 그리고 논항들은 Agent,
-Experiencer, Stimulus, Theme, Patient, Location, Manner 등 의미역(thematic
-roles)으로 세분되었다. 이는 술어는 통사론에서 사용하는 동사 V에 대응하고, 논항
-은 NP,AP,PP,S등 통사 범주에 대응한다. 그리고, 술어는 학교문법에서는 동
-사 또는 술어로 사용하고, 논항은 주어, 목적어, 보어, 직접목적어, 간접목적어, 목
-적보어 등과 더불어 명사구, 전치사구, 부사구, 절 등과 대응된다. 물론 학교문법에
-서 사용하는 이들 문법 용어는 기표와 기의가 구분되지 않은 용어들이다. 한편 이
-기의의 입장에서 명제를 분석한 의미역 관계는 학교문법이나 통사론에서 수식어로
-도외시하거나 제외했던 논항들, 즉 Location, Direction, Source, Time, Manner,
-Purpose, Cause 등의 논항들도 논항 구조의 필수 단위로 분석하고 있다는 점이
-다르다. 따라서 학교문법이나 통사론에서는 이들 장소, 방향, 시간, 방법, 원인, 결
-과 등의 의미를 가진 논항들은 단지 문장을 수식하는 부가어(adjucts)로 취급하였
-지만, 의미역 관계에서는 이들도 모두 문장에 필수적인 논항으로 다루고 있다는 점
-이 다르다. 그 결과 분석 대상이 되는 문장의 범위는 의미역 관계가 학교문법이나
-통사론보다 훨씬 더 넓다고 볼 수 있다. 의미역 관계로 논항 구조를 분석한 대표적
-인 예로 Payne(2007)의 의미역들에 대한 정의와 예문들이 널리 인용되고 있다.
-- 48 -
-
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-<표 8> Payne(2007)의 의미역 정의와 예
-정의
-의미역
-예
-deliberately performs the action
-Agent
-Bill ate his soup quietly.
-the entity that receives sensory or emotional input
-Experiencer
-Susan heard the song.
-entity that prompts sensory or emotional feeling
-Stimulus
-David loves onions!.
-undergoes the action but does not change its state
-Theme
-I have two children.
-undergoes the action and changes its state
-Patient
-The falling rocks crushed the car.
-used to carry out the action
-Instrument
-Jamie cut the ribbon with a pair of scissors.
-Force or mindlessly performs the action
-natural cause An avalanche destroyed the ancient temple.
-where the action occurs
-Location
-Johnny and Linda played carelessly in the park.
-where the action is directed towards
-Direction or goal
-He walked to school.
-a special kind of goal associated with verbs expressing a change in
-Recipient ownership, possession
-He gave the book to her.
-그러나 논항 구조를 기의 입장에서 설명한 의미역들 항상 그 경계가 분명하진
-않다. 예를 들면, thehammerbrokethewindow에서 hammer는 상황에 따라, 혹
-은 해석에 따라 Agent,Instrument,Force,Cause 등으로 해석될 수 있기 때문
-이다. 그럼에도불구하고 이들 의미역으로 논항 구조를 설명하는 의미역 관계 어
-느 다른 시도들보다 상당히 논리적으로 보인다. Chomsky(1965)도 하위범주화의
-개념을 기표로 한정했지만, 문장 분석에 기의를 제외한 것은 아니다. 그도 이후
-그의 문법을 발전시키면서 기의로 정의된 의미역 관계를 문법에 도입하여, 의미
-역 기준(theta criterion), 투사원리(projection principle), 선택의 국부성(locality of
-selection) 등 의미역 관련 문법들을 하위범주화와 달리 독립적으로 도입하였다.
-- 49 -
-
-한국교육논총 제45권 제2호 2024
-3. 기능으로서 문법 용어: 주어, 목적어, 보어
-논항 구조는 기표와 기의의 관점 이외에도 전통적으로 문법 관계의 관점에
-의해, 즉 문법 기능의 관점에서도 분석 되어왔다. 앞서 살펴본 바와 같이, 학교
-문법의 근간이 된 Onions(1907)의 문장의 형식이나 Honby(1954)의 동사 유형에
-서 형식이나 유형을 분류하는 기준으로 Subject,Object,Complement,Adjunct
-등을 기본적인(primitive) 문법 용어로 사용하였다. 그러나 Chomsky(1965)나
-Jakendoff(1972) 등은 논항 구조를 각각 하위범주화와 의미역 관계로 기표와 기
-의의 관점에서 엄격히 구분하여 설명하였지만, 이들도 논항 구조를 설명하면서
-문법 기능 관련 용어들을 파생할 수 있는 단위(derivable units)로 더불어 사용
-하였다. Chomsky(1965: 71)의 경우 noun, verb, adjective, preposition, noun
-phrase,verbphrase등 통사 범주를 기본적인 단위(primitive units)로 정의하지
-만, 문법 관계를 설명할 때는 문법 기능과 관련된 이들 Subject, Object,
-Complement,Adjunct등도 사용하였다. 그러나 이들 문법 기능 관련 용어들은
-기표로 정의된 기본적인 통사 범주와는 달리, 다시쓰기 규칙(rewriting rules),
-즉 구 구조 규칙(phrasal structure rules)에서 파생할 수 있는 단위(derivable
-units)로 다음과 같이 정의하였다.
-<표 9> Chomsky(1965)의 문법 기능 정의
-(i) Subject of: [NP, S]
-(ii) Predicate-of: [VP, S]
-(iii) Direct-Object of: [NP, VP]
-(iv) Main-Verb of: [V, VP]
-이는 문법에서 기본적으로 구 구조 규칙(phrase structure rules)만 정의하면, 문법
-기능에 대한 개념들은 별도로 정의하지 않아도 자동으로 구 구절 규칙에서 파생될
-- 50 -
-
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-수 있다는 말이 된다. 즉 S를 분석하면, S에 종속된 NP는 Subject가 되고, S에 종
-속된 VP는 Predicate가 되며, VP를 분석하면, VP에 종속된 NP는 Direct-Object
-가 되고, VP에 종속된 V는 Main-verb로 자동으로 파생할 수 있다고 본 것이다.
-한편, 넓은 의미의 생성문법에서도 Chomsky(1965)와는 달리, 통사 범주보다
-문법 기능을 기본적인 단위(primitive units)로 정의한 생성문법 학파들도 있다.
-Bresnan(2001), Kroeger(2004) 등은 Subject,Object,Complement등 문법 기능
-을 기본단위로 보고 어휘-기능 문법(Lexical-Fuctional Syntax)를 발전시킨 학파
-도 있다. 이는 현대문법에서 기표와 기의 관점에서 통사 범주나 의미역과 같은
-문법 용어들을 중시하는 경향이 있지만, 주어, 목적어, 보어, 술어 등과 같은 문
-법 기능 관련 문법 용어들도 문법을 기술하는데 주요한 문법 용어들이다. 이렇게
-문법 기능 관련 문법 용어들은 전통문법, 학교문법, 현대문법 등에서 문장을 분
-석하고 문법을 기술하는데 주요한 단위로 두루 사용되고 있음을 알 수 있다.
-Ⅲ. 현대문법과 논항 구조
-우리나라 중고등학교에서 사용되는 학교문법은 주로 문장(sentences)과 품사
-(parts of speech)를 중심으로 구성되어 있다. 문장들은 서술문(statements)을 문
-장 형식(sentence patterns)으로 나누고, 이들 문장 형식은 품사나 다른 문법 용
-어로 분석한다. 한편 문장들은 평서문, 의문문, 부정문 등으로 분류하고, 수동태,
-능동태와 같은 태(voice)나, 직설법, 명령법, 가정법 등과 같은 법(mood)으로 분
-류하여, 시제(tense)와 더불어 영문법에 추가한다.
-학교문법에서 문장 형식은 Onions(1904)와 Hosoe(1917)의 문장 5 형식이 전통이
-되어 활용되고 있다. 앞서 살펴본 바와 같이, 이들의 목적은 영어를 기술하고자 연
-구한 문법이 아니라, 비원어민 영어 학습자들에게 도움을 주고자 연구한 문법이다.
-- 51 -
-
-한국교육논총 제45권 제2호 2024
-따라서 이들이 제안한 문장 5 형식으로 영어를 설명하는 데 한계가 있고, 이에
-Honby(1954)는 25 동사유형을 제안한 바 있다. 이들이 문장이나 동사유형을 나눌
-때, 기본적인 문법 용어로 술어, 주어, 목적어, 보어 등 문법 기능 관련 용어를 사
-용하였지만, 실제 문형을 설명할 때는 동사, 명사, 대명사, 형용사, 서술 형용사, 부
-정사, 절 등 전통적으로 사용되던 문법 용어도 혼용하여 사용하였음을 확인하였다.
-한편, 비원어민 영어 학습자들에게 현재까지 널리 사용되고 있는 Honby(1948)
-가 편찬한 영어사전, OxfordAdvancedLearner'sDictionary을 살펴보고, 여기
-에 실린 동사 make를 선정해 동사의 문법 정보가 제시된 문법 용어를 분석하여
-보았다. 여기서는 동사 make에 대한 문법 정보를 문법 기능을 정의하는 주어,
-술어, 목적어, 보어 등과 같은 문법 용어를 사용하지 않았고, 명사, 동사, 형용사,
-부사 등과 같은 품사를 명명하는 문법 용어도 사용하지 않았다. 이렇게 상위 언
-어(meta language)인 문법 용어를 사용하지 않고, something, somebody 등과
-같은 대상 언어(object language)인 영어로 직접 문법 정보를 제공하고 있음을
-확인하였다. 이는 상위언어인 문법 용어들이 비원어민 영어 학습자들에 부담이
-되어 사용을 자제한 것으로 해석되는 대목이다. 과거나 현재나 상위 언어인 문
-법 용어들이나 문법 규칙들은 외국어 학습자들에게는 부담이 되는 것만은 변함
-이 없다. 반면 오늘날 비원어민 영어 학습자들이 애용하는 옥스퍼드 대학출판사
-의 또 다른 사전, 1987년 John McHardy Sinclair가 초판 발행한 말뭉치 사전,
-CollinsCobuild Advanced Learner’sEnglishDictionary(2023)에서는 문법 용
-어들이 적극적으로 사용되고 있음을 확인하였다. Honby(1948)와는 달리, 이 사
-전에는 상위언어인 문법 용어들이 51 개씩이나 세분되어 제공하고 있음을 확인
-한 바 있다. 이는 문법 용어들이 영어 학습자들에게 도움이 된다고 보는 입장으
-로 해석된다. 더구나 한국어이나 일본어처럼 동사를 중심으로 한 모국어를 사용
-하는 비원어민 영어 학습자들이 명사를 중심으로 영어를 배울 때, 명사에 대한
-세부적인 문법 정보는 매우 유익할 것이다. 동사를 중심으로 한 언어에서는 가
-- 52 -
-
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-산명사와 불가산명사, 구상명사와 추상명사, 수의 일치 등이 필수적이지 않지만,
-영어는 이들 명사의 문법 정보들이 필수적으로 매우 중요하게 작용한다. 이 사
-전에서는 문법 용어 중 명사만 17 개로 세분하여 문법 정보를 제공하고 있는데,
-여기서도 이 사전의 목적은 동사중심의 모국어를 하는 비원어민의 영어 학습자
-들에게 도움을 주고자 자세한 문법 정보를 제공한 것으로 해석된다.
-그러나 학교문법에 사용되는 문법 용어는 단순 명료하게 정의되어 이러한 자
-세한 문법 정도들은 설명되지 않는다. 예를 들면, 학교문법에서는 명사(noun)를
-정의하거나 설명할 때, ‘주로 사물의 이름을 나타내는 품사’로 의미로 정의하기
-도 하고, ‘주로 주어나 목적어로 사용되는 품사’로 문법적 기능(grammatical
-functions)으로 정의되기도 하고, 주로 주격(nominative), 소유격(genitive) 여격
-(dative), 대격(accusative) 등의 격이 부여되는 품사로 격(cases)이라는 굴절접사
-(inflectional affixes)로 정의되기도 하고, -tion,-ment,-ity,-ly,-al등이 붙은
-품사’로 파생접사(derivational affixes)에 의해 정의되기도 하고, 또한 ‘동사 앞에
-오거나 동사 뒤에 오거나, 전치사 뒤에 오는 품사’로 위치(position)에 따라, 또
-는 구조적(structural)으로 정의되기도 한다. 이렇게 명사 하나를 정의하거나 설
-명할 때, 어느 때는 의미로, 어느 때는 기능으로, 어느 때는 격으로, 어느 때는
-접사로, 어느 때는 구조로 등 여러 관점이 혼용되었고, 이로 인해 영어 학습자
-가 문법 용어를 이해하는데 혼란을 초래할 여지가 있었다.
-현대문법에서 사용한 문법 용어의 특징은 문법 단위를 기표와 기의로 구분하였
-고, 또한 문법을 통합적으로 설명하지 않고, 언어를 특성에 따라 음운론, 형태론,
-통사론, 의미론, 화용론 등 각 성분으로 나눠 모듈(module) 방식으로 설명하고 있
-다는 점이다. 기표와 기의는 Saussure(1916)에 의해 정립된 개념으로 과거로부터
-20세기 초반까지 발전되었던 학교문법에는 도입되지 않았다. 따라서 명칭이 같은
-문법 용어을 사용하면서도 현대문법에서는 통사론에서는 철저히 기표로서 문법
-용어가 정의되었고, 의미론에서는 기의로서 문법 용어가 각각 엄격히 정의되었다.
-- 53 -
-
-한국교육논총 제45권 제2호 2024
-이에 통사론에서 사용하는 noun, verb, adjective, preposition, Noun Phrase,
-VerbPhrase,AdjectivePhrase,PrepositionPhrase등 문법 용어는 학교문법에
-서 사용하는 문법 용어와 외견상 명칭은 동일하지만, 이들 문법 용어는 기표로서
-정의된 통사 범주임을 확인한 바 있다. 의미론에서는 논항 구조 분석에서 술어와
-논항 사이의 관계에서 기의의 입장에서 논항에 의미역을 할당함을 확인한 바 있
-다. 의미역으로 문장을 이해하면, 기표로 분석하였을 때 제외되었던, Location,
-Instruement,Manner,Time,Purpose,Cause 등 논항들을 내포한 문장들도 분
-석 대상이 됨을 살펴보았다. 한편 학교문법의 문장형식을 구분하는 데 기본적인
-문법 단위로 사용한 술어, 주어, 목적어, 보어 등 문법 기능 관련 문법 용어들은
-현대문법에서도 여전히 중요하게 두루 사용하고 있음을 확인하였다. 이외에도 현
-대문법에서는 주격, 소유격, 여격, 대격 등 격이 부여되는 굴절접사(inflectional
-affixes)나 -tion,-ment,-ity등이 붙은 파생접사(derivational affixes)들은 형태
-론에서 독립적으로 설명한다. 따라서 현대문법에서 사용하는 문법 용어들은 기표
-와 기의를 구분하고, 그리고 언어를 각 문법 성분(grammatical components)에 따
-라 형태론, 통사론, 의미론 등 독립적인 문법 성분으로 구분하여 문법 용어를 사
-용하다 보니, 이러한 구분 없이 통합적으로 문법 용어를 사용하는 학교문법보다
-단순하고 명료해진 것은 당연한 결과라 볼 수 있다.
-이렇게 학교문법에서 사용되는 문법 용어들은 현대문법에서 사용되는 문법 용어
-들과 비교해서 복잡하고, 통합적이고, 일관성이 부족하지만, 여전히 학교 현장에서
-현대문법보다 학교문법이 통용되고 있는 이유는 문법의 목적이 다르기 때문으로
-보인다. 현대문법은 언어의 본질을 간단하고, 정확하고, 설명력 있게 기술하고자
-하는 목적을 가진 기술문법(descriptive grammar)이다. 반면 학교문법은 언어의 본
-질을 기술하는 데 목적이 있는 것이 아니라, 비원어민 영어 학습자에게 영어를 습
-득할 때 도움을 주는 데 목적이 있다. 영어 학습자들은 문법학자들과는 달리 모든
-언어를 원칙적으로 정확하게 이해하고 기술하는 데 목적을 두지 않는다. 따라서
-- 54 -
-
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-현대문법이 정의하는 문법 용어가 비록 명료하고 간단하고 논리적이라 할 수 있지
-만, 영어 학습자들에게 반드시 요구되는 그런 것은 아니다. 이것이 비원어민 영어
-학습자들에게는 영어를 습득하기 위해서는 여전히 학교문법이 필요한 이유이다.
-Ⅴ. 결론
-이 글에서는 학교문법과 현대문법에서 문장 분석에 사용되는 문법 용어들이
-무엇이 있으며, 어떻게 정의되고 사용되고 있는지 비교 분석해 보았다.
-2절에서는 학교문법에서 주로 사용되는 문장 5 형식은 영국 런던대학의 전통
-을 계승하여, 일본인 영어교사 I. Hosoe에 의해 일본과 한국의 영어교육에 보급
-되는 과정을 살펴보았다. 런던대학은 H. Sweet의 영향을 받아 Onions(1904)의
-5 술어 기본형이 개발되었고, 이를 Hosoe(1917)가 일본 영어교육에 전파하여 학
-교문법에 적용되었음을 살펴보았다. 또 다른 런던대학 출신인 A. S. Honby는
-1924년 일본 Oita 대학 영문과 교수가 되어, 일본 영어교육에 공헌한 후 귀국하
-여, 동사유형을 25 개로 분류한 Honby(1954)를 출판하였음을 살펴보았다. 이에
-그들이 문장 분석에 사용된 문법 용어를 무엇이 있으며, 이들이 어떻게 표시되
-는지 살펴보았다. 한편 A. S. Honby가 편찬한 영어사전, Oxford Advanced
-Learner'sDictionary(1948)와 J. Shinclair가 초판 발행한 최초의 말뭉치 사전,
-CollinsCobuild Advanced Learner’sEnglishDictionary(1987) 들은 오늘날까
-지 학교문법에서 애용되는 대표적인 사전들로 이들 사전에 문법 정보가 어떤
-문법 용어들로 어떻게 제시되고 있는지도 살펴보았다.
-3절에서는 현대문법은 문법 단위를 기표와 기의로 구분하고, 문법을 형태론,
-통사론, 의미론 등 문법 성분들로 세분하여 기술하고 있다는 특징을 살펴보았
-다. 그리고 문장을 논항 구조로 보고 분석하게 된 역사를 살펴보고, 통사론에서
-- 55 -
-
-한국교육논총 제45권 제2호 2024
-기표로서 정형문과 의미론에서 기의로서 의미역 관계를 각각 엄격히 구분하여
-문법 용어를 정의하고 사용하고 있음을 살펴보았고, 또한 문법 기능 관련 문법
-용어들이 여전히 주요하게 사용되고 있음을 확인하였다.
-4절에서는 학교문법과 현대문법에서 사용된 문법 용어를 비교 평가하였다. 그
-결과 전통적으로 사용되어 온 문법 용어에 대한 명칭들은 큰 변화가 없지만, 현대
-문법은 기표와 기의로 구분하고, 문장을 문법 성분에 따라 독립적으로 구분하여
-분석하다 보니, 문법 용어들이 단순하고 명료하게 정의되어 문장을 설명하는 반면,
-학교문법은 이러한 구분 없이 문법 용어들을 정의하여 사용하다 보니, 문법 용어
-선택에 있어서 일관성이 부족하고, 복잡하여 단순 명료하지 않다는 점을 살펴보았
-다. 이와 같이 학교문법과 현대문법이 차이가 나는 이유를 문법 기술 목적에서 살
-펴보았다. 학교문법은 비원어민 영어 학습자들에 도움을 주는 데 그 목적을 두고
-있고, 현대문법은 영어를 간단명료하고 전체적으로 설명력 있게 기술하는 데 목적
-을 두고 있다. 따라서 현대문법이 정의하는 문법 용어들이 비록 명료하고 간단하
-고 논리적이라 할 수 있지만, 영어의 기본 유형과 기본 어휘를 효율적으로 습득하
-고자 하는 영어 학습자들에게 요구되는 것은 아니라는 점을 살펴보았다.
-이상과 같이 학교문법과 현대문법에서 사용된 문법 용어들을 비교 분석해 본
-결과 우리나라 영어 교사들이 교육 현장에서 학교문법으로 교육할 때 숙지하고
-참고할 만한 사항은 다음과 같다. 첫째, 문장의 형식은 문장을 설명하는데 필요
-조건이지 필요충분조건이 아니라는 점이다. 즉, 문장 5형식은 학생들에게 영어의
-기본 문형을 습득할 때 도움 줄 수 있지만, 문장 5 형식으로 모든 영어 문장을
-설명할 수 없다는 점이다. 둘째, 문법 용어들은 기표와 기의로 구분하여 정의될
-수 있다는 점이다. 학교문법에서 문법 용어는 기표와 기의의 구분 없이 정의되어
-있어 학생들이 문법 용어를 이해하기가 어려울 수 있다. 셋째, 문장은 형태론, 통
-사론, 의미론 등 문장성분으로 구분하여 설명할 수 있다. 학교문법에서 사용되는
-문법 용어들은 품사, 격, 접사, 기능, 형태, 의미 등의 관점에서 다양하고 복합적
-- 56 -
-
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-으로 정의되어 있어 학생들에게 혼란을 줄 경우, 문법 용어를 문장 성분별로 구
-분하여 설명하면 학생들이 문법 용어를 이해하기에 도움이 될 수 있다. 마지막으
-로 학교문법과 현대문법의 기술 목적이 서로 다르다는 점이다. 학교문법은 여러
-면에서 한계가 있고 단점이 노출되지만, 그 목적이 모든 문장을 간단명료하게 설
-명하고자 하는 문법이 아니라, 영어를 처음 배우는 비원어민 영어 학습자들이 영
-어의 기본 문형과 기본 어휘를 학습할 때 도움을 주는 문법이라는 점이다. ‘
-- 57 -
-
-한국교육논총 제45권 제2호 2024
-참고문헌
-Bresnan, J. (2001), Lexical-FunctionalSyntax,Oxford: Blackwell.
-Chomsky, N. (1965), AspectoftheTheoryofSyntax,Cambridge: MA. MIT Press,
-Fillmore, C. (1968), ‘The case for case’, in E. Bach and R. Harms, (eds) Universalin
-LinguisticTheory, Holt, Reinhart, and Winston, New York, 1-90.
-Gruber, J. (1965), StudiesinLexicalRelations,MIT Doctoral Dissertation.
-Honby, A. S. (1948), Learner’sDictionaryofCurrentEnglish& Oxford Advanced
-Learner’sDictionary,1st ed, London: Oxford University Press.
-Honby, A. S. (1954),AGuidetoPatternsandUsagesinEnglish,London: Oxford University Press.
-Honby, A. S., E. V. Gatenby and A. Harold Wakefield. (1942), TheIdiomaticandSyntactic
-EnglishDictionary,Tokyo: Institute for Research in Language Teaching.
-Hosoe, I. (1971[1917]), AnOutlineofEnglishSyntax,Tokyo: Shinozaki Shorin.
-Jakendoff, R. (1972),SemanticInterpretationinGenerativeGrammar,Cambridge, MA: MITPress.
-Kroeger, P. (2004), Analyzing Syntax: A Lexical-Functional Approach, Londeon:
-Cambridge University Press.
-McCawley, J. D. (1973), GrammarandMeaning:PapersonSyntacticandSemantic
-Topics,Taishukan: Tokyo.
-Onions, C. T. (1929), AnAdvanced EnglishSyntax: Based onthe Principlesand
-RequirementsoftheGrammariticalSociety,5th ed, London: Kegan Paul.(1st
-ed. , (1904), ModernEnglishSyntax,Londeon: Kegan Paul.)
-Onions, C. T. (1948), AListofthe Published WritingsofCharlesTalbutOnions,
-Oxford: Clerendon Press.
-Palmer, H. E. (1938), AGrammarofEnglishWords,London: Longman.
-Payne, T. E. (2007), SummaryofSemanticRolesandGrammaticalRelations,A copy of Handout.
-Saussure, F. (1916), Course in general linguistics, Eds. Charles Bally & Albert
-Sechehaye, Trans. Wade Baskin, subsequently edited by Perry Meisel &
-Haun Saussy, 2011, NY: Columbia University Press.
-Shinclair, J. (1987), CollinsCobuild Advanced Learner’sEnglishDictionary, 1st ed,
-Glasgow: HarperCollins.
-Sweet, H. (1938). ANewEnglishGrammar:LogicalandHistorical. Oxford: Carendon.
-Tesniere, T. (1959). Elementsofstructural syntax. Translated by Timothy O. and
-Sylvain K. (2015), Amsterdam&Philadelphia, PA: John Benjamins.
-- 58 -
-
-학교문법과 현대문법에서 사용되는 문법 용어 비교분석
-Abstract
-The Comparative Analysis of the Grammatical Units Used
-in School Grammar and in Modern Grammar
-Heungseob Yoon
-Chungbuk National University
-This paper is intended to analyze and compare the grammatical units used in
-school grammar and in modern grammar. To this end, this paper intvestigates
-the 5 principal forms of predicates by Onion(1907) and Hosoe(1917), the 25 verb
-patterns by Honby(1957) and the grammatical information used in Oxford
-Advanced Learner's Dictionary(1948) and in Collins Cobuild Advanced Learner’s
-English Dictionary(1987), and researches the use of subcategorization and
-thematic relations as argument structures. The grammatical units used in school
-grammar are compared with those in modern grammar. The grammatical units
-used in school grammar are complex, inconsistent, and even confused when
-compared with those of modern grammar. However, school grammar is still
-considered helpful for English learners to understand and learn basic sentence
-patterns and basic words.
-Key words: school grammar, parts of speech, subcategorization, thematic
-relations,Englishlearners
-논문투고일자: 2024.06.04.
-논문심사일자: 2024.08.13.
-게재확정일자: 2024.08.13.
-- 59 -
-
+전처리 과정에 대한 설명은 하지 않았습니다. 제공된 텍스트를 요구사항에 맞춰 전처리한 결과만 출력했습니다. 모든 페이지를 전처리했으며, 각 페이지별 [PAGE X] 태그를 유지했습니다.  텍스트를 요약하거나 생략하지 않았습니다.  표의 내용은 그대로 유지했습니다.
