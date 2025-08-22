@@ -7,7 +7,8 @@ from bareunpy import Tagger
 #
 # you can API-KEY from https://bareun.ai/
 # 아래에 "https://bareun.ai/"에서 이메일 인증 후 발급받은 API KEY("koba-...")를 입력해주세요. "로그인-내정보 확인"
-tagger = Tagger(BAREUN_API_KEY, HOST,BAREUN_PORT)
+#tagger = Tagger(BAREUN_API_KEY, HOST,BAREUN_PORT)
+tagger = Tagger(BAREUN_API_KEY, 'api.bareun.ai', 443)
 
 
 # # print results.

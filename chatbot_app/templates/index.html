@@ -3,153 +3,184 @@
 <head>
 <meta charset="UTF-8" />
 <title>형태소 분석 챗봇</title>
+
+<!-- 마크다운 렌더러 + XSS 방지 -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f9f4f4;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  html, body { height: 100%; }
+  body { 
+    background: #f9f4f4; 
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', sans-serif;
+    overflow: hidden;        /* ★ 페이지 자체 스크롤 막고 */
+  }
+  .chat-container {
+    height: 100dvh;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 10px;
+    padding: 12px 16px;
+    min-height: 0;
   }
   .chat-area {
-    flex: 1;
-    padding: 1rem;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    overflow-y: auto;        /* ★ 여기서만 스크롤 */
+    min-height: 0;
   }
+  @supports not (height: 100dvh) {
+    .chat-container { height: 100vh; }  /* iOS Safari 폴백 */
+  }
+
+  /* 말풍선 공통 */
   .message {
-    max-width: 60%;
-    padding: 0.6rem 0.8rem;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    white-space: pre-wrap;
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    word-wrap: break-word;
   }
+
+  /* 봇 말풍선 */
   .bot {
     align-self: flex-start;
-    background-color: #e0d0d0;
-    color: #333;
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ececec;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    overflow: hidden;
   }
+  .message.bot .bot-content { display:block; overflow-x:auto; }
+
+  /* 사용자 말풍선 */
   .user {
     align-self: flex-end;
-    background-color: #800020;
-    color: white;
+    background: #800020;
+    color: #fff;
+    white-space: pre-wrap;
   }
+
+  /* 빠른 액션 버튼 */
   .bot-buttons {
     display: flex;
-    gap: 0.5rem;
-    margin-top: 0.3rem;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
   }
   .bot-buttons button {
     padding: 6px 12px;
     font-size: 0.9rem;
-    background-color: white;
+    background: #fff;
     color: #800020;
     border: 1px solid #800020;
-    border-radius: 6px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  .bot-buttons button:hover {
-    background-color: #f0e0e0;
-  }
-  .input-box {
+  .bot-buttons button:hover { background: #ffe6ea; }
+
+  /* 하단 입력 컴포저 */
+  .composer {
+    grid-row: 2;
     display: flex;
-    gap: 0.5rem;
-    margin-top: 0.3rem;
+    gap: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
   }
-  .input-box input {
-    flex: 1;
-    padding: 0.4rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+  .composer input[type="text"] {
+    flex: 1 1 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
   }
-  .input-box button {
-    background-color: #800020;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 0.4rem 0.8rem;
+  .composer button {
+    background: #800020;
+    color: #fff;
+    border: 0;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  .input-box button:hover {
-    background-color: #a52a2a;
+  .composer button:disabled { opacity: .6; cursor: not-allowed; }
+
+  /* 마크다운 가독성 */
+  .message.bot h1, .message.bot h2, .message.bot h3 { margin: .25rem 0 .5rem }
+  .message.bot p { margin: .25rem 0; }
+  .message.bot ul, .message.bot ol { margin: .25rem 0 .5rem 1.25rem; }
+  .message.bot pre, .message.bot code { white-space: pre-wrap; word-break: break-word; }
+
+  /* 표 스타일 */
+  .message.bot table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: .25rem 0;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
   }
+  .message.bot th, .message.bot td {
+    border: 1px solid #eee;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .message.bot thead th { background: #f3f4f6; }
 </style>
 </head>
 <body>
+<div class="chat-container">
+  <div class="chat-area" id="chatArea" aria-live="polite"></div>
 
-<div class="chat-area" id="chatArea"></div>
+  <!-- 폼 아님(기본 GET 제출 X) -->
+  <div class="composer">
+    <input id="userInput" type="text" placeholder="메시지를 입력하세요..." autocomplete="off" />
+    <button id="sendBtn" type="button">전송</button>
+  </div>
+</div>
 
-<script>
-  const chatArea = document.getElementById('chatArea');
+<script type="module">
+document.addEventListener('DOMContentLoaded', () => {
+  const chatArea  = document.getElementById('chatArea');
+  const userInput = document.getElementById('userInput');
+  const sendBtn   = document.getElementById('sendBtn');
 
-  // 초기 챗봇 메시지
-  addBotMessage("무엇을 도와드릴까요?", [
-    { text: "형태소 분석하기", action: onMorphClick },
-    { text: "미정", action: () => addBotMessage("이 기능은 준비 중이에요!") }
-  ]);
+  /* === 스크롤 앵커 & 도우미 === */
+  let endAnchor = document.createElement('div');
+  endAnchor.style.height = '1px';
 
-  function onMorphClick() {
-    addUserMessage("형태소 분석하기");
-    addBotMessage("분석할 문장을 입력해주세요!");
-
-    // 입력창을 user 말풍선(오른쪽)에 추가
-    addInputBox();
+  function isNearBottom() {
+    const threshold = 80; // px
+    return (chatArea.scrollHeight - chatArea.scrollTop - chatArea.clientHeight) <= threshold;
   }
 
-  function addInputBox() {
-    const container = document.createElement('div');
-    container.className = 'message user'; // 👈 오른쪽에 나오도록
-
-    const inputBox = document.createElement('div');
-    inputBox.className = 'input-box';
-
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = '메시지를 입력하세요...';
-
-    const sendBtn = document.createElement('button');
-    sendBtn.textContent = '전송';
-
-    sendBtn.addEventListener('click', () => handleSend(input));
-    input.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') handleSend(input);
+  function scrollToBottom(force = false) {
+    if (!force && !isNearBottom()) return; // 위로 올려 보는 중이면 강제 스크롤 X
+    if (endAnchor.parentNode !== chatArea) chatArea.appendChild(endAnchor);
+    else chatArea.appendChild(endAnchor);
+    requestAnimationFrame(() => {
+      try { endAnchor.scrollIntoView({ block: 'end', inline: 'nearest' }); }
+      catch { chatArea.scrollTop = chatArea.scrollHeight; }
+      requestAnimationFrame(() => {
+        try { endAnchor.scrollIntoView({ block: 'end', inline: 'nearest' }); }
+        catch { chatArea.scrollTop = chatArea.scrollHeight; }
+      });
     });
-
-    inputBox.appendChild(input);
-    inputBox.appendChild(sendBtn);
-    container.appendChild(inputBox);
-    chatArea.appendChild(container);
-    scrollToBottom();
-    input.focus();
   }
 
-  function handleSend(input) {
-    const text = input.value.trim();
-    if (!text) return;
-    addUserMessage(text);
-    input.value = '';
-
-    fetch('/chat/query', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text })
-    })
-    .then(res => {
-      if (!res.ok) throw new Error('서버 오류');
-      return res.json();
-    })
-    .then(data => {
-      addBotMessage(data.response);
-    })
-    .catch(err => {
-      addBotMessage('오류 발생: ' + err.message);
-    });
+  /* === 유틸 === */
+  function safeHTML(unsafe) {
+    try { if (window.DOMPurify?.sanitize) return DOMPurify.sanitize(unsafe); } catch(e) {}
+    return unsafe;
   }
 
   function addUserMessage(text) {
@@ -157,34 +188,111 @@
     msg.className = 'message user';
     msg.textContent = text;
     chatArea.appendChild(msg);
-    scrollToBottom();
+    scrollToBottom(true); // 내가 보낸 건 바로 바닥
   }
 
-  function addBotMessage(text, buttons = []) {
+  function addBotText(text) {
+    const el = document.createElement('div');
+    el.className = 'message bot';
+    el.textContent = text;
+    chatArea.appendChild(el);
+    scrollToBottom(false);
+  }
+
+  function addBotHTML(html, buttons = []) {
     const container = document.createElement('div');
     container.className = 'message bot';
-    container.innerHTML = text;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'bot-content';
+    wrap.innerHTML = html; // safeHTML()로 정화된 값만 전달
+    container.appendChild(wrap);
 
     if (buttons.length) {
-      const btnContainer = document.createElement('div');
-      btnContainer.className = 'bot-buttons';
-      buttons.forEach(btn => {
+      const btns = document.createElement('div');
+      btns.className = 'bot-buttons';
+      buttons.forEach(({text, action}) => {
         const b = document.createElement('button');
-        b.textContent = btn.text;
-        b.addEventListener('click', btn.action);
-        btnContainer.appendChild(b);
+        b.type = 'button';
+        b.textContent = text;
+        b.addEventListener('click', action);
+        btns.appendChild(b);
       });
-      container.appendChild(btnContainer);
+      container.appendChild(btns);
     }
 
     chatArea.appendChild(container);
-    scrollToBottom();
+    scrollToBottom(false);
   }
 
-  function scrollToBottom() {
-    chatArea.scrollTop = chatArea.scrollHeight;
+  /* === 전송 처리 === */
+  userInput.addEventListener('keydown', (e) => {
+    if (e.isComposing) return;      // IME 조합 중 Enter 무시
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSend();
+    }
+  });
+  sendBtn.addEventListener('click', handleSend);
+
+  async function handleSend() {
+    const text = userInput.value.trim();
+    if (!text) return;
+
+    addUserMessage(text);
+    userInput.value = '';
+    userInput.focus();
+    sendBtn.disabled = true;
+
+    const endpoints = ['/chat/query', '/chat/query/']; // 라우팅 차이 방어
+    let data = null, lastErr = null;
+
+    for (const ep of endpoints) {
+      try {
+        const res = await fetch(ep, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text })
+        });
+        if (res.ok) { data = await res.json(); break; }
+        lastErr = new Error(`HTTP ${res.status}`);
+      } catch (e) { lastErr = e; }
+    }
+
+    if (!data) {
+      addBotText('오류 발생: ' + (lastErr?.message || '네트워크 오류'));
+      sendBtn.disabled = false;
+      return;
+    }
+
+    if (data.html) {
+      addBotHTML(safeHTML(data.html));
+    } else if (data.response || data.markdown) {
+      const md = data.markdown || data.response;
+      try { marked.setOptions({ gfm: true, breaks: false }); } catch(e){}
+      const html = (window.marked?.parse ? marked.parse(md) : md);
+      addBotHTML(safeHTML(html));
+    } else {
+      addBotText('응답 형식을 알 수 없습니다.');
+    }
+
+    sendBtn.disabled = false;
   }
+
+  /* === 초기 웰컴 + 빠른 액션 === */
+  addBotHTML(safeHTML("<p>무엇을 도와드릴까요?</p>"), [
+    { text: "형태소 분석하기", action: onMorphClick },
+    { text: "미정", action: () => addBotText("이 기능은 준비 중이에요!") }
+  ]);
+  scrollToBottom(true);
+
+  function onMorphClick() {
+    addUserMessage("형태소 분석하기");
+    addBotText("분석할 문장을 입력해주세요!");
+    userInput.placeholder = "예) 집 앞에 있는 나무에 새잎이 돋았다.";
+    userInput.focus();
+  }
+});
 </script>
-
 </body>
 </html>
