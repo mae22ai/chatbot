@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,52 +17,77 @@
     font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', sans-serif;
     overflow: hidden;        /* ★ 페이지 자체 스크롤 막고 */
   }
-  .chat-container {
-    height: 100dvh;
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 10px;
-    padding: 12px 16px;
-    min-height: 0;
-  }
-  .chat-area {
-    overflow-y: auto;        /* ★ 여기서만 스크롤 */
-    min-height: 0;
-  }
-  @supports not (height: 100dvh) {
-    .chat-container { height: 100vh; }  /* iOS Safari 폴백 */
-  }
+  /* 채팅 메시지 컨테이너 - flexbox 사용 */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 10px;
+  padding: 12px 16px;
+  min-height: 0;
+}
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  min-height: 0;
+}
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.message-row.user-row {
+  justify-content: flex-end;
+}
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0; /* 크기 유지를 위해 */
+}
+.profile-img.user {
+  order: 2; /* 사용자 프로필을 메시지 오른쪽으로 이동 */
+}
 
-  /* 말풍선 공통 */
-  .message {
-    max-width: 70%;
-    padding: 12px 16px;
-    border-radius: 16px;
-    font-size: 0.96rem;
-    line-height: 1.55;
-    word-wrap: break-word;
-  }
+/* 말풍선 공통 */
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  word-wrap: break-word;
+  align-self: flex-start;
+}
 
-  /* 봇 말풍선 */
-  .bot {
-    align-self: flex-start;
-    background: #ffffff;
-    color: #222;
-    border: 1px solid #ececec;
-    box-shadow: 0 1px 2px rgba(0,0,0,.04);
-    overflow: hidden;
-  }
-  .message.bot .bot-content { display:block; overflow-x:auto; }
+/* 봇 말풍선 */
+.bot {
+  background: #ffffff;
+  color: #222;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  overflow: hidden;
+}
+.message.bot .bot-content { display:block; overflow-x:auto; }
 
-  /* 사용자 말풍선 */
-  .user {
-    align-self: flex-end;
-    background: #800020;
-    color: #fff;
-    white-space: pre-wrap;
-  }
+/* 사용자 말풍선 */
+.user {
+  background: #800020;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.message-row.user-row .user {
+  border-top-right-radius: 4px; /* 사용자 말풍선의 모서리 둥글기 조절 */
+}
+.message-row.bot-row .bot {
+  border-top-left-radius: 4px; /* 챗봇 말풍선의 모서리 둥글기 조절 */
+}
 
   /* 빠른 액션 버튼 */
   .bot-buttons {
@@ -182,16 +208,27 @@ document.addEventListener('DOMContentLoaded', () => {
     try { if (window.DOMPurify?.sanitize) return DOMPurify.sanitize(unsafe); } catch(e) {}
     return unsafe;
   }
-
+  
   function addUserMessage(text) {
-    const msg = document.createElement('div');
-    msg.className = 'message user';
-    msg.textContent = text;
-    chatArea.appendChild(msg);
-    scrollToBottom(true); // 내가 보낸 건 바로 바닥
-  }
+  const messageRow = document.createElement('div');
+  messageRow.className = 'message-row user-row';
 
-  function addBotText(text) {
+  const msg = document.createElement('div');
+  msg.className = 'message user';
+  msg.textContent = text;
+
+  const profile = document.createElement('img');
+  profile.className = 'profile-img user';
+  profile.src = "{% static 'images/user_profile.png' %}";
+  profile.alt = '사용자 프로필';
+
+  messageRow.appendChild(msg);
+  messageRow.appendChild(profile);
+  chatArea.appendChild(messageRow);
+  scrollToBottom(true);
+}
+
+function addBotText(text) {
     const el = document.createElement('div');
     el.className = 'message bot';
     el.textContent = text;
@@ -200,30 +237,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addBotHTML(html, buttons = []) {
-    const container = document.createElement('div');
-    container.className = 'message bot';
+  const messageRow = document.createElement('div');
+  messageRow.className = 'message-row bot-row';
 
-    const wrap = document.createElement('div');
-    wrap.className = 'bot-content';
-    wrap.innerHTML = html; // safeHTML()로 정화된 값만 전달
-    container.appendChild(wrap);
+  const profile = document.createElement('img');
+  profile.className = 'profile-img bot';
+  profile.src = "{% static 'images/bot_profile.png' %}";
+  profile.alt = '챗봇 프로필';
 
-    if (buttons.length) {
-      const btns = document.createElement('div');
-      btns.className = 'bot-buttons';
-      buttons.forEach(({text, action}) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.textContent = text;
-        b.addEventListener('click', action);
-        btns.appendChild(b);
-      });
-      container.appendChild(btns);
-    }
+  const container = document.createElement('div');
+  container.className = 'message bot';
 
-    chatArea.appendChild(container);
-    scrollToBottom(false);
+  const wrap = document.createElement('div');
+  wrap.className = 'bot-content';
+  wrap.innerHTML = html;
+  container.appendChild(wrap);
+
+  if (buttons.length) {
+    const btns = document.createElement('div');
+    btns.className = 'bot-buttons';
+    buttons.forEach(({text, action}) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = text;
+      b.addEventListener('click', action);
+      btns.appendChild(b);
+    });
+    container.appendChild(btns);
   }
+
+  messageRow.appendChild(profile);
+  messageRow.appendChild(container);
+  chatArea.appendChild(messageRow);
+  scrollToBottom(false);
+}
 
   /* === 전송 처리 === */
   userInput.addEventListener('keydown', (e) => {
@@ -244,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userInput.focus();
     sendBtn.disabled = true;
 
-    const endpoints = ['/chat/query', '/chat/query/']; // 라우팅 차이 방어
+    const endpoints = ['chat/query']; // 라우팅 차이 방어
     let data = null, lastErr = null;
 
     for (const ep of endpoints) {
@@ -277,6 +324,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     sendBtn.disabled = false;
+
+    // 분석 결과 후에 웰컴 메시지와 버튼을 다시 추가합니다.
+    addBotHTML(safeHTML("<p>무엇을 도와드릴까요?</p>"), [
+      { text: "형태소 분석하기", action: onMorphClick },
+      { text: "미정", action: () => addBotText("이 기능은 준비 중이에요!") }
+    ]);
   }
 
   /* === 초기 웰컴 + 빠른 액션 === */
@@ -288,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function onMorphClick() {
     addUserMessage("형태소 분석하기");
-    addBotText("분석할 문장을 입력해주세요!");
+    addBotHTML(safeHTML("<p>분석할 문장을 입력해주세요!</p>"));
     userInput.placeholder = "예) 집 앞에 있는 나무에 새잎이 돋았다.";
     userInput.focus();
   }
