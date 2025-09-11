@@ -26,7 +26,6 @@ def chatbot_view(request):
         if not text:
             return JsonResponse({'ok': False, 'error': '분석할 문장을 입력하세요.'}, status=400)
 
-        korea_u_form = (request.data.get('korea_u_form') or "").strip()
         std_kr_entry = (request.data.get('std_kr_entry') or "").strip()
 
         # 1) Bareun
@@ -45,7 +44,6 @@ def chatbot_view(request):
                 try:
                     md_comp = analyze_compound_block(
                         sentence=text,
-                        korea_u_form=korea_u_form,
                         std_kr_entry=std_kr_entry,
                         pretokenized=pretokenized,
                         candidates=candidates,
@@ -69,7 +67,6 @@ def chatbot_view(request):
         try:
             result_md = analyze_school_grammar(
                 sentence=text,
-                korea_u_form=korea_u_form,
                 std_kr_entry=std_kr_entry,
                 pretokenized=pretokenized if used_bareun else ""
             )
@@ -84,6 +81,8 @@ def chatbot_view(request):
                 'bareun_error': None if used_bareun else bareun_error,
             })
         except Exception as e:
+            import traceback
+            traceback.print_exc()  # 콘솔에 에러 출력
             return JsonResponse({
                 'ok': False,
                 'error': f'LLM 오류: {e}',
