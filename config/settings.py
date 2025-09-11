@@ -21,12 +21,13 @@ load_dotenv()
 BAREUN_API_KEY=os.environ['BAREUN_API_KEY']
 HOST=os.environ['HOST']
 BAREUN_PORT=os.environ['BAREUN_PORT']
-OPENAI_API_KEY=os.environ['OPENAI_API_KEY']
+# OPENAI_API_KEY=os.environ['OPENAI_API_KEY']
+GEMINI_API_KEY=os.environ['GEMINI_API_KEY']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x&#+vv%hxr8r$f&ke5n7)5p!f3!p=c&1r@t-w^!$rk=yz-o#sa'
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
