@@ -6,8 +6,8 @@
 <title>형태소 분석 챗봇</title>
 
 <!-- 마크다운 렌더러 + XSS 방지 -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -236,7 +236,7 @@ function addBotText(text) {
     scrollToBottom(false);
   }
 
-function addBotHTML(html, buttons = [], issueName = null) {
+function addBotHTML(html, buttons = [], issueNames = []) {
   const messageRow = document.createElement('div');
   messageRow.className = 'message-row bot-row';
 
@@ -253,17 +253,19 @@ function addBotHTML(html, buttons = [], issueName = null) {
   wrap.innerHTML = html;
   container.appendChild(wrap);
 
-  if (buttons.length || issueName) {
+  if (buttons.length || (issueNames && issueNames.length > 0)) {
     const btns = document.createElement('div');
     btns.className = 'bot-buttons';
     
-    if (issueName) {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.textContent = '관련 쟁점 설명 더보기';
-      b.dataset.issueName = issueName;
-      b.classList.add('issue-button'); // Class for event delegation
-      btns.appendChild(b);
+    if (issueNames && issueNames.length > 0) {
+      issueNames.forEach(issueName => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = `'${issueName}' 관련 쟁점 보기`;
+        b.dataset.issueName = issueName;
+        b.classList.add('issue-button');
+        btns.appendChild(b);
+      });
     }
 
     buttons.forEach(({text, action}) => {
@@ -319,8 +321,12 @@ function addBotHTML(html, buttons = [], issueName = null) {
     if (!data) {
       addBotText('오류 발생: ' + (lastErr?.message || '네트워크 오류'));
     } else if (data.ok) {
-        const botHtml = data.html || (window.marked?.parse ? marked.parse(data.markdown || '') : (data.markdown || ''));
-        addBotHTML(safeHTML(botHtml), [], data.issue_found);
+        let markdownText = data.markdown || '';
+        // LLM 응답이 전체 코드 블록으로 감싸진 경우(```markdown ... ```)를 대비해 제거합니다.
+        markdownText = markdownText.trim().replace(/^```(?:markdown|md)?\s*/, '').replace(/```\s*$/, '');
+
+        const botHtml = window.marked?.parse ? marked.parse(markdownText) : markdownText;
+        addBotHTML(safeHTML(botHtml), [], data.issues_found || []); // issue_found -> issues_found
     } else if (data.error) {
         addBotText('오류: ' + data.error);
     } else {
@@ -349,8 +355,9 @@ function addBotHTML(html, buttons = [], issueName = null) {
             const res = await fetch(`/issue/${issueName}/`);
             const data = await res.json();
 
-            if (data.ok && data.html) {
-                addBotHTML(safeHTML(data.html));
+            if (data.ok) {
+                const issueHtml = window.marked?.parse ? marked.parse(data.markdown || '') : (data.markdown || '');
+                addBotHTML(safeHTML(issueHtml));
             } else {
                 addBotText('쟁점 설명을 불러오는 데 실패했습니다: ' + (data.error || '알 수 없는 오류'));
             }

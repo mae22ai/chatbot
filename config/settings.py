@@ -10,24 +10,25 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from dotenv import load_dotenv
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Load .env file
 load_dotenv()
-BAREUN_API_KEY=os.environ['BAREUN_API_KEY']
-HOST=os.environ['HOST']
-BAREUN_PORT=os.environ['BAREUN_PORT']
-# OPENAI_API_KEY=os.environ['OPENAI_API_KEY']
-GEMINI_API_KEY=os.environ['GEMINI_API_KEY']
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", 'django-insecure-fallback-key-for-development')
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+BAREUN_API_KEY = os.getenv("BAREUN_API_KEY")
+HOST = os.getenv("HOST", "localhost")
+BAREUN_PORT = os.getenv("BAREUN_PORT", 5656)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,3 +133,17 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+}

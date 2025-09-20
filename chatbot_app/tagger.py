@@ -20,10 +20,15 @@ tagger = Tagger(BAREUN_API_KEY, 'api.bareun.ai', 443)
 # print(m)
 
 
-def analyze_text(text):
-    res=tagger.tags([text])
-    # m = res.as_json_str()  #전체 분석 결과
-    # return m
-    pa=res.pos()
-    print(pa)
-    return pa
+def analyze_text(self, sentence: str):
+    if not self.tagger:
+        raise RuntimeError("Tagger가 초기화되지 않았습니다.")
+    
+    # 형태소 분석 실행
+    result = self.tagger.pos(sentence)
+    
+    # 문장 부호(품사 태그가 'S'로 시작하는 경우) 제외
+    filtered_result = [morph for morph in result if not morph[1].startswith('S')]
+    
+    print(filtered_result)
+    return filtered_result
