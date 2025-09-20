@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const profile = document.createElement('img');
   profile.className = 'profile-img user';
-  profile.src = "{% static 'images/user_profile.png' %}";
+  profile.src = `{% static 'images/user_profile.png' %}`;
   profile.alt = '사용자 프로필';
 
   messageRow.appendChild(msg);
@@ -236,13 +236,13 @@ function addBotText(text) {
     scrollToBottom(false);
   }
 
-  function addBotHTML(html, buttons = []) {
+function addBotHTML(html, buttons = [], issueName = null) {
   const messageRow = document.createElement('div');
   messageRow.className = 'message-row bot-row';
 
   const profile = document.createElement('img');
   profile.className = 'profile-img bot';
-  profile.src = "{% static 'images/bot_profile.png' %}";
+  profile.src = `{% static 'images/bot_profile.png' %}`;
   profile.alt = '챗봇 프로필';
 
   const container = document.createElement('div');
@@ -253,9 +253,19 @@ function addBotText(text) {
   wrap.innerHTML = html;
   container.appendChild(wrap);
 
-  if (buttons.length) {
+  if (buttons.length || issueName) {
     const btns = document.createElement('div');
     btns.className = 'bot-buttons';
+    
+    if (issueName) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = '관련 쟁점 설명 더보기';
+      b.dataset.issueName = issueName;
+      b.classList.add('issue-button'); // Class for event delegation
+      btns.appendChild(b);
+    }
+
     buttons.forEach(({text, action}) => {
       const b = document.createElement('button');
       b.type = 'button';
@@ -298,7 +308,7 @@ function addBotText(text) {
       try {
         const res = await fetch(ep, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}' },
           body: JSON.stringify({ text })
         });
         if (res.ok) { data = await res.json(); break; }
@@ -308,19 +318,13 @@ function addBotText(text) {
 
     if (!data) {
       addBotText('오류 발생: ' + (lastErr?.message || '네트워크 오류'));
-      sendBtn.disabled = false;
-      return;
-    }
-
-    if (data.html) {
-      addBotHTML(safeHTML(data.html));
-    } else if (data.response || data.markdown) {
-      const md = data.markdown || data.response;
-      try { marked.setOptions({ gfm: true, breaks: false }); } catch(e){}
-      const html = (window.marked?.parse ? marked.parse(md) : md);
-      addBotHTML(safeHTML(html));
+    } else if (data.ok) {
+        const botHtml = data.html || (window.marked?.parse ? marked.parse(data.markdown || '') : (data.markdown || ''));
+        addBotHTML(safeHTML(botHtml), [], data.issue_found);
+    } else if (data.error) {
+        addBotText('오류: ' + data.error);
     } else {
-      addBotText('응답 형식을 알 수 없습니다.');
+        addBotText('알 수 없는 오류가 발생했습니다.');
     }
 
     sendBtn.disabled = false;
@@ -331,6 +335,32 @@ function addBotText(text) {
       { text: "미정", action: () => addBotText("이 기능은 준비 중이에요!") }
     ]);
   }
+
+  /* === 쟁점 설명 더보기 처리 === */
+  chatArea.addEventListener('click', async (e) => {
+    if (e.target.matches('.issue-button')) {
+        const issueName = e.target.dataset.issueName;
+        if (!issueName) return;
+
+        e.target.disabled = true;
+        e.target.textContent = '로딩 중...';
+
+        try {
+            const res = await fetch(`/issue/${issueName}/`);
+            const data = await res.json();
+
+            if (data.ok && data.html) {
+                addBotHTML(safeHTML(data.html));
+            } else {
+                addBotText('쟁점 설명을 불러오는 데 실패했습니다: ' + (data.error || '알 수 없는 오류'));
+            }
+        } catch (err) {
+            addBotText('쟁점 설명을 불러오는 데 실패했습니다: ' + err.message);
+        } finally {
+            e.target.style.display = 'none'; // 버튼 숨기기
+        }
+    }
+  });
 
   /* === 초기 웰컴 + 빠른 액션 === */
   addBotHTML(safeHTML("<p>무엇을 도와드릴까요?</p>"), [

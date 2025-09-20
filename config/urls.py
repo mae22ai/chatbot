@@ -16,11 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from chatbot_app.views import chatbot_view, index
+from chatbot_app.views import chatbot_view, index, get_issue_document
 
 urlpatterns = [
     path("", index, name="index"),
-    path("chat/query", chatbot_view, name="chat_query"),      # ← 슬래시 없는 버전
-    # path("chat/query/", chatbot_view, name="chat_query_slash")# ← 슬래시 있는 버전(둘 다 허용)
+    path("chat/query", chatbot_view, name="chat_query"),
+    path("issue/<str:issue_name>/", get_issue_document, name="get_issue_document"),
 ]
-
