@@ -7,7 +7,7 @@ import logging
 from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from .llm_client import analyze_school_grammar, detect_grammatical_issue, analyze_sino_korean
+from .llm_client import analyze_school_grammar, detect_grammatical_issue, analyze_sino_korean, decompose_words
 from .tagger import analyze_text
 import traceback
 from markdown import markdown
@@ -39,7 +39,16 @@ def chatbot_view(request):
         except Exception as e:
             bareun_error = str(e)
 
-        # 2) 쟁점 사전 탐지 및 컨텍스트 로딩
+        # 2) 1단계: 단어 분해 LLM 호출
+        decomposition_info = ""
+        try:
+            decomposition_result = decompose_words(sentence=text)
+            if decomposition_result and decomposition_result != "없음":
+                decomposition_info = decomposition_result
+        except Exception as e:
+            logger.warning(f"단어 분해 LLM 실패: {e}")
+
+        # 3) 쟁점 사전 탐지 및 컨텍스트 로딩
         issue_context = ""
         try:
             processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
@@ -47,7 +56,6 @@ def chatbot_view(request):
             
             preliminary_issues = {morph[0] for morph in pretokenized if morph[0] in issue_files}
             
-            # '이다'의 경우 '이' 형태소도 탐지
             if any(morph[0] == '이' and morph[1] == 'VCP' for morph in pretokenized) and '이다' in issue_files:
                 preliminary_issues.add('이다')
 
@@ -62,12 +70,13 @@ def chatbot_view(request):
         except Exception as e:
             logger.warning(f"쟁점 컨텍스트 로딩 중 오류 발생: {e}")
 
-        # 3) 메인 LLM 분석 (쟁점 컨텍스트 주입)
+        # 4) 2단계: 메인 LLM 분석 (단어 분해 및 쟁점 컨텍스트 주입)
         try:
             main_md = analyze_school_grammar(
                 sentence=text, std_kr_entry=std_kr_entry,
                 pretokenized=pretokenized if used_bareun else "",
-                issue_context=issue_context
+                issue_context=issue_context,
+                decomposition_info=decomposition_info
             )
         except Exception as e:
             logger.critical(f"메인 LLM 분석 실패: {e}", exc_info=True)
@@ -76,25 +85,7 @@ def chatbot_view(request):
                 'used_bareun': used_bareun, 'bareun_error': bareun_error
             }, status=500)
 
-        # 3) 지능형 쟁점 탐지 (메인 분석 기반)
-        issues_found = []
-        try:
-            processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
-            issue_files = [os.path.splitext(f)[0] for f in os.listdir(processed_dir) if f.endswith('.md')]
-            
-            detected_issues_str = detect_grammatical_issue(
-                analysis_markdown=main_md, # result_md -> main_md
-                issue_list=issue_files
-            )
-            if detected_issues_str and detected_issues_str != "없음":
-                issues_found = [issue.strip() for issue in detected_issues_str.split(',')]
-            
-            logger.info(f"쟁점 탐지 LLM 결과: '{detected_issues_str}' -> 파싱 후: {issues_found}")
-
-        except Exception as e:
-            logger.warning(f"지능형 쟁점 탐지 중 오류 발생: {e}")
-
-        # 4) 한자어 분석 (메인 분석 결과에서 명사 추출)
+        # 5) 한자어 분석 (메인 분석 결과에서 명사 추출)
         nouns = []
         try:
             noun_pattern = re.compile(r"^\|\s*([^|]+?)\s*\|\s*(?:명사|대명사)", re.MULTILINE | re.UNICODE)
@@ -106,7 +97,25 @@ def chatbot_view(request):
         md_sino = analyze_sino_korean(nouns=nouns)
         result_md = f"{main_md}\n\n{md_sino}".strip()
 
-        # 5) 최종 결과 반환
+        # 6) 최종 쟁점 탐지 (버튼 생성용)
+        issues_found = []
+        try:
+            processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
+            issue_files = [os.path.splitext(f)[0] for f in os.listdir(processed_dir) if f.endswith('.md')]
+            
+            detected_issues_str = detect_grammatical_issue(
+                analysis_markdown=main_md,
+                issue_list=issue_files
+            )
+            if detected_issues_str and detected_issues_str != "없음":
+                issues_found = [issue.strip() for issue in detected_issues_str.split(',')]
+            
+            logger.info(f"쟁점 탐지 LLM 결과: '{detected_issues_str}' -> 파싱 후: {issues_found}")
+
+        except Exception as e:
+            logger.warning(f"지능형 쟁점 탐지 중 오류 발생: {e}")
+
+        # 7) 최종 결과 반환
         logger.info(f"--- 최종 챗봇 답변 (Markdown) ---\n{result_md}\n------------------------------------")
         html_unsafe = markdown(result_md, extensions=["tables", "fenced_code"])
         html = bleach.clean(html_unsafe, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRS, strip=True)
