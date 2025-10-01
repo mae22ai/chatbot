@@ -8,7 +8,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from .llm_client import analyze_school_grammar, detect_grammatical_issue, analyze_sino_korean, decompose_words
-from .tagger import analyze_text
+from .tagger import Tagger
+from .school_morph import parse_for_llm, generate_heuristic_annotations
 import traceback
 from markdown import markdown
 import bleach
@@ -31,13 +32,25 @@ def chatbot_view(request):
 
         std_kr_entry = (request.data.get('std_kr_entry') or "").strip()
 
-        # 1) Bareun 초기 분석
-        pretokenized, used_bareun, bareun_error = [], False, None
-        try:
-            pretokenized = analyze_text(text)
-            used_bareun = True
-        except Exception as e:
-            bareun_error = str(e)
+        # 1) Bareun 초기 분석 (설정값에 따라 분기)
+        pos_line, heuristic_info = "", ""
+        used_bareun, bareun_error = False, None
+        morph_list = []
+
+        if settings.USE_BAREUN_ANALYZER:
+            try:
+                tagger = Tagger(settings.BAREUN_API_KEY, 'api.bareun.ai', 443)
+                bareun_json = tagger.tags([text]).as_json()
+                morph_list, pos_line = parse_for_llm(bareun_json)
+                used_bareun = True
+                
+                if settings.USE_HEURISTICS:
+                    heuristic_info = generate_heuristic_annotations(morph_list)
+
+            except Exception as e:
+                bareun_error = str(e)
+        else:
+            pos_line = "(Bareun 분석기 비활성화됨)"
 
         # 2) 1단계: 단어 분해 LLM 호출
         decomposition_info = ""
@@ -51,33 +64,51 @@ def chatbot_view(request):
         # 3) 쟁점 사전 탐지 및 컨텍스트 로딩
         issue_context = ""
         try:
-            processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
-            issue_files = {os.path.splitext(f)[0] for f in os.listdir(processed_dir) if f.endswith('.md')}
-            
-            preliminary_issues = {morph[0] for morph in pretokenized if morph[0] in issue_files}
-            
-            if any(morph[0] == '이' and morph[1] == 'VCP' for morph in pretokenized) and '이다' in issue_files:
-                preliminary_issues.add('이다')
+            if 'morph_list' in locals() and morph_list:
+                processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
+                issue_files = {os.path.splitext(f)[0] for f in os.listdir(processed_dir) if f.endswith('.md')}
+                
+                # 더 안전한 코드로 수정 및 디버깅 로그 추가
+                preliminary_issues = set()
+                for morph in morph_list:
+                    if not isinstance(morph, dict):
+                        logger.warning(f"morph_list에 dict가 아닌 항목 발견: {morph}")
+                        continue
+                    
+                    morph_text = morph.get('morph')
+                    if not isinstance(morph_text, str):
+                        logger.warning(f"morph 딕셔너리에 문자열이 아닌 'morph' 값 발견: {morph_text}")
+                        continue
 
-            if preliminary_issues:
-                context_parts = []
-                for issue in preliminary_issues:
-                    file_path = os.path.join(processed_dir, f"{issue}.md")
-                    if os.path.exists(file_path):
-                        with open(file_path, 'r', encoding='utf-8') as f:
-                            context_parts.append(f.read())
-                issue_context = "\n\n".join(context_parts)
+                    if morph_text in issue_files:
+                        preliminary_issues.add(morph_text)
+
+                if any(morph.get('morph') == '이' and morph.get('tag') == 'VCP' for morph in morph_list if isinstance(morph, dict)) and '이다' in issue_files:
+                    preliminary_issues.add('이다')
+
+                if preliminary_issues:
+                    context_parts = []
+                    for issue in preliminary_issues:
+                        file_path = os.path.join(processed_dir, f"{issue}.md")
+                        if os.path.exists(file_path):
+                            with open(file_path, 'r', encoding='utf-8') as f:
+                                context_parts.append(f.read())
+                    issue_context = "\n\n".join(context_parts)
         except Exception as e:
-            logger.warning(f"쟁점 컨텍스트 로딩 중 오류 발생: {e}")
+            logger.error(f"쟁점 컨텍스트 로딩 중 결정적 오류 발생: {e}", exc_info=True)
 
-        # 4) 2단계: 메인 LLM 분석 (단어 분해 및 쟁점 컨텍스트 주입)
+
+        # 4) 2단계: 메인 LLM 통합 분석 (최적화)
         try:
-            main_md = analyze_school_grammar(
+            main_md, md_sino, issues_found = analyze_school_grammar(
                 sentence=text, std_kr_entry=std_kr_entry,
-                pretokenized=pretokenized if used_bareun else "",
+                pretokenized=pos_line if used_bareun else "",
                 issue_context=issue_context,
-                decomposition_info=decomposition_info
+                decomposition_info=decomposition_info,
+                heuristic_info=heuristic_info
             )
+            result_md = f"{main_md}\n\n{md_sino}".strip()
+
         except Exception as e:
             logger.critical(f"메인 LLM 분석 실패: {e}", exc_info=True)
             return JsonResponse({
@@ -85,37 +116,7 @@ def chatbot_view(request):
                 'used_bareun': used_bareun, 'bareun_error': bareun_error
             }, status=500)
 
-        # 5) 한자어 분석 (메인 분석 결과에서 명사 추출)
-        nouns = []
-        try:
-            noun_pattern = re.compile(r"^\|\s*([^|]+?)\s*\|\s*(?:명사|대명사)", re.MULTILINE | re.UNICODE)
-            nouns = noun_pattern.findall(main_md)
-            nouns = sorted(list(set([n.replace('-', '').strip() for n in nouns])))
-        except Exception as e:
-            logger.warning(f"명사 추출 중 오류 발생: {e}")
-
-        md_sino = analyze_sino_korean(nouns=nouns)
-        result_md = f"{main_md}\n\n{md_sino}".strip()
-
-        # 6) 최종 쟁점 탐지 (버튼 생성용)
-        issues_found = []
-        try:
-            processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
-            issue_files = [os.path.splitext(f)[0] for f in os.listdir(processed_dir) if f.endswith('.md')]
-            
-            detected_issues_str = detect_grammatical_issue(
-                analysis_markdown=main_md,
-                issue_list=issue_files
-            )
-            if detected_issues_str and detected_issues_str != "없음":
-                issues_found = [issue.strip() for issue in detected_issues_str.split(',')]
-            
-            logger.info(f"쟁점 탐지 LLM 결과: '{detected_issues_str}' -> 파싱 후: {issues_found}")
-
-        except Exception as e:
-            logger.warning(f"지능형 쟁점 탐지 중 오류 발생: {e}")
-
-        # 7) 최종 결과 반환
+        # 5) 최종 결과 반환 (한자어 분석 및 쟁점 탐지는 LLM이 동시 수행)
         logger.info(f"--- 최종 챗봇 답변 (Markdown) ---\n{result_md}\n------------------------------------")
         html_unsafe = markdown(result_md, extensions=["tables", "fenced_code"])
         html = bleach.clean(html_unsafe, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRS, strip=True)

@@ -30,6 +30,11 @@ BAREUN_API_KEY = os.getenv("BAREUN_API_KEY")
 HOST = os.getenv("HOST", "localhost")
 BAREUN_PORT = os.getenv("BAREUN_PORT", 5656)
 
+# 개발용 기능 플래그 (on/off)
+# .env 파일에서 "true"/"false" 문자열을 파싱하여 True/False 불리언으로 변환
+USE_BAREUN_ANALYZER = os.getenv("USE_BAREUN_ANALYZER", "true").lower() == "true"
+USE_HEURISTICS = os.getenv("USE_HEURISTICS", "true").lower() == "true"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
