@@ -34,7 +34,10 @@ def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
                         lemma = str(m_obj)
 
                     tag   = m.get("tag")   or m.get("pos")  or ""
-                    if lemma: out.append({"morph": lemma, "tag": tag})
+
+                    # 문장 부호(태그가 'S'로 시작)는 분석에서 제외
+                    if not tag.upper().startswith('S'):
+                        if lemma: out.append({"morph": lemma, "tag": tag})
         if out: return out
     except Exception:
         pass
