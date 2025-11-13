@@ -1,65 +1,19 @@
 # chatbot_app/school_morph.py
 from __future__ import annotations
-from typing import List, Tuple, Dict, Any
+from typing import List, Dict, Any, Tuple
 import json
+from .pos_heuristics import (
+    classify_determiner,
+    classify_interjection,
+    classify_particle_by_heuristic,
+    classify_ep_by_heuristic,
+    classify_nominal_ending,
+    classify_adnominal_ending,
+    classify_all_ec,
+    classify_deriv_suffix
+)
 
-# ─────────────────────────────────────────────────────────
-# Bareun POS → 학교 문법 표기 맵핑(세분)
-# ─────────────────────────────────────────────────────────
-def _tag_to_school(tag: str) -> Tuple[str, str, str]:
-    t = (tag or "").upper()
-
-    # 명사 계열
-    if t == "NNG":  return ("명사",       "실질", "자립")
-    if t == "NNP":  return ("고유명사",   "실질", "자립")
-    if t == "NNB":  return ("의존명사",   "실질", "의존")
-    if t == "NP":   return ("대명사",     "실질", "자립")
-    if t == "NR":   return ("수사",       "실질", "자립")
-
-    # 수식언
-    if t == "MM":   return ("관형사",     "실질", "자립")
-    if t in ("MAG","MAJ"): return ("부사","실질", "자립")
-
-    # 감탄사
-    if t == "IC":   return ("감탄사",     "실질", "자립")
-
-    # 용언 어간
-    if t == "VV":   return ("동사 어간",   "실질", "의존")
-    if t == "VA":   return ("형용사 어간", "실질", "의존")
-    if t == "VX":   return ("보조용언 어간","실질","의존")
-    if t == "VCP":  return ("계사 어간",   "실질", "의존")
-    if t == "VCN":  return ("부정지사 어간","실질","의존")
-
-    # 어미
-    if t == "EP":   return ("선어말 어미", "형식", "의존")
-    if t == "EF":   return ("어말어미(종결)","형식","의존")
-    if t == "EC":   return ("연결 어미",   "형식", "의존")
-    if t == "ETM":  return ("전성어미(관형)","형식","의존")
-    if t == "ETN":  return ("전성어미(명사)","형식","의존")
-
-    # 조사(세분)
-    if t == "JKS":  return ("주격 조사",   "형식", "의존")
-    if t == "JKC":  return ("보격 조사",   "형식", "의존")
-    if t == "JKG":  return ("관형격 조사", "형식", "의존")
-    if t == "JKO":  return ("목적격 조사", "형식", "의존")
-    if t == "JKB":  return ("부사격 조사", "형식", "의존")
-    if t == "JKV":  return ("호격 조사",   "형식", "의존")
-    if t == "JKQ":  return ("인용격 조사", "형식", "의존")
-    if t == "JX":   return ("보조사",     "형식", "의존")
-    if t == "JC":   return ("접속 조사",   "형식", "의존")
-    if t.startswith("J"): return ("조사",  "형식", "의존")
-
-    # 접사/어근
-    if t == "XPN":  return ("접두사",      "형식", "의존")
-    if t == "XSN":  return ("접미사(명사)","형식", "의존")
-    if t == "XSV":  return ("접미사(동사)","형식", "의존")
-    if t == "XSA":  return ("접미사(형용사)","형식","의존")
-    if t == "XR":   return ("어근",        "실질", "의존")
-
-    # 기타
-    if t in ("SN","SL","SH","SY"): return ("기타", "형식", "의존")
-    return ("기타", "형식", "의존")
-
+HYPHEN_TOKENS = {"-", "‐", "‑"}
 
 def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
     """Bareun JSON/str을 [{'morph':..., 'tag':...}, ...]로 평탄화."""
@@ -68,20 +22,30 @@ def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
         try: doc = json.loads(doc)
         except Exception: return []
 
-    # 구조1
+    # Bareun v3.2.0 이상 구조
     try:
         out = []
         for s in doc.get("sentences", []):
             for tok in s.get("tokens", []):
                 for m in tok.get("morphemes", []):
-                    lemma = m.get("lemma") or m.get("text") or m.get("morph") or ""
+                    # 중첩된 딕셔너리 구조 처리
+                    m_obj = m.get("lemma") or m.get("text") or m.get("morph") or ""
+                    if isinstance(m_obj, dict):
+                        lemma = m_obj.get("content", "")
+                    else:
+                        lemma = str(m_obj)
+
                     tag   = m.get("tag")   or m.get("pos")  or ""
-                    if lemma: out.append({"morph": lemma, "tag": tag})
+
+                    # 문장 부호(태그가 'S'로 시작)는 분석에서 제외하되 하이픈은 유지
+                    tag_upper = tag.upper()
+                    if not tag_upper.startswith('S') or lemma in HYPHEN_TOKENS:
+                        if lemma: out.append({"morph": lemma, "tag": tag})
         if out: return out
     except Exception:
         pass
 
-    # 구조2
+    # Bareun 구버전 또는 일반적인 형태소 분석기 구조
     try:
         out = []
         for m in doc.get("morphs", []):
@@ -94,83 +58,70 @@ def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
 
     return []
 
-
-def parse_for_hybrid(bareun_output: Any) -> Tuple[List[Dict[str,str]], List[str], str]:
+def parse_for_llm(bareun_output: Any) -> Tuple[List[Dict[str,str]], str]:
     """
+    LLM 프롬프트에 사용될 초기 분석 결과와 휴리스틱 주석을 생성
     반환:
       morph_list: [{'morph','tag'}...]
-      candidates: 합성/파생 의심 후보 목록(주로 NNG 길이 ≥ 2)
-      posline: '나/NP 는/JX 어제/MAG ...' 형태의 한 줄 요약
-    """
-    morphs = _best_effort_parse(bareun_output)
-    posline = " ".join(f"{m['morph']}/{m.get('tag','')}" for m in morphs)
-
-    candidates = []
-    for m in morphs:
-        tag = (m.get("tag") or "").upper()
-        if tag in ("NNG","NNB","NNP") and len(m["morph"]) >= 2:
-            candidates.append(m["morph"])
-    # 중복 제거(순서 보존)
-    seen = set(); cand_uniq = []
-    for w in candidates:
-        if w not in seen:
-            seen.add(w); cand_uniq.append(w)
-    return morphs, cand_uniq, posline
-
-
-def build_sections_from_bareun(bareun_output: Any) -> Tuple[str, bool]:
-    """
-    Bareun 결과로
-      ① 단어/형태소 요약
-      ② 학교 문법 표
-      ③ 실질/형식, 자립/의존 목록
-    을 **마크다운**으로 생성.
+      pos_line: '나/NP 는/JX 어제/MAG ...' 형태의 한 줄 요약
     """
     morph_list = _best_effort_parse(bareun_output)
-    if not morph_list:
-        return ("", False)
+    pos_line = " ".join(f"{m['morph']}/{m.get('tag','')}" for m in morph_list)
+    return morph_list, pos_line
 
-    # 표 행
-    rows = []
-    for it in morph_list:
-        pos, subst, dep = _tag_to_school(it.get("tag",""))
-        rows.append((it["morph"], pos, subst, dep))
+def generate_heuristic_annotations(morph_list: List[Dict[str, str]]) -> str:
+    """형태소 분석 결과에 휴리스틱 규칙을 적용하여 LLM에게 제공할 주석 문자열을 생성"""
+    annotations = []
+    for i, item in enumerate(morph_list):
+        morph = item.get("morph", "")
+        tag = (item.get("tag") or "").upper()
+        
+        if not morph:
+            continue
 
-    # 토큰 대략 복원(보기에만)
-    tokens = []
-    buf = []
-    for morph, pos, subst, dep in rows:
-        if subst == "실질" and dep == "자립":
-            if buf: tokens.append("".join(buf)); buf = []
-            tokens.append(morph)
-        else:
-            buf.append(morph)
-    if buf: tokens.append("".join(buf))
+        heuristic_results = []
 
-    # 목록
-    real = [m for (m,_,s,_) in rows if s=="실질"]
-    form = [m for (m,_,s,_) in rows if s=="형식"]
-    free = [m for (m,_,_,d) in rows if d=="자립"]
-    bound= [m for (m,_,_,d) in rows if d=="의존"]
+        # 문맥 기반 중의성 해소 ('이/그/저')
+        if morph in ["이", "그", "저"]:
+            if i + 1 < len(morph_list):
+                next_tag = (morph_list[i + 1].get("tag") or "").upper()
+                if next_tag.startswith("NN"):
+                    heuristic_results.append("'지시 관형사'일 가능성 높음 (다음에 명사 위치)")
+            if tag == "NP":
+                 heuristic_results.append("'대명사'일 가능성 (bareunpy가 대명사로 분석)")
 
-    # MD
-    L = []
-    L.append("### 🔍 단어 분석 및 형태소 분석\n")
-    L.append(f"* **단어**: {', '.join(tokens) if tokens else '—'}")
-    L.append(f"* **형태소**: {', '.join(m for (m,_,_,_) in rows)}\n")
+        # 태그 기반 휴리스틱
+        if tag == 'IC':
+            res = classify_interjection(morph)
+            if res != 'Unknown': heuristic_results.append(f"감탄사 상세: {res}")
+        if tag.startswith('J'):
+            res = classify_particle_by_heuristic(morph)
+            if res != 'Unknown': heuristic_results.append(f"조사 상세: {res}")
+        if tag == 'EP':
+            res = classify_ep_by_heuristic(morph)
+            if res != 'Unknown': heuristic_results.append(f"선어말어미 상세: {res}")
+        if tag == 'ETN':
+            res = classify_nominal_ending(morph)
+            if res != 'Unknown': heuristic_results.append(f"전성어미 상세: {res}")
+        if tag == 'ETM':
+            res = classify_adnominal_ending(morph)
+            if res != 'Unknown': heuristic_results.append(f"전성어미 상세: {res}")
+        if tag == 'EC':
+            res = classify_all_ec(morph)
+            if res != 'Unknown': heuristic_results.append(f"연결어미 상세: {res}")
 
-    L.append("### 🔍 학교 문법 기준 형태소 분석 표\n")
-    L.append("| 형태소 | 품사(세부) | 실질/형식 | 자립/의존 |")
-    L.append("| --- | --- | --- | --- |")
-    for morph, pos, subst, dep in rows:
-        L.append(f"| {morph} | {pos} | {subst} | {dep} |")
+        # 단어 기반 휴리스틱 (중의성 단어 제외)
+        if morph not in ["이", "그", "저"]:
+            res = classify_determiner(morph)
+            if res != "Unknown":
+                 heuristic_results.append(f"사전 기반 분석: {res}")
 
-    L.append("\n### 🔍 실질형태소와 형식형태소\n")
-    L.append(f"* **실질형태소**: {', '.join(real) if real else '—'}")
-    L.append(f"* **형식형태소**: {', '.join(form) if form else '—'}")
+        # 파생어 휴리스틱
+        res = classify_deriv_suffix(morph)
+        if res != "Unknown":
+            heuristic_results.append(f"파생어 분석: {res}")
 
-    L.append("\n### 🔍 자립형태소와 의존형태소\n")
-    L.append(f"* **자립형태소**: {', '.join(free) if free else '—'}")
-    L.append(f"* **의존형태소**: {', '.join(bound) if bound else '—'}")
+        if heuristic_results:
+            annotations.append(f"- {morph}: {', '.join(heuristic_results)}")
 
-    return ("\n".join(L), True)
+    return "\n".join(annotations) if annotations else "없음"

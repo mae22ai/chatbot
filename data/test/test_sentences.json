@@ -37,25 +37,20 @@
   {
     "id": "N-DEP-08",
     "category": "명사/의존명사",
-    "sentence": "현욱 군 반가워요."
+    "sentence": "현서 양 반가워요."
   },
   {
     "id": "N-DEP-09",
     "category": "명사/의존명사",
-    "sentence": "현서 양 반가워요."
+    "sentence": "그들은 늘 모든 것을 아는 양 행동했다."
   },
   {
     "id": "N-DEP-10",
     "category": "명사/의존명사",
-    "sentence": "그들은 늘 모든 것을 아는 양 행동했다."
-  },
-  {
-    "id": "N-DEP-11",
-    "category": "명사/의존명사",
     "sentence": "나무를 두 그루 심었다."
   },
   {
-    "id": "N-DEP-12",
+    "id": "N-DEP-11",
     "category": "명사/의존명사",
     "sentence": "나는 이번 방학 책을 한 권도 읽지 않았다."
   },

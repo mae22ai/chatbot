@@ -1,0 +1,97 @@
+[
+      {
+    "id": "ADV-COMP-01",
+    "category": "부사/성분부사",
+    "sentence": "내 친구는 밥을 잘 먹는다."
+  },
+  {
+    "id": "ADV-COMP-02",
+    "category": "부사/성분부사",
+    "sentence": "나는 지금 매우 불행하다."
+  },
+  {
+    "id": "ADV-COMP-03",
+    "category": "부사/성분부사",
+    "sentence": "집에 너무 가고 싶다."
+  },
+  {
+    "id": "ADV-COMP-04",
+    "category": "부사/성분부사",
+    "sentence": "집에 일찍 들어가고 싶다."
+  },
+  {
+    "id": "ADV-COMP-05",
+    "category": "부사/성분부사",
+    "sentence": "이리 와 봐."
+  },
+  {
+    "id": "ADV-COMP-06",
+    "category": "부사/성분부사",
+    "sentence": "오늘 시킨 물건이 내일 올 예정이다."
+  },
+  {
+    "id": "ADV-COMP-07",
+    "category": "부사/성분부사",
+    "sentence": "나 오늘 집에 안 갈래."
+  },
+  {
+    "id": "ADV-COMP-08",
+    "category": "부사/성분부사",
+    "sentence": "다리를 다쳐서 집에 못 간다."
+  },
+  {
+    "id": "ADV-SENT-01",
+    "category": "부사/문장부사",
+    "sentence": "설마 오늘도 집에 못 가는 건 아니겠지?"
+  },
+  {
+    "id": "ADV-SENT-02",
+    "category": "부사/문장부사",
+    "sentence": "만약 내일 비가 온다면 경기는 취소됩니다."
+  },
+  {
+    "id": "ADV-SENT-03",
+    "category": "부사/문장부사",
+    "sentence": "결코 오늘의 승리는 우연이 아니었다."
+  },
+  {
+    "id": "ADV-SENT-04",
+    "category": "부사/문장부사",
+    "sentence": "제발 이번 시험은 통과하게 해 주세요."
+  },
+  {
+    "id": "ADV-SENT-05",
+    "category": "부사/문장부사",
+    "sentence": "부디 행복하기를 바랄게."
+  },
+  {
+    "id": "ADV-SENT-06",
+    "category": "부사/문장부사",
+    "sentence": "나는 게임을 좋아한다. 그러나 공부는 좋아하지 않는다."
+  },
+  {
+    "id": "ADV-SENT-07",
+    "category": "부사/문장부사",
+    "sentence": "나는 게임을 좋아한다. 그래서 도서관에 가지 않을 것이다."
+  },
+  {
+    "id": "ADV-SENT-08",
+    "category": "부사/문장부사",
+    "sentence": "나는 게임을 좋아한다. 그리고 운동도 좋아한다."
+  },
+  {
+    "id": "ADV-SENT-09",
+    "category": "부사/문장부사",
+    "sentence": "오히려 내 성적은 떨어지고 말았다."
+  },
+  {
+    "id": "ADV-SENT-10",
+    "category": "부사/문장부사",
+    "sentence": "어제는 외출 및 산책을 진행했다."
+  },
+  {
+    "id": "ADV-SENT-11",
+    "category": "부사/문장부사",
+    "sentence": "화요일 또는 수요일에 만나기로 하자."
+  }
+]

@@ -1,0 +1,72 @@
+[
+      {
+    "id": "ADN-PROP-01",
+    "category": "관형사/성상관형사",
+    "sentence": "새 책을 샀다."
+  },
+  {
+    "id": "ADN-PROP-02",
+    "category": "관형사/성상관형사",
+    "sentence": "그는 늘 헌 가방을 메고 다닌다."
+  },
+  {
+    "id": "ADN-PROP-03",
+    "category": "관형사/성상관형사",
+    "sentence": "어젯밤 길에서 옛 친구를 만났다."
+  },
+  {
+    "id": "ADN-PROP-04",
+    "category": "관형사/성상관형사",
+    "sentence": "그는 늘 강의실에 맨 처음으로 들어왔다."
+  },
+  {
+    "id": "ADN-PROP-05",
+    "category": "관형사/성상관형사",
+    "sentence": "우리 회사의 주 고객은 아이들이다."
+  },
+  {
+    "id": "ADN-IND-01",
+    "category": "관형사/지시관형사",
+    "sentence": "이 침대는 정말 푹신하다."
+  },
+  {
+    "id": "ADN-IND-02",
+    "category": "관형사/지시관형사",
+    "sentence": "저 사람은 참 잘생겼다."
+  },
+  {
+    "id": "ADN-IND-03",
+    "category": "관형사/지시관형사",
+    "sentence": "다른 사람들은 어디에 있어?"
+  },
+  {
+    "id": "ADN-IND-04",
+    "category": "관형사/지시관형사",
+    "sentence": "무슨 일이야?"
+  },
+  {
+    "id": "ADN-IND-05",
+    "category": "관형사/지시관형사",
+    "sentence": "어느 날 어느 시에 다시 만나자."
+  },
+  {
+    "id": "ADN-NUM-01",
+    "category": "관형사/수관형사",
+    "sentence": "사과 한 상자를 샀다."
+  },
+  {
+    "id": "ADN-NUM-02",
+    "category": "관형사/수관형사",
+    "sentence": "종이 넉 장을 받았다."
+  },
+  {
+    "id": "ADN-NUM-03",
+    "category": "관형사/수관형사",
+    "sentence": "셋째 주부터 시험이 시작된다."
+  },
+  {
+    "id": "ADN-NUM-04",
+    "category": "관형사/수관형사",
+    "sentence": "친구 아홉 명이 집에 오기로 했다."
+  }
+]

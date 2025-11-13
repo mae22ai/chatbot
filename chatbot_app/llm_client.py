@@ -1,20 +1,36 @@
 from pathlib import Path
 from typing import Optional
+from itertools import cycle
 from django.conf import settings
 from google import genai
 from google.genai import types
+import json
+import re
 import time
 
 # ───────────────────────────────
 # 클라이언트 초기화
 # ───────────────────────────────
-def _make_client():
-    api_key = settings.GEMINI_API_KEY
-    if not api_key:
+_GEMINI_KEYS = getattr(settings, "GEMINI_API_KEYS", None) or ([settings.GEMINI_API_KEY] if getattr(settings, "GEMINI_API_KEY", None) else [])
+_GEMINI_KEY_CYCLE = cycle(_GEMINI_KEYS) if _GEMINI_KEYS else None
+
+def _next_gemini_api_key():
+    if not _GEMINI_KEY_CYCLE:
         raise RuntimeError("❌ GEMINI_API_KEY가 설정되지 않았습니다. .env와 config/settings.py를 확인하세요.")
+    return next(_GEMINI_KEY_CYCLE)
+
+def _make_client():
+    api_key = _next_gemini_api_key()
     return genai.Client(api_key=api_key)
 
 DEFAULT_MODEL = getattr(settings, "GEMINI_MODEL", "gemini-2.5-flash")
+LLM_RETRY_DELAYS = getattr(settings, "GEMINI_RETRY_DELAYS", [15.0, 20.0])
+
+def _retry_delay(attempt: int) -> float:
+    if not LLM_RETRY_DELAYS:
+        return 0
+    idx = min(attempt, len(LLM_RETRY_DELAYS) - 1)
+    return LLM_RETRY_DELAYS[idx]
 
 # ───────────────────────────────
 # 프롬프트 로드
@@ -25,12 +41,14 @@ SYSTEM_PROMPT = (PROMPT_DIR / "school_morph.md").read_text(encoding="utf-8")
 # ───────────────────────────────
 # 사용자 프롬프트 빌더
 # ───────────────────────────────
-def build_user_prompt(sentence: str, std_kr_entry: str = "", pretokenized: str = "", issue_context: str = "", decomposition_info: str = "") -> str:
+def build_user_prompt(sentence: str, std_kr_entry: str = "", pretokenized: str = "", issue_context: str = "", decomposition_info: str = "", heuristic_info: str = "") -> str:
     prompt = (
-        f'문장: "{sentence}"\n'
-        f'사전_표준국어: "{std_kr_entry}"\n'
-        f'형태소기_결과(raw): "{pretokenized}"\n'
+        f'[분석 대상 문장]: "{sentence}"\n'
+        f'[사전 정보]: "{std_kr_entry}"\n'
+        f'[초기 분석 결과]: "{pretokenized}"\n'
     )
+    if heuristic_info and heuristic_info != "없음":
+        prompt += f'\n[휴리스틱 분석 정보]\n{heuristic_info}\n'
     if issue_context:
         prompt += f'\n[참고 자료: 쟁점 문서]\n{issue_context}\n'
     if decomposition_info:
@@ -38,7 +56,7 @@ def build_user_prompt(sentence: str, std_kr_entry: str = "", pretokenized: str =
     return prompt
 
 # ───────────────────────────────
-# 학교 문법 전체 분석 (자동 재시도 내장)
+# 학교 문법 전체 분석 (JSON 파싱 기능 내장)
 # ───────────────────────────────
 def analyze_school_grammar(
     sentence: str,
@@ -46,13 +64,12 @@ def analyze_school_grammar(
     pretokenized: str = "",
     issue_context: str = "",
     decomposition_info: str = "",
+    heuristic_info: str = "",
     model: Optional[str] = None,
     temperature: float = 0.2,
-    thinking_budget: Optional[int] = 0,
     use_system_prompt: bool = True,
-) -> str:
-    max_retries = 5
-    initial_delay = 2  # seconds
+) -> tuple[str, str, list[str]]:
+    max_retries = 3
 
     for attempt in range(max_retries):
         try:
@@ -60,10 +77,7 @@ def analyze_school_grammar(
             _model = model or DEFAULT_MODEL
 
             config = types.GenerateContentConfig(temperature=temperature)
-            if thinking_budget is not None:
-                config.thinking_config = types.ThinkingConfig(thinking_budget=int(thinking_budget))
-
-            user_prompt = build_user_prompt(sentence, std_kr_entry, pretokenized, issue_context, decomposition_info)
+            user_prompt = build_user_prompt(sentence, std_kr_entry, pretokenized, issue_context, decomposition_info, heuristic_info)
             
             parts = []
             if use_system_prompt and SYSTEM_PROMPT:
@@ -75,20 +89,42 @@ def analyze_school_grammar(
                 contents=[types.Content(parts=parts)],
                 config=config,
             )
-            return resp.text
-        
+            
+            # LLM 응답에서 JSON 추출 및 파싱
+            raw_text = resp.text.strip()
+            json_match = re.search(r"```json\n(.*?)\n```", raw_text, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(1)
+            else:
+                json_str = raw_text # 코드 블록이 없는 경우, 전체를 JSON으로 가정
+
+            data = json.loads(json_str)
+            
+            main_md = data.get("main_analysis_markdown", "")
+            sino_md = data.get("sino_korean_analysis_markdown", "")
+            issues = data.get("detected_issues", [])
+            
+            return main_md, sino_md, issues
+
+        except (json.JSONDecodeError, AttributeError) as e:
+            # JSON 파싱 실패 시 재시도
+            if attempt < max_retries - 1:
+                delay = _retry_delay(attempt)
+                print(f"JSON parsing failed. Retrying in {delay}s... ({attempt + 1}/{max_retries})")
+                time.sleep(delay)
+            else:
+                raise RuntimeError(f"LLM did not return valid JSON after max retries: {str(e)}") from e
         except Exception as e:
             if "503" in str(e) or "Service Unavailable" in str(e):
                 if attempt < max_retries - 1:
-                    delay = initial_delay * (2 ** attempt)
-                    print(f"API 503 Error in analyze_school_grammar. Retrying in {delay}s... ({attempt + 1}/{max_retries})")
+                    delay = _retry_delay(attempt)
+                    print(f"API 503 Error. Retrying in {delay}s... ({attempt + 1}/{max_retries})")
                     time.sleep(delay)
                 else:
-                    print(f"API 503 Error. Exceeded max retries ({max_retries}).")
                     raise RuntimeError(f"Gemini API error after max retries: {str(e)}") from e
             else:
-                # 503이 아닌 다른 오류는 즉시 실패 처리
                 raise RuntimeError(f"Gemini API error: {str(e)}") from e
+    return "", "", [] # Should not be reached
 
 # ───────────────────────────────
 # 단어 분해 전용
@@ -99,22 +135,38 @@ def decompose_words(
     sentence: str,
     model: Optional[str] = None,
 ) -> str:
-    client = _make_client()
-    _model = model or DEFAULT_MODEL
+    max_retries = 3
 
-    prompt = DECOMPOSER_PROMPT.replace("{{SENTENCE}}", sentence)
+    for attempt in range(max_retries):
+        try:
+            client = _make_client()
+            _model = model or DEFAULT_MODEL
 
-    try:
-        config = types.GenerateContentConfig(temperature=0.0)
-        resp = client.models.generate_content(
-            model=_model,
-            contents=prompt,
-            config=config,
-        )
-        return resp.text.strip()
-    except Exception as e:
-        print(f"Warning: Word decomposition failed. Error: {str(e)}")
-        return "없음"
+            prompt = DECOMPOSER_PROMPT.replace("{{SENTENCE}}", sentence)
+            config = types.GenerateContentConfig(temperature=0.0)
+            resp = client.models.generate_content(
+                model=_model,
+                contents=prompt,
+                config=config,
+            )
+            return resp.text.strip()
+
+        except Exception as e:
+            if "503" in str(e) or "Service Unavailable" in str(e):
+                if attempt < max_retries - 1:
+                    delay = _retry_delay(attempt)
+                    print(f"API 503 Error in decompose_words. Retrying in {delay}s... ({attempt + 1}/{max_retries})")
+                    time.sleep(delay)
+                else:
+                    print(f"API 503 Error in decompose_words. Exceeded max retries ({max_retries}).")
+                    # 재시도 실패 시 경고만 남기고 계속 진행
+                    print(f"Warning: Word decomposition failed after max retries. Error: {str(e)}")
+                    return "없음"
+            else:
+                # 503이 아닌 다른 오류는 즉시 실패 처리
+                print(f"Warning: Word decomposition failed. Error: {str(e)}")
+                return "없음"
+    return "없음" # Should not be reached
 
 # ───────────────────────────────
 # 쟁점 탐지 전용
