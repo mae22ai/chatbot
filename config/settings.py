@@ -30,6 +30,55 @@ BAREUN_API_KEY = os.getenv("BAREUN_API_KEY")
 HOST = os.getenv("HOST", "localhost")
 BAREUN_PORT = os.getenv("BAREUN_PORT", 5656)
 
+def _load_gemini_api_keys():
+    keys = []
+    if GEMINI_API_KEY:
+        keys.append(GEMINI_API_KEY)
+
+    numbered = []
+    prefix = "GEMINI_API_KEY_"
+    for env_key, value in os.environ.items():
+        if not value or not env_key.startswith(prefix):
+            continue
+        suffix = env_key[len(prefix):]
+        try:
+            order = int(suffix)
+        except ValueError:
+            order = float('inf')
+        numbered.append((order, env_key, value))
+
+    if numbered:
+        numbered.sort(key=lambda item: (item[0], item[1]))
+        keys.extend(value for _, _, value in numbered)
+
+    # 중복 제거 while preserving order
+    seen = set()
+    deduped = []
+    for key in keys:
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(key)
+    return deduped
+
+GEMINI_API_KEYS = _load_gemini_api_keys()
+LLM_CALL_DELAY = float(os.getenv("LLM_CALL_DELAY", "5"))
+
+def _parse_retry_delays():
+    raw = os.getenv("GEMINI_RETRY_DELAYS", "15,20")
+    delays = []
+    for part in raw.split(","):
+        part = part.strip()
+        if not part:
+            continue
+        try:
+            delays.append(float(part))
+        except ValueError:
+            continue
+    return delays or [10.0, 15.0]
+
+GEMINI_RETRY_DELAYS = _parse_retry_delays()
+
 # 개발용 기능 플래그 (on/off)
 # .env 파일에서 "true"/"false" 문자열을 파싱하여 True/False 불리언으로 변환
 USE_BAREUN_ANALYZER = os.getenv("USE_BAREUN_ANALYZER", "true").lower() == "true"

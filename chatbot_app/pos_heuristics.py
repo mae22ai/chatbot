@@ -2,6 +2,19 @@
 from typing import Tuple, Dict, List
 import re
 
+
+def _matches_variant(token: str, candidate: str) -> bool:
+    """
+    조사 사전에는 '이/가' 형태로 표현된 엔트리가 많으므로
+    슬래시로 분리된 모든 변형을 비교한다.
+    """
+    token = token.strip()
+    variants = [part.strip() for part in candidate.split("/") if part.strip()]
+    if not variants:
+        return False
+    return token in variants
+
+
 # ──────────────────────────────────────────────
 # 관형사(Determiner) 휴리스틱
 # ──────────────────────────────────────────────
@@ -57,12 +70,15 @@ def classify_particle_by_heuristic(particle: str) -> str:
     """입력된 조사 문자열을 격조사/접속조사/보조사로 분류"""
     particle = particle.strip()
     for case_type, case_list in particle_categories["case"].items():
-        if particle in case_list:
-            return f"격조사 ({case_type})"
-    if particle in particle_categories["접속조사"]:
-        return "접속조사"
-    if particle in particle_categories["보조사"]:
-        return "보조사"
+        for entry in case_list:
+            if _matches_variant(particle, entry):
+                return f"격조사 ({case_type})"
+    for entry in particle_categories["접속조사"]:
+        if _matches_variant(particle, entry):
+            return "접속조사"
+    for entry in particle_categories["보조사"]:
+        if _matches_variant(particle, entry):
+            return "보조사"
     return "Unknown"
 
 # ──────────────────────────────────────────────

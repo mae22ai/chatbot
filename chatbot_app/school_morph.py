@@ -13,6 +13,8 @@ from .pos_heuristics import (
     classify_deriv_suffix
 )
 
+HYPHEN_TOKENS = {"-", "‐", "‑"}
+
 def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
     """Bareun JSON/str을 [{'morph':..., 'tag':...}, ...]로 평탄화."""
     doc = bareun_output
@@ -35,8 +37,9 @@ def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
 
                     tag   = m.get("tag")   or m.get("pos")  or ""
 
-                    # 문장 부호(태그가 'S'로 시작)는 분석에서 제외
-                    if not tag.upper().startswith('S'):
+                    # 문장 부호(태그가 'S'로 시작)는 분석에서 제외하되 하이픈은 유지
+                    tag_upper = tag.upper()
+                    if not tag_upper.startswith('S') or lemma in HYPHEN_TOKENS:
                         if lemma: out.append({"morph": lemma, "tag": tag})
         if out: return out
     except Exception:

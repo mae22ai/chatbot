@@ -1,21 +1,36 @@
 from pathlib import Path
 from typing import Optional
+from itertools import cycle
 from django.conf import settings
 from google import genai
 from google.genai import types
 import json
 import re
+import time
 
 # ───────────────────────────────
 # 클라이언트 초기화
 # ───────────────────────────────
-def _make_client():
-    api_key = settings.GEMINI_API_KEY
-    if not api_key:
+_GEMINI_KEYS = getattr(settings, "GEMINI_API_KEYS", None) or ([settings.GEMINI_API_KEY] if getattr(settings, "GEMINI_API_KEY", None) else [])
+_GEMINI_KEY_CYCLE = cycle(_GEMINI_KEYS) if _GEMINI_KEYS else None
+
+def _next_gemini_api_key():
+    if not _GEMINI_KEY_CYCLE:
         raise RuntimeError("❌ GEMINI_API_KEY가 설정되지 않았습니다. .env와 config/settings.py를 확인하세요.")
+    return next(_GEMINI_KEY_CYCLE)
+
+def _make_client():
+    api_key = _next_gemini_api_key()
     return genai.Client(api_key=api_key)
 
 DEFAULT_MODEL = getattr(settings, "GEMINI_MODEL", "gemini-2.5-flash")
+LLM_RETRY_DELAYS = getattr(settings, "GEMINI_RETRY_DELAYS", [15.0, 20.0])
+
+def _retry_delay(attempt: int) -> float:
+    if not LLM_RETRY_DELAYS:
+        return 0
+    idx = min(attempt, len(LLM_RETRY_DELAYS) - 1)
+    return LLM_RETRY_DELAYS[idx]
 
 # ───────────────────────────────
 # 프롬프트 로드
@@ -55,7 +70,6 @@ def analyze_school_grammar(
     use_system_prompt: bool = True,
 ) -> tuple[str, str, list[str]]:
     max_retries = 3
-    initial_delay = 2
 
     for attempt in range(max_retries):
         try:
@@ -95,7 +109,7 @@ def analyze_school_grammar(
         except (json.JSONDecodeError, AttributeError) as e:
             # JSON 파싱 실패 시 재시도
             if attempt < max_retries - 1:
-                delay = initial_delay * (2 ** attempt)
+                delay = _retry_delay(attempt)
                 print(f"JSON parsing failed. Retrying in {delay}s... ({attempt + 1}/{max_retries})")
                 time.sleep(delay)
             else:
@@ -103,7 +117,7 @@ def analyze_school_grammar(
         except Exception as e:
             if "503" in str(e) or "Service Unavailable" in str(e):
                 if attempt < max_retries - 1:
-                    delay = initial_delay * (2 ** attempt)
+                    delay = _retry_delay(attempt)
                     print(f"API 503 Error. Retrying in {delay}s... ({attempt + 1}/{max_retries})")
                     time.sleep(delay)
                 else:
@@ -122,7 +136,6 @@ def decompose_words(
     model: Optional[str] = None,
 ) -> str:
     max_retries = 3
-    initial_delay = 2
 
     for attempt in range(max_retries):
         try:
@@ -141,7 +154,7 @@ def decompose_words(
         except Exception as e:
             if "503" in str(e) or "Service Unavailable" in str(e):
                 if attempt < max_retries - 1:
-                    delay = initial_delay * (2 ** attempt)
+                    delay = _retry_delay(attempt)
                     print(f"API 503 Error in decompose_words. Retrying in {delay}s... ({attempt + 1}/{max_retries})")
                     time.sleep(delay)
                 else:
