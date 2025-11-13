@@ -1,0 +1,62 @@
+[
+    {
+    "id": "AFFIX-SINO-01",
+    "category": "접사/한자어접사",
+    "sentence": "사용료 책정이 불합리하다."
+  },
+  {
+    "id": "AFFIX-SINO-02",
+    "category": "접사/한자어접사",
+    "sentence": "전쟁은 전쟁 자체의 비합리성을 갖는다."
+  },
+  {
+    "id": "AFFIX-SINO-03",
+    "category": "접사/한자어접사",
+    "sentence": "무허가 판자촌 신세를 전전하다."
+  },
+  {
+    "id": "AFFIX-SINO-04",
+    "category": "접사/한자어접사",
+    "sentence": "내 동생은 초등학교 고학년이다."
+  },
+  {
+    "id": "AFFIX-SAE-01",
+    "category": "접사/새",
+    "sentence": "우리 가족들은 새집에 이사를 왔다."
+  },
+  {
+    "id": "AFFIX-SAE-02",
+    "category": "접사/새",
+    "sentence": "새색시가 들어온 이후 우리집은 더욱 활기가 넘쳤다."
+  },
+  {
+    "id": "AFFIX-SAE-03",
+    "category": "접사/새",
+    "sentence": "나는 새빨간 옷을 입고 있었다."
+  },
+  {
+    "id": "AFFIX-SAE-04",
+    "category": "접사/새",
+    "sentence": "하늘이 새파랗게 물들었다."
+  },
+  {
+    "id": "AFFIX-EUMGI-01",
+    "category": "접사/-음,-기",
+    "sentence": "많은 사람들이 모임으로써 장내의 분위기가 활기를 띠었다."
+  },
+  {
+    "id": "AFFIX-EUMGI-02",
+    "category": "접사/-음,-기",
+    "sentence": "이번 모임에 많은 사람들이 참석하였다."
+  },
+  {
+    "id": "AFFIX-EUMGI-03",
+    "category": "접사/-음,-기",
+    "sentence": "선생님께서 교실에 들어오시자 학생들이 일제히 책을 읽기 시작하였다."
+  },
+  {
+    "id": "AFFIX-EUMGI-04",
+    "category": "접사/-음,-기",
+    "sentence": "나는 읽기 시간이 제일 지루하다."
+  }
+]

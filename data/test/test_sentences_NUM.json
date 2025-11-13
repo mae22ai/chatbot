@@ -1,0 +1,32 @@
+[
+      {
+    "id": "NUM-ADN-01",
+    "category": "수사/수관형사",
+    "sentence": "셋째 주 토요일에 만나자."
+  },
+  {
+    "id": "NUM-NUM-01",
+    "category": "수사/수사",
+    "sentence": "아이에게는 첫째도 사랑, 둘째도 사랑, 셋째도 사랑이다."
+  },
+  {
+    "id": "NUM-NUM-02",
+    "category": "수사/수사",
+    "sentence": "학생 다섯이 교실에 들어왔다."
+  },
+  {
+    "id": "NUM-ADN-02",
+    "category": "수사/수관형사",
+    "sentence": "다섯 학생이 교실에 들어왔다."
+  },
+  {
+    "id": "NUM-NUM-03",
+    "category": "수사/수사",
+    "sentence": "총 금액은 천이다."
+  },
+  {
+    "id": "NUM-ADN-03",
+    "category": "수사/수관형사",
+    "sentence": "천 원을 벌었다."
+  }
+]

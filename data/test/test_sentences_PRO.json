@@ -1,0 +1,92 @@
+[
+    {
+    "id": "PRO-PER-01",
+    "category": "대명사/인칭대명사",
+    "sentence": "우리 먼저 갈게."
+  },
+  {
+    "id": "PRO-PER-02",
+    "category": "대명사/인칭대명사",
+    "sentence": "나는 너를 증오한다."
+  },
+  {
+    "id": "PRO-PER-03",
+    "category": "대명사/인칭대명사",
+    "sentence": "당신은 누구십니까?"
+  },
+  {
+    "id": "PRO-PER-04",
+    "category": "대명사/인칭대명사",
+    "sentence": "우리는 너희에게 무척 실망했다."
+  },
+  {
+    "id": "PRO-PER-05",
+    "category": "대명사/인칭대명사",
+    "sentence": "아직 아무도 오지 않았다."
+  },
+  {
+    "id": "PRO-PER-06",
+    "category": "대명사/인칭대명사",
+    "sentence": "그 친구는 자기가 한 말도 기억을 못하더라."
+  },
+  {
+    "id": "PRO-PER-07",
+    "category": "대명사/인칭대명사",
+    "sentence": "할아버지께서는 늘 당신 손으로 직접 농사를 지으셨다."
+  },
+  {
+    "id": "PRO-IND-01",
+    "category": "대명사/지시대명사",
+    "sentence": "이것은 사과입니다."
+  },
+  {
+    "id": "PRO-IND-02",
+    "category": "대명사/지시대명사",
+    "sentence": "무엇도 나를 행복하게 할 수 없다."
+  },
+  {
+    "id": "PRO-IND-03",
+    "category": "대명사/지시대명사",
+    "sentence": "이건 좀 무거우니 조심해."
+  },
+  {
+    "id": "PRO-IND-04",
+    "category": "대명사/지시대명사",
+    "sentence": "그건 사실이 아니다."
+  },
+  {
+    "id": "PRO-IND-05",
+    "category": "대명사/지시대명사",
+    "sentence": "어디로 가야 할 지 모르겠다."
+  },
+  {
+    "id": "PRO-IND-06",
+    "category": "대명사/지시대명사",
+    "sentence": "그와 같은 사실."
+  },
+  {
+    "id": "PRO-IND-07",
+    "category": "대명사/지시대명사",
+    "sentence": "이를 보아라."
+  },
+  {
+    "id": "PRO-ADN-01",
+    "category": "대명사/관형사",
+    "sentence": "그 사람은 어디 갔어?"
+  },
+  {
+    "id": "PRO-ADN-02",
+    "category": "대명사/관형사",
+    "sentence": "저기 저 사람은 내 친구이다."
+  },
+  {
+    "id": "PRO-ADN-03",
+    "category": "대명사/관형사",
+    "sentence": "그는 아무 말도 하지 않았다."
+  },
+  {
+    "id": "PRO-ADN-04",
+    "category": "대명사/관형사",
+    "sentence": "이 사과는 맛있게 생겼다."
+  }
+]

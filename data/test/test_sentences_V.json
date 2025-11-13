@@ -1,0 +1,97 @@
+[
+    {
+    "id": "V-COMP-01",
+    "category": "동사/합성동사",
+    "sentence": "그는 오랜 기간 굶주렸다."
+  },
+  {
+    "id": "V-COMP-02",
+    "category": "동사/합성동사",
+    "sentence": "종이로 돌을 감쌌다."
+  },
+  {
+    "id": "V-COMP-03",
+    "category": "동사/합성동사",
+    "sentence": "애타게 그를 붙잡았다."
+  },
+  {
+    "id": "V-COMP-04",
+    "category": "동사/합성동사",
+    "sentence": "다리에 검푸른 멍이 들었다."
+  },
+  {
+    "id": "V-COMP-05",
+    "category": "동사/합성동사",
+    "sentence": "동생이 나의 머리를 잡아당겼다."
+  },
+  {
+    "id": "V-COMP-06",
+    "category": "동사/합성동사",
+    "sentence": "친구가 내 연필을 가져갔다."
+  },
+  {
+    "id": "V-COMP-07",
+    "category": "동사/합성동사",
+    "sentence": "갑자기 한 선수가 앞서기 시작했다."
+  },
+  {
+    "id": "V-AUX-01",
+    "category": "동사/본동사+보조동사",
+    "sentence": "순이가 돈을 찢어 버렸다."
+  },
+  {
+    "id": "V-AUX-02",
+    "category": "동사/본동사+보조동사",
+    "sentence": "순이가 돈을 버려 버렸다."
+  },
+  {
+    "id": "V-AUX-03",
+    "category": "동사/본동사+보조동사",
+    "sentence": "선배들은 나를 잘 챙겨 주었다."
+  },
+  {
+    "id": "V-AUX-04",
+    "category": "동사/본동사+보조동사",
+    "sentence": "저를 바보라고 불러 주세요."
+  },
+  {
+    "id": "V-AUX-05",
+    "category": "동사/본동사+보조동사",
+    "sentence": "음식을 먹어 댔다."
+  },
+  {
+    "id": "V-AUX-06",
+    "category": "동사/본동사+보조동사",
+    "sentence": "아직 집에 가지 않았다."
+  },
+  {
+    "id": "V-IRR-01",
+    "category": "동사/불규칙용언",
+    "sentence": "추운 겨울 군고구마 장수가 부산에 걸어왔다."
+  },
+  {
+    "id": "V-IRR-02",
+    "category": "동사/불규칙용언",
+    "sentence": "나는 친구에게 길을 묻고 답을 들었다."
+  },
+  {
+    "id": "V-IRR-03",
+    "category": "동사/불규칙용언",
+    "sentence": "나는 아르바이트를 하여 번 돈으로 여행을 다녀왔다."
+  },
+  {
+    "id": "V-IRR-04",
+    "category": "동사/불규칙용언",
+    "sentence": "할머니를 도와 쓰레기를 주우러 나갔다."
+  },
+  {
+    "id": "V-IRR-05",
+    "category": "동사/불규칙용언",
+    "sentence": "엄마를 따라 나왔다."
+  },
+  {
+    "id": "V-IRR-06",
+    "category": "동사/불규칙용언",
+    "sentence": "그는 뭔가 확실히 달랐다."
+  }
+]
