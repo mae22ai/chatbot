@@ -66,7 +66,7 @@ def analyze_school_grammar(
     decomposition_info: str = "",
     heuristic_info: str = "",
     model: Optional[str] = None,
-    temperature: float = 0.2,
+    temperature: float = 0.0,
     use_system_prompt: bool = True,
 ) -> tuple[str, str, list[str]]:
     max_retries = 3
@@ -185,7 +185,7 @@ def detect_grammatical_issue(
     prompt = prompt.replace("{{ISSUE_LIST}}", ", ".join(issue_list))
 
     try:
-        config = types.GenerateContentConfig(temperature=0.1)
+        config = types.GenerateContentConfig(temperature=0.0)
         resp = client.models.generate_content(
             model=_model,
             contents=prompt,
@@ -215,7 +215,7 @@ def analyze_sino_korean(
     prompt = SINO_KOREAN_PROMPT.replace("{{NOUN_LIST}}", ", ".join(nouns))
 
     try:
-        config = types.GenerateContentConfig(temperature=0.1)
+        config = types.GenerateContentConfig(temperature=0.0)
         resp = client.models.generate_content(
             model=_model,
             contents=prompt,
