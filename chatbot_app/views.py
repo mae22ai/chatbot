@@ -65,8 +65,8 @@ def chatbot_view(request):
         issue_context = ""
         try:
             if 'morph_list' in locals() and morph_list:
-                processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
-                issue_files = {os.path.splitext(f)[0] for f in os.listdir(processed_dir) if f.endswith('.md')}
+                issues_dir = os.path.join(settings.BASE_DIR, 'data', 'issues')
+                issue_files = {os.path.splitext(f)[0] for f in os.listdir(issues_dir) if f.endswith('.md')}
                 
                 # 더 안전한 코드로 수정 및 디버깅 로그 추가
                 preliminary_issues = set()
@@ -89,7 +89,7 @@ def chatbot_view(request):
                 if preliminary_issues:
                     context_parts = []
                     for issue in preliminary_issues:
-                        file_path = os.path.join(processed_dir, f"{issue}.md")
+                        file_path = os.path.join(issues_dir, f"{issue}.md")
                         if os.path.exists(file_path):
                             with open(file_path, 'r', encoding='utf-8') as f:
                                 context_parts.append(f.read())
@@ -135,10 +135,10 @@ def index(request):
     return render(request, 'index.html')
 
 def get_issue_document(request, issue_name):
-    processed_dir = os.path.join(settings.BASE_DIR, 'data', 'processed')
+    issues_dir = os.path.join(settings.BASE_DIR, 'data', 'issues')
     
     try:
-        all_files = os.listdir(processed_dir)
+        all_files = os.listdir(issues_dir)
         md_files = [f for f in all_files if f.endswith('.md')]
         file_map = {os.path.splitext(f)[0]: f for f in md_files}
     except FileNotFoundError:
@@ -148,7 +148,7 @@ def get_issue_document(request, issue_name):
     if not filename:
         return JsonResponse({'ok': False, 'error': '해당 이슈 문서를 찾을 수 없습니다.'}, status=404)
 
-    file_path = os.path.join(processed_dir, filename)
+    file_path = os.path.join(issues_dir, filename)
     
     if not os.path.exists(file_path):
         return JsonResponse({'ok': False, 'error': '해당 이슈 문서를 찾을 수 없습니다.'}, status=404)
