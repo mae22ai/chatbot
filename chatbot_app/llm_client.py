@@ -68,6 +68,7 @@ def analyze_school_grammar(
     model: Optional[str] = None,
     temperature: float = 0.0,
     use_system_prompt: bool = True,
+    system_prompt_override: Optional[str] = None,
 ) -> tuple[str, str, list[str]]:
     max_retries = 3
 
@@ -80,8 +81,11 @@ def analyze_school_grammar(
             user_prompt = build_user_prompt(sentence, std_kr_entry, pretokenized, issue_context, decomposition_info, heuristic_info)
             
             parts = []
-            if use_system_prompt and SYSTEM_PROMPT:
-                parts.append(types.Part(text=SYSTEM_PROMPT))
+            if use_system_prompt:
+                # 외부에서 주입된 프롬프트가 있으면 그것을 사용, 없으면 기본 프롬프트 사용
+                prompt_to_use = system_prompt_override if system_prompt_override is not None else SYSTEM_PROMPT
+                if prompt_to_use:
+                    parts.append(types.Part(text=prompt_to_use))
             parts.append(types.Part(text=user_prompt))
 
             resp = client.models.generate_content(
