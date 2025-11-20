@@ -68,14 +68,15 @@ def _columns_to_process(row_data: dict, repair_only: bool) -> list:
 # --------------------------------------------------------------------------
 # 분석 함수
 # --------------------------------------------------------------------------
-def run_analysis(sentence, pretokenized="", heuristic_info="", decomposition_info=""):
+def run_analysis(sentence, pretokenized="", heuristic_info="", decomposition_info="", system_prompt_override=None):
     """LLM 분석을 실행하고 예외를 처리하는 래퍼 함수"""
     try:
         main_md, md_sino, _ = analyze_school_grammar(
             sentence=sentence,
             pretokenized=pretokenized,
             heuristic_info=heuristic_info,
-            decomposition_info=decomposition_info
+            decomposition_info=decomposition_info,
+            system_prompt_override=system_prompt_override
         )
         return f"{main_md}\n\n{md_sino}".strip()
     except Exception as e:
@@ -183,6 +184,17 @@ def process_dataset(input_path, output_path, tagger, repair_only=False):
         print(f"❌ 기존 CSV({output_path})를 찾을 수 없습니다. --repair-only 모드에서는 필수입니다.")
         return
 
+    # <<<--- 수정된 부분: 테스트용 프롬프트 로드 ---
+    table_only_prompt_path = os.path.join(PROJECT_ROOT, 'chatbot_app', 'prompts', 'school_morph_table_only.md')
+    try:
+        with open(table_only_prompt_path, 'r', encoding='utf-8') as f:
+            table_only_prompt = f.read()
+        print("✅ 테스트용 '표 전용' 프롬프트 로드 완료.")
+    except FileNotFoundError:
+        print(f"❌ 테스트용 프롬프트({table_only_prompt_path})를 찾을 수 없습니다.")
+        return
+    # --- 수정된 부분 끝 ---/>
+
     print(f"--- 분석 및 평가 데이터 생성 시작: {output_path} ---")
 
     failures = []
@@ -237,7 +249,9 @@ def process_dataset(input_path, output_path, tagger, repair_only=False):
         for col_key, scen_name, kwargs in scenario_configs:
             if col_key not in columns_to_process:
                 continue
-            result = run_analysis(sentence, **kwargs)
+            # <<<--- 수정된 부분: 테스트용 프롬프트를 인자로 전달 ---
+            result = run_analysis(sentence, **kwargs, system_prompt_override=table_only_prompt)
+            # --- 수정된 부분 끝 ---/>
             row_data[col_key] = result
             if result.startswith("Analysis Error"):
                 if "503" in result:
@@ -257,7 +271,9 @@ def process_dataset(input_path, output_path, tagger, repair_only=False):
     if llm_retry_queue:
         print("\n🔁 503 오류가 발생한 문장을 다시 시도합니다...")
         for retry in tqdm(llm_retry_queue, desc="503 재시도 중"):
-            result = run_analysis(retry["sentence"], **retry["kwargs"])
+            # <<<--- 수정된 부분: 재시도 시에도 테스트용 프롬프트 전달 ---
+            result = run_analysis(retry["sentence"], **retry["kwargs"], system_prompt_override=table_only_prompt)
+            # --- 수정된 부분 끝 ---/>
             retry["row_ref"][retry["col_key"]] = result
             if result.startswith("Analysis Error"):
                 failures.append((retry["id"], retry["scenario"], result))
