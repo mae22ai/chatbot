@@ -41,7 +41,7 @@ SYSTEM_PROMPT = (PROMPT_DIR / "school_morph.md").read_text(encoding="utf-8")
 # ───────────────────────────────
 # 사용자 프롬프트 빌더
 # ───────────────────────────────
-def build_user_prompt(sentence: str, std_kr_entry: str = "", pretokenized: str = "", issue_context: str = "", decomposition_info: str = "", heuristic_info: str = "") -> str:
+def build_user_prompt(sentence: str, std_kr_entry: str = "", pretokenized: str = "", issue_context: str = "", heuristic_info: str = "") -> str:
     prompt = (
         f'[분석 대상 문장]: "{sentence}"\n'
         f'[사전 정보]: "{std_kr_entry}"\n'
@@ -51,8 +51,6 @@ def build_user_prompt(sentence: str, std_kr_entry: str = "", pretokenized: str =
         prompt += f'\n[휴리스틱 분석 정보]\n{heuristic_info}\n'
     if issue_context:
         prompt += f'\n[참고 자료: 쟁점 문서]\n{issue_context}\n'
-    if decomposition_info:
-        prompt += f'\n[단어 분해 정보]\n{decomposition_info}\n'
     return prompt
 
 # ───────────────────────────────
@@ -63,7 +61,6 @@ def analyze_school_grammar(
     std_kr_entry: str = "",
     pretokenized: str = "",
     issue_context: str = "",
-    decomposition_info: str = "",
     heuristic_info: str = "",
     model: Optional[str] = None,
     temperature: float = 0.0,
@@ -77,7 +74,7 @@ def analyze_school_grammar(
             _model = model or DEFAULT_MODEL
 
             config = types.GenerateContentConfig(temperature=temperature)
-            user_prompt = build_user_prompt(sentence, std_kr_entry, pretokenized, issue_context, decomposition_info, heuristic_info)
+            user_prompt = build_user_prompt(sentence, std_kr_entry, pretokenized, issue_context, heuristic_info)
             
             parts = []
             if use_system_prompt and SYSTEM_PROMPT:

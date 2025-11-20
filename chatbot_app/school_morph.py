@@ -15,18 +15,25 @@ from .pos_heuristics import (
 
 HYPHEN_TOKENS = {"-", "‐", "‑"}
 
-def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
-    """Bareun JSON/str을 [{'morph':..., 'tag':...}, ...]로 평탄화."""
+
+def _best_effort_parse(bareun_output: Any) -> List[Dict[str, Any]]:
+    """
+    Bareun JSON/str을 어절 단위로 구조화하여 반환.
+    반환 형식: [{'text': '어절', 'morphemes': [{'morph': '..', 'tag': '..'}, ...]}, ...]
+    """
     doc = bareun_output
     if isinstance(doc, str):
         try: doc = json.loads(doc)
         except Exception: return []
 
+    out = []
+    
     # Bareun v3.2.0 이상 구조
     try:
-        out = []
         for s in doc.get("sentences", []):
             for tok in s.get("tokens", []):
+                ejeol_text = tok.get("text", "")
+                morphemes = []
                 for m in tok.get("morphemes", []):
                     # 중첩된 딕셔너리 구조 처리
                     m_obj = m.get("lemma") or m.get("text") or m.get("morph") or ""
@@ -35,24 +42,33 @@ def _best_effort_parse(bareun_output: Any) -> List[Dict[str,str]]:
                     else:
                         lemma = str(m_obj)
 
-                    tag   = m.get("tag")   or m.get("pos")  or ""
-
-                    # 문장 부호(태그가 'S'로 시작)는 분석에서 제외하되 하이픈은 유지
-                    tag_upper = tag.upper()
-                    if not tag_upper.startswith('S') or lemma in HYPHEN_TOKENS:
-                        if lemma: out.append({"morph": lemma, "tag": tag})
+                    tag = m.get("tag") or m.get("pos") or ""
+                    
+                    # 모든 형태소 포함 (문장부호 포함)
+                    if lemma:
+                        morphemes.append({"morph": lemma, "tag": tag})
+                
+                if morphemes:
+                    out.append({"text": ejeol_text, "morphemes": morphemes})
         if out: return out
     except Exception:
         pass
 
-    # Bareun 구버전 또는 일반적인 형태소 분석기 구조
+    # Bareun 구버전 또는 일반적인 형태소 분석기 구조 (Flat structure)
+    # 이 경우 어절 정보를 복원하기 어려우므로 Flat list를 가짜 어절로 포장
     try:
-        out = []
+        flat_morphs = []
         for m in doc.get("morphs", []):
             lemma = m.get("lemma") or m.get("text") or m.get("morph") or ""
             tag   = m.get("tag")   or m.get("pos")  or ""
-            if lemma: out.append({"morph": lemma, "tag": tag})
-        if out: return out
+            if lemma: flat_morphs.append({"morph": lemma, "tag": tag})
+        
+        if flat_morphs:
+            # 어절 정보가 없으므로 전체를 하나의 그룹으로 묶거나 개별 처리
+            # 여기서는 호환성을 위해 단순 리스트 반환 (호출부에서 처리 필요할 수 있음)
+            # 하지만 _best_effort_parse의 시그니처를 맞추기 위해 
+            # 각 형태소를 하나의 어절로 취급하는 fallback
+            return [{"text": m['morph'], "morphemes": [m]} for m in flat_morphs]
     except Exception:
         pass
 
@@ -62,11 +78,25 @@ def parse_for_llm(bareun_output: Any) -> Tuple[List[Dict[str,str]], str]:
     """
     LLM 프롬프트에 사용될 초기 분석 결과와 휴리스틱 주석을 생성
     반환:
-      morph_list: [{'morph','tag'}...]
-      pos_line: '나/NP 는/JX 어제/MAG ...' 형태의 한 줄 요약
+      morph_list: [{'morph','tag'}...] (Flat list for heuristics & issue loading)
+      pos_line: '나/NP 는/JX  학교/NNG ...' (Ejeol-aware string for LLM)
     """
-    morph_list = _best_effort_parse(bareun_output)
-    pos_line = " ".join(f"{m['morph']}/{m.get('tag','')}" for m in morph_list)
+    ejeol_list = _best_effort_parse(bareun_output)
+    
+    # 1. Flat list 생성 (기존 로직 호환성 및 휴리스틱용)
+    morph_list = []
+    for ejeol in ejeol_list:
+        morph_list.extend(ejeol['morphemes'])
+
+    # 2. Ejeol-aware pos_line 생성 (띄어쓰기 보존)
+    # 예: "나/NP+는/JX  학교/NNG+에/JKB  간다/VV+ㄴ다/EF"
+    pos_segments = []
+    for ejeol in ejeol_list:
+        morphs_str = "+".join(f"{m['morph']}/{m.get('tag','')}" for m in ejeol['morphemes'])
+        pos_segments.append(morphs_str)
+    
+    pos_line = "  ".join(pos_segments) # 어절 사이는 공백 2개로 구분하여 시각적 명확성 확보
+
     return morph_list, pos_line
 
 def generate_heuristic_annotations(morph_list: List[Dict[str, str]]) -> str:
